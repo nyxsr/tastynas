@@ -54,7 +54,7 @@
             <div class="page-content">
                 <section class="intro-section">
                     <video playsinline autoplay muted loop class="videoHeader" id="bgvid">
-                        <source src="{{ asset('assets/header.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('assets/header2.mp4') }}" type="video/mp4">
                       </video>
                 </section>
                 <section class="best-section container mb-10 pb-10 appear-animate">
