@@ -1,0 +1,163 @@
+/* -------------------------------------------
+    Creative Grid
+---------------------------------------------- */
+
+.creative-grid {
+    .height-1-x2 {
+        height: 42rem;
+    }
+    .height-1-x1 {
+        height: 21rem;
+    }
+    .height-2-x2 {
+        height: 47rem;
+    }
+    .height-2-x1 {
+        height: 23.5rem;
+    }
+    .height-3-x2 {
+        height: 60rem;
+    }
+    .height-3-x1 {
+        height: 30rem;
+    }
+}
+.banner-creative1 {
+    .banner-content {
+        left: 6.5%;
+    }
+    .banner-subtitle {
+        margin: .5rem 0 2.2rem; //d-s
+    }
+    .banner-title {
+        font-size: 1.875em;
+        line-height: 1.2;
+        margin-bottom: 2.3rem; //d-s
+    }
+}
+.banner-creative2 {
+    .banner-content {
+        left: 9.7%;
+    }
+    .banner-title {
+        font-size: 1.375em;
+        line-height: 1.23;
+        margin: .4rem 0 1.6rem; //d-s
+    }
+    &.content-right .banner-content {
+        left: unset;
+        right: 10.1%;
+        text-align: right;
+    }
+}
+.banner-creative3 {
+    .banner-content {
+        top: 10%;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .banner-subtitle {
+        margin-bottom: 1.1rem; //d-s
+    }
+    .banner-title {
+        line-height: 1.22;
+        margin-bottom: 1.5rem; //d-s
+    }
+}
+.banner-creative4 {
+    .banner-content {
+        left: 6.1%;
+    }
+    .banner-subtitle {
+        margin-bottom: 1.2rem; //d-s
+    }
+    .banner-title {
+        font-size: 2.25em;
+        line-height: 1.2;
+        margin-bottom: 1.5rem; //d-s
+    }
+    p {
+        font-size: 1.125em;
+        margin-bottom: 4.3rem; //d-s
+    }
+    .banner-price {
+        font-size: 2em;
+        span {
+            font-size: .611em;
+            vertical-align: text-top;
+        }
+    }
+}
+.banner-creative5 {
+    .banner-content {
+        left: 7%;
+    }
+    .banner-title {
+        line-height: 1.2;
+        margin-top: .9rem; //d-s
+    }
+    .banner-price {
+        font-size: 2.285em;
+        span {
+            font-size: .5em;
+            vertical-align: text-top
+        }
+    }
+}
+.banner-creative6 {
+    .banner-content {
+        left: 8.4%;
+    }
+    .banner-subtitle {
+        margin-bottom: 1.9rem; //d-s
+    }
+    .banner-title {
+        font-size: 2.5em;
+        line-height: 1.2;
+        margin-bottom: 3.7rem; //d-s
+    }
+    .btn {
+        color: $white-color;
+        border-color: #818284;
+        &:hover {
+            color: $primary-color;
+            background: $white-color;
+            border-color: $white-color;
+        }
+    }
+}
+.banner-creative7 {
+    .banner-content {
+        left: 10.5%;
+    }
+    .banner-title {
+        font-size: 1.875em;
+        line-height: 1.2;
+        margin: .5rem 0 3.4rem; //d-s
+    }
+    &.content-right .banner-content {
+        left: unset;
+        right: 10.5%;
+        text-align: right;
+    }
+}
+.banner-creative8 {
+    .banner-content {
+        top: 10%;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .banner-subtitle {
+        margin-bottom: 1.2rem; //d-s
+    }
+    .banner-title {
+        font-size: 1.875em;
+        line-height: 1.2;
+        margin-bottom: 2.8rem; //d-s
+    }
+    @include mq(xl, max) {
+        .banner-title {
+            font-size: 1.5em;
+        }
+    }
+}

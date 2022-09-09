@@ -1,0 +1,58 @@
+/* -------------------------------------------
+    Tab Page
+---------------------------------------------- */
+
+.tab-desc {
+    padding: 5rem 0;
+    text-align: left;
+    .tab-subtitle {
+        line-height: 3rem;
+        margin-bottom: .7rem; //d-s
+    }
+    .tab-title {
+        font-size: 2.25em;
+        line-height: 1.667;
+        color: $primary-color-dark;
+    }
+    p {
+        line-height: 1.5;
+    }
+    .btn {
+        padding: 1.4em 2.78em 1em;
+    }
+    &.tab-desc-absolute {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        top: 0;
+        margin: 9rem 0;
+        padding: 5rem 7rem;
+        max-width: 59.5rem;
+        min-height: 50rem;
+        background: #fff;
+        box-shadow: 0 5px 60px 0 rgb(0 0 0 / 10%);
+        .tab-title {
+            font-size: 1.875em;
+            line-height: 1.333;
+        }
+        @include mq(md, max) {
+            max-width: 45rem;
+            min-height: 30rem;
+            padding: 3rem 5rem;
+            .tab-title {
+                font-size: 1.5em;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+    &.tab-vertical-desc {
+        .tab-title {
+            font-size: 1.875em;
+            line-height: 1.4;
+        }
+    }
+}

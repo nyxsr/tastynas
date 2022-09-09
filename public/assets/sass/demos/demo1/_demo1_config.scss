@@ -1,0 +1,14 @@
+/* Demo 1
+*/
+
+@include set (
+	(
+		base: (
+            subtitle: (
+                letter-spacing: .2em,
+                color: $dim-color,
+                margin-bottom: 1.9rem,
+            )
+        )
+    )
+);

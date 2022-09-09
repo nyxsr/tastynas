@@ -1,0 +1,342 @@
+/* -------------------------------------------
+    Buttons
+---------------------------------------------- */
+
+// Button
+.btn {
+    display: inline-block;
+    border: 1px solid #e4eaec;
+    background-color: #e4eaec;
+    color: #222;
+    outline: 0;
+    cursor: pointer;
+    padding: 1.25em 2.78em .95em; //d-s
+    font: {
+        size: .875em;
+        weight: 400;
+    }
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    transition: color .3s, border-color .3s, background-color .3s, box-shadow .3s;
+    white-space: nowrap;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #222;
+        border-color: darken( #e4eaec , 7% );
+        background-color: darken( #e4eaec , 7% );  
+    }
+    i {
+        position: relative;
+        vertical-align: middle;
+        margin-left: .6rem;
+        font-size: 1.357em;
+    }
+}
+// Button Color Styles
+.btn-primary {
+    @include button-variant($primary-color);
+}
+.btn-secondary {
+    @include button-variant($secondary-color);
+}
+.btn-dim {
+    @include button-variant($dim-color);
+}
+.btn-alert { 
+    @include button-variant($alert-color);
+}
+.btn-success  {
+    @include button-variant($success-color);
+}
+.btn-primary-dark {
+    @include button-variant($primary-color-dark);
+}
+.btn-dark {
+    @include button-variant($dark-color);
+}
+.btn-white {
+    color: #222;
+    background-color: #fff;
+    border-color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $white-color;
+        border-color: $primary-color;
+        background-color: $primary-color; 
+    }
+    &.btn-outline {
+        color: #fff;
+        background-color: transparent;
+        border-color: #fff;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $primary-color;
+            background-color: #fff;
+        }
+    }
+    &.btn-link {
+        color: #fff;
+        background-color: transparent;
+        &:hover,
+        &:active,
+        &:focus {
+            color: #fff;
+            background-color: transparent;
+        }
+    }
+}
+// Outline Button
+.btn-outline {
+    color: $border-color-light;
+    background-color: transparent;
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: #666;
+        background-color: #666;
+        color: #fff;
+    }   
+    &.btn-bg {
+        color: #fff;
+    }
+}
+
+// Reveal Button
+.btn-reveal-right {
+    i {
+        font-size: .95em;
+        opacity: 0;
+        margin-right: -1em;
+        transform: translateX(-.5em);
+        margin-left: 0;
+        transition: transform .3s, opacity .3s, margin .3s;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        i {
+            opacity: 1;
+            margin-left: .7rem;
+            transform: translateX(0);
+            margin-right: 0;
+        }
+    }
+}
+// Slide Button
+.btn-slide-right {
+    &:hover,
+    &:active,
+    &:focus {
+        i {
+            animation: .5s ease slideRight;
+        }
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: .5em;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+// Shadow Button
+.btn-shadow {
+    box-shadow: 0 8px 10px 0px rgb(0 0 0 / 10%);
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 15px 20px -15px rgb(0 0 0 / 35%);
+    }
+}
+.btn-shadow-lg {
+    box-shadow: 0px  0px 10px 7px rgb(0 0 0 / 5%);
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0px 4px 8px 2px rgb(0 0 0 / 40%);
+    }
+}
+.btn-shadow-success {
+    box-shadow: 3px 6px 20px 1px #dcff77;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0 13px 20px -10px rgb(#dcff77 , .2);
+    }
+}
+.btn-shadow-icon {
+    i {
+        padding: 5px 3px 3px 5px;
+        margin-left: 1rem;
+        font-size: 1em;
+        line-height: 2.3rem;
+        color: #fff;
+        background-color: $success-color;
+        border-radius: 100%;
+        box-shadow: 2px 3px 9px 0px $success-color;
+    }
+    &.btn-white:hover,
+    &.btn-white:active,
+    &.btn-white:focus {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+.btn-overlap {
+    box-shadow: 4px 4px 0px 0px #a1bc20;
+    &:hover {
+        box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 50%);
+    }
+}
+// Underline Button
+.btn-underline {
+    &:hover,
+    &:active,
+    &:focus {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1px;
+        width: 100%;
+        border-bottom: 1px solid;
+        transform: scaleX(0);
+        transition: transform .3s;
+    }
+    &.btn-underline-visible {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+    &.btn-underline-width-sm {
+        &::after {
+            height: 1px;
+            border-bottom: 0;
+        }
+    }
+    &.primary-bold {
+        position: relative;
+        &::after {
+            position: absolute;
+            bottom: 0%;
+            border-bottom: 10px solid transparent;
+            transform-origin: left center;
+        }
+    }
+}
+.btn-underline.sm::after { width: 46%; }
+.btn-underline.lg::after { 
+    margin-left: -16.5%;
+    margin-right: -16.5%;
+    width: 133%;
+}
+.btn-underline.primary-bold:hover::after { 
+    border-color: rgba(255,156,40,0.3);
+}
+// Link Button 
+.btn-link {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+    }
+}
+
+// Other Button Styles
+.btn-disabled {
+    cursor: not-allowed;
+    background-color: #e4eaec !important;
+    color: #999 !important;
+    border-color: #e4eaec !important;
+    box-shadow: none !important;
+    &::before,
+    &::after {
+        content: none !important;
+    }
+}
+.btn {
+    &.btn-rounded {
+        border-radius: 8px;
+        &::before,
+        &::after {
+            border-radius: 8px;
+        }
+    }
+
+    &.btn-block {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    &.btn-right-circle i{
+        position: relative;
+        z-index: 2;
+        margin-left: 20px;
+        &::before {
+            color: $primary-color;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 38px;
+            height: 38px;
+            z-index: -1;
+            left: 50%;
+            top: 43%;
+            transform: translate(-50%, -50%);
+            background: $white-color;
+            border-radius: 50%;
+        }
+    }
+    &.btn-ellipse {
+        border-radius: 3rem;
+    }
+
+}
+.btn-lg {   
+    padding: 1.1em 2.45em .9em; //d-s
+    font-size: 1.429em;
+}
+.btn-md {
+    padding: 1.16em 2.38em 1em;    //d-s
+    font-size: .8125em;
+}
+
+.btn-sm {
+    padding: 0.9em 1.75em 0.7em;   //d-s
+    font-size: .75em;
+}
+.btn-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 0.857em;
+    color: #54524d;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+    i {
+        line-height: 0;
+    }
+}

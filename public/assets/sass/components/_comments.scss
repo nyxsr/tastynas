@@ -1,0 +1,123 @@
+/* -------------------------------------------
+    comments
+---------------------------------------------- */
+.comments {
+    padding: 6rem 0;
+	ul ul {
+        margin-left: 10rem;
+		padding-top: 4.2rem;
+	}
+	li {
+		margin-bottom: 5rem;
+		&:last-child {
+			border-bottom-width: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+@include mq( sm, max ) {
+    .comments ul ul {
+        margin-left: 3rem;
+    }
+}
+.comment {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	p:last-child { margin-bottom: 0; }
+	@include mq(sm ,max) {
+		flex-direction: column;	
+		.comment-body  {
+			padding-left: 0;
+			.btn-reply {
+				position: relative;
+			}
+		}
+	}
+}
+.comment-body {
+	position: relative;
+	flex: 1 1 auto;
+	padding: .8rem 0 0 2rem;
+	.comment-content {
+		margin-bottom: 15px;
+	}
+	.btn-reply {
+		position: absolute;
+		top: .9rem;
+		right: 0;
+	}
+}
+
+.comment-reply {
+	color: #777;
+	position: absolute;
+	right: 0;
+    top: 1.7rem;
+    text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: -.01em;
+    padding-bottom: .5rem;
+    transition: color .3s, box-shadow .3s;
+	&:hover,
+	&:focus {
+		color: $primary-color;
+		box-shadow: 0 2px 0 $primary-color;
+	}
+}
+.comment-media {
+    max-width: 10rem;
+    flex: 0 0 10rem;
+    height: 10rem;
+	overflow: hidden;
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.comment-user {
+	margin-bottom: 1.8rem;
+	.comment-name {
+		font-weight: 400;
+		color: $dim-color;
+		a {
+			&:hover,
+			&:focus {
+				color: $primary-color;
+			}
+		}
+		span {
+            display: block;
+		}
+	}
+}
+
+.comment-date {
+	display: block;
+	margin-top: .3rem;
+	line-height: 1.5;
+}
+.comment-description {
+	font-size: 2rem;
+	line-height: 1;
+	margin: -1px 0 13px;
+	color: $primary-color-dark;
+}
+.reply {
+	.title {
+		font-size: 1.625em;
+		line-height: 1;
+		margin-bottom: 0;
+	}
+	label {
+		color: $dim-color;
+	}
+    input, textarea {
+        margin-top: 1.1rem;
+    	padding: 1.4rem 2rem;
+    }
+}

@@ -1,0 +1,57 @@
+/* Demo 1
+*/
+
+@include set (
+	(
+        base: (
+            title: (
+                font-size: 2.5em,
+                double: (
+                    font-size: 9rem,
+                    top: 143%,
+                    color: $primary-color-dark,
+                    opacity: .06,
+                ),
+                border: (
+                    _sm-width: 10rem,
+                    _sm-height: 2px,
+                    line-height: 1.1,
+                )
+            ),
+            subtitle: (
+                font-size: .875em,
+                letter-spacing: .2em,
+                color: $primary-color,
+            )
+        ),
+        header: (
+            contact: (
+                padding: 13px 0 13px 23px,
+            ),
+            middle: (
+                background: transparent,
+                center: (
+                    margin:0 2rem 0 3.5rem,
+                ),
+            ),
+        ),
+        footer: (
+            background: $primary-color-dark,
+            middle: (
+                padding: 8rem 0 6.8rem,
+                border-color: #393939,
+            ),
+            bottom: (
+                padding: 2.6rem 0 2.2rem,
+            ),
+            copyright: (
+                color: $body-color,
+            ),
+            about: (
+                p: (
+                    padding-right: 7rem,
+                )
+            )
+        ),
+    )
+);

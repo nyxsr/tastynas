@@ -1,0 +1,82 @@
+/* -------------------------------------------
+    Page Header
+---------------------------------------------- */
+
+$page-header-background: #faf8f5 !default;
+
+
+// Page title
+.page-title {
+    padding-top: 1rem;
+    text-transform: capitalize;
+    color: $dark-color;
+    text-align: center;
+    & + .breadcrumb {
+        padding: 1em 0;
+    }
+}
+
+// Breadcrumb
+.breadcrumb-nav {
+    .breadcrumb {
+        font-size: .875em;
+        padding: 1.6rem 0 1.2rem;
+    }
+    &.has-border .breadcrumb{
+        border-bottom: 1px solid $border-color;
+    }
+}
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    li:last-child {
+            color: $primary-color-dark;
+    }
+    li:not(:last-child) {
+        &::after {
+            position: relative;
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            margin: 0 .6em 0 .8rem;
+            font-size: .857em;
+            font-weight: 600;
+            opacity: .5;
+            color: $dim-color;
+        }
+    }
+}
+// Page Header
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    background-color: $page-header-background;
+}
+// Category in page header
+.cph-header {
+    height: auto;
+    flex-direction: column;
+    padding: 2.9em 1em;
+    .category-content {
+        padding: 1.6rem 0 1.3rem;
+    }
+    .category-container {
+        display: flex;
+        @include mq(md) {
+            width: 78rem;
+        }
+        figure {
+            width: 10.2rem;
+            margin: 0 auto;
+        }
+        .category-name {
+            font-size: 1.6rem;
+        }
+    }
+}
+@include mq( md, max ) {
+    .page-title {
+        font-size: 2.25em;
+    }
+} 

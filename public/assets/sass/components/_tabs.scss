@@ -1,0 +1,429 @@
+/* -------------------------------------------
+    Tab
+---------------------------------------------- */
+@include set-default(
+	(
+		tabs: (
+            link: (
+                font-weight: 400,
+                margin-bottom: -0.1rem,
+                padding: .7rem 3rem,
+                color: $dark-color,
+                text-transform: uppercase,
+            ),
+            pane: (
+                padding: 4rem 0,
+            )
+        ),
+    )
+);
+// Default
+.tab-content {
+    background-color: transparent;
+}
+.nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $border-color-secondary-light;
+}
+
+.nav-link {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    @include print_css( tabs , link );
+    transition: border .3s, color .3s, background-color .3s;
+}
+
+.nav-fill {
+    .nav-item {
+        flex: 1;
+    }
+}
+
+.tab-content {
+    position: relative;
+    > .tab-pane {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 0 !important;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity .3s;
+        &:not(.active) {
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+    > .active {
+        position: relative;
+        height: auto !important;
+        opacity: 1;
+        z-index: auto;
+    }
+}
+
+.tab-pane {
+    @include print_css( tabs , pane );
+}
+
+// Nav Center
+.tab-nav-center {
+    .nav {
+        justify-content: center;
+    }
+}
+
+//Nac Right
+.tab-nav-right {
+    .nav {
+        justify-content: flex-end;
+    }
+}
+
+// Nav Boxed
+.tab-nav-boxed {
+    .nav-item {
+        margin-right: 0;
+    }
+    .nav-link {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+}
+
+// Tab Boxed
+.tab-boxed {
+    .tab-pane {
+        padding: 4rem 4rem 3.5rem; //d-s
+    }
+}
+
+// Tab Underline
+.tab-nav-underline {
+    .nav-link {
+        position: relative;
+        &:not(:hover) {
+            color: $dim-color;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border-bottom: 1px solid $primary-color;
+            transform: scaleX(0);
+            transition: transform .3s;
+            will-change: transform;
+        }
+    }
+    
+    .nav-item.show .nav-link,
+    .nav-link.active,
+    .nav-link:hover {
+        color: $primary-color;
+        &:after {
+            transform: scaleX(1);
+        } 
+    }
+}
+
+// Tab Outline
+.tab-outline {
+    .tab-content {
+        background: $white-color;
+        border: 1px solid $border-color;
+        border-top: none;
+    }
+    .nav-tabs {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0;
+    }
+    .nav-item {
+        flex: 1;
+        border: 1px solid $border-color;
+        border-left-width: 0;
+        &:first-child {
+            border-left-width: 1px;
+        }
+    }
+    .nav-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1.1rem;
+        padding-bottom: .9rem;
+        i {
+            font-size: 1.875em;
+            margin-right: 1rem;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border-top: 3px solid transparent;
+            top: -1px;
+            transform: scale(0);
+            transition: transform .3s;
+            z-index: 1;
+        } 
+    }
+    .nav-item.show .nav-link,
+    .nav-item .nav-link.active {
+        border-bottom: none;
+        border-top-color: transparent;
+        color: $primary-color;
+        background: $white-color;
+        &:after {
+            transform: scale(1);
+            border-color: $primary-color;
+        }
+    }
+    .nav-item:hover .nav-link {
+        &:after {
+            transform: scale(1);
+            border-color: $primary-color;
+        }
+    }
+}
+
+// Tab Vertical
+.tab-vertical {
+    display: flex;
+    .nav-tabs {
+        flex-flow: column nowrap;
+        border: 0;
+        border-right: 1px solid $border-color-secondary-light;
+    }
+    .tab-content {
+        flex: 1;
+    }
+    .nav-item {
+        margin-right: 0;
+        border: 1px solid $border-color;
+        border-right: 0;
+        margin-bottom: 1rem;
+    }
+    .nav-link {
+        position: relative;
+        padding: 1.3rem 4.5rem 1.1rem 4rem;
+        width: 100%;
+        border: 0;
+        text-align: left;
+        margin-bottom: 0;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -1px;
+            width: 3px;
+            height: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            z-index: 1;
+        }
+    }   
+    .tab-pane {
+        padding: 0 2rem;
+    }
+ 
+    &.tab-simple {
+        .nav-link {
+            background: $bg-grey;
+            &::after {
+                transform: translateY(-50%) scale(0);
+                transition: transform .3s;
+            }
+        }
+        .nav-item.show .nav-link,
+        .nav-item .nav-link.active,
+        .nav-item:hover .nav-link {
+            color: $primary-color-dark;
+            background: $white-color;
+            &::after {
+                background-color: $primary-color;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+    }
+}
+
+// Nav Background  ( Primary Color )
+.tab-nav-solid {
+    .nav-link { 
+        padding: 1.3rem 3.8rem 1rem;
+        border: 1px solid $border-color;
+        border-bottom: 0;
+        background-color: $white-color;
+        margin: 0 5px;
+    }
+    .nav-item.show .nav-link,
+    .nav-item .nav-link.active,
+    .nav-item:hover .nav-link {
+        color: $white-color;
+        background-color: $primary-color; 
+        border-color: $primary-color;
+    }
+}
+
+// Nav Icon
+.tab-with-icon {
+    .nav-tabs {
+        border: none;
+    }
+    .nav-link {
+        position: relative;
+        margin: 0 3rem;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background: transparent;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+    }
+    .nav-link.active {
+        &:after {
+            background: $primary-color;
+        }
+    }
+    .nav i {
+        display: block;
+        font-size: 2.812em;
+        margin-bottom: .3rem;
+        color: $primary-color;
+    }
+}
+
+// Responsive
+@include mq( md, max ) {
+    .nav-link {
+        font-size: .875em;
+        padding: 1.2rem 1.5rem;
+    }
+    .tab-nav-solid .nav-link {
+        padding: 1.6rem 2.3rem;
+    }
+    .tab-outline .nav-item {
+        border-left-width: 1px;
+    }
+    .tab-nav-boxed {
+        .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    .tab-vertical {
+        flex-flow: column nowrap;
+        .tab-content,
+        .nav-tabs {
+            width: 100%;
+        }
+        .nav-tabs {
+            border: 0;
+        }
+        .tab-content {
+            padding-left: 0;
+        }
+        .tab-pane {
+            padding: 0;
+        }
+        &.tab-simple {
+            .nav-link {
+                border-right: 1px solid $border-color;
+                &::after {
+                    height: 2px;
+                    width: 100%;
+                    background-color: transparent;
+                    top: calc(100% - 1px);
+                    transform: scale(0);
+                }
+            }
+            .nav-item.show .nav-link,
+            .nav-item .nav-link.active,
+            .nav-item:hover .nav-link {
+                &::after {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+@include mq( sm, max ) {
+    .nav {
+        width: 100%;
+        .nav-item {
+            width: 50%;
+        }
+    }
+    .tab-vertical .nav .nav-item {
+        width: 100%;
+    }
+    .tab-outline .nav-link {
+        font-size: .812em;
+    }
+    .tab-with-icon .nav-link {
+        margin: 0 1rem;
+    }
+}
+
+// Product Tabs
+.product-tab {
+    .nav-link {
+        font-size: 1.125em;
+    }
+    .tab-pane {
+        padding: 2rem 0;
+    }
+}
+.product-tab-type1 {
+    .nav-link {
+        text-transform: capitalize;
+    }
+}
+.product-tab-type2 {
+    .nav-tabs {
+        border-bottom: none;
+    }
+    .nav-link {
+        font-weight: 300;
+        text-transform: capitalize;
+        padding: 2rem .95rem 1.1rem .95rem;
+        &.active,
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+.product-tab-type3 {
+    .nav-link {
+        padding: 1.2rem 1.8rem;
+        @include mq(md, max) {
+            padding: 1.2rem 1.5rem;
+        }
+        &:not(.active):not(:hover) i {
+            color: $dim-color;
+        }
+        i {
+            font-size: 2.4em;
+        }
+    }
+    .nav-title {
+        font-size: .889em;
+    }
+}

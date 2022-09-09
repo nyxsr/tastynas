@@ -1,0 +1,23 @@
+.element-banner-effect {
+    .kenBurnsToRight img {
+        min-height: 40rem;
+        object-fit: cover;
+    }
+    .banner-kenburns {
+        .banner-content {
+            left: 21.65%;
+            max-width: 40rem;
+        }
+        .btn {
+            padding: 1.2em 2.88em;
+        }
+    }
+    .banner-title {
+        font-size: 3.75em;
+    }
+    @include mq(sm, max) {
+        .banner-content {
+            left: 1rem;
+        }
+    }
+}

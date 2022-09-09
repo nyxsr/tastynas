@@ -1,0 +1,68 @@
+/* Demo 1
+*/
+
+@include set (
+	(
+        base: (
+            subtitle: (
+                font-size: 1em,
+                font-weight: 300,
+                text-transform: uppercase,
+                margin-bottom: 2rem,
+                color: #666,
+            ),
+            title: (
+                font-size: 2.25em,
+            )
+        ),
+        header: (
+            middle: (
+                color: $white-color,
+            ),
+            sticky: (
+                background: #1B1B1B,
+            )
+        ),
+        footer: (
+            font-size: 1em,
+            background: $primary-color-dark,
+            middle: (
+                padding: 9rem 0 8rem,
+                border-bottom: 1px solid rgba(119,119,119,.3),
+            ),
+            bottom: (
+                padding: 2.6rem 0 2.2rem,
+            ),
+            newsletter: (
+                title: (
+                    font-size: 1.875em,
+                    font-weight: 300,
+                    margin: 1.2rem 0,
+                ),
+                desc: (
+                    max-width: 55rem,
+                    margin: 0 auto,
+                    color: $body-color,
+                ),
+                form: (
+                    margin: 4rem auto 5rem,
+                    max-width: 61rem,
+                    height: 5.1rem,
+                    input: (
+                        height: 5.1rem,
+                        padding: 0 0 0 2.1rem,
+                        color: $body-color,
+                        border: 0,
+                        background: rgba(255, 255, 255, .06),
+                    ),
+                ),
+                btn: (
+                    padding: 1rem 3.9rem .5rem, //d-s
+                ),
+            ),
+            copyright: (
+                color: $body-color,
+            )
+        ),
+    )
+);

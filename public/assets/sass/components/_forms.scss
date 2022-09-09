@@ -1,0 +1,223 @@
+/* -------------------------------------------
+    Form
+---------------------------------------------- */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    background-color: transparent;
+    margin: 0;
+}
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+}
+option {
+    font-weight: 300;
+}
+
+button {
+    overflow: visible;
+    border-style: none;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type=reset],
+input[type=tel],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 1.1em 1.22em .9em; //d-s
+    border: 1px solid $border-color;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: .875em;
+    line-height: 1.5;
+    color: $grey-color; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 20px;
+}
+
+input {
+    &::placeholder,
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder {
+        color: inherit;
+        transition: color .3s;
+    }
+    &:focus::placeholder,
+    &:focus::-webkit-input-placeholder,
+    &:focus::-moz-placeholder {
+        color: transparent;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input,
+select,
+textarea {
+    font-weight: 300;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-flex;
+    width: 1.286em;
+    height: 1.286em;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border: 1px solid $light-color;
+    border-radius: 0;
+    margin-bottom: 0.3em;
+    margin-right: 0.286em; //
+    font-size: .875em;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    ~ label, ~ span {
+        font-size: .875em;
+        color: $dim-color;
+        cursor: pointer;
+    }
+}
+
+input[type="checkbox"] {
+    box-shadow: none;
+    &:checked {
+        background: $primary-color-dark;
+        border-color: $primary-color-dark;
+        &:before {
+            content: '\f00c';
+            font-size: .643em;
+            font-weight: 900;
+            font-family: 'Font Awesome 5 Free';
+            display: block;
+            line-height: 1.286em;
+            color: $white-color;
+        }
+    }
+}
+
+input[type="radio"] {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: .571em;
+        height: .571em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:checked {
+        border-color: $primary-color;
+    }
+    &:checked::before {
+        background-color: $primary-color;
+    }
+}
+
+select {
+    -moz-appearance: none;
+    padding-right: 1.4em;  ///^^^^^^^^^^^^^^^^^^
+}
+
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    select::-ms-expand { display: none }
+    select:focus::-ms-value { background: transparent; color: currentColor }
+}
+.inline-form {
+    display: flex;
+    input {
+        flex: 1;
+    }
+    @include mq(sm, max) {
+        button {            
+            padding-left: 1.65em;
+            padding-right: 1.65em;
+        }
+    }
+}
+.form-simple {
+    position: relative;
+    border: 1px solid $border-color;
+    input, .btn {
+        border: none;
+    }
+    .btn {
+        position: absolute;
+        top: 54%;
+        right: 1rem;
+        transform: translateY(-50%);
+        padding: 0;
+        background: none;
+        transition: color .3s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.select-box,
+.select-menu {
+    position: relative;
+    select {
+        color: inherit;
+        z-index: 1;
+    }
+    &::before {
+        content: '\e910';
+        font-family: 'panda';
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

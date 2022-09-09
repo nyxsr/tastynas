@@ -1,0 +1,241 @@
+/* Demo7 */
+
+// base
+.menu:not(.vertical-menu) > .submenu > a:after {
+    content: none;
+}
+.dropdown > a {
+    font-weight: 400;
+    &:after {
+        margin-bottom: .4rem;
+        font-size: .714em;
+    }
+}
+.section-seperator {
+    z-index: 1;
+    svg {
+        fill: $white-color;
+        top: unset;
+        height: 21rem;
+    }
+}
+.owl-nav-outer .owl-nav .owl-prev {
+    left: -4.8%;
+}
+.owl-nav-outer .owl-nav .owl-next {
+    right: -4.8%;
+}
+.main-wrapper {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+// main content
+.intro-banner {
+    > figure > img {
+        min-height: 108rem;
+        object-fit: cover;
+    }
+    .act-img {
+        position: absolute;
+        right: 1.7%;
+        top: 19.6%;
+    }
+    .banner-content {
+        position: absolute;
+        left: 4.7%;
+    }
+    .title {
+        align-items: flex-start;
+        font-size: 3.75em;
+        line-height: 1.2;
+        margin: 2.2rem 0 2.8rem;
+        span {
+            margin: 0 0 1.6rem -.3rem;
+        }
+    }
+    p {
+        max-width: 50rem;
+        margin-bottom: 5.1rem;
+    }
+}
+.seperator1 {
+    transform: rotate(180deg);
+}
+.banner2 {
+    > figure > img {
+        min-height: 72rem;
+        object-fit: cover;
+    }
+    .act-img {
+        position: absolute;
+        left: 1.7%;
+        top: 12.5%;
+    }
+    .banner-content {
+        position: absolute;
+        right: 2.9%;
+    }
+    .banner-subtitle {
+        font-size: 1.8rem;
+        letter-spacing: .1em;
+    }
+    .title {
+        align-items: flex-start;
+        line-height: 1.6;
+        margin-left: -3px;
+    }
+    .list {
+        li {
+            color: $dim-color;
+            margin-bottom: 2.2rem;
+        }
+        i {
+            margin-right: 1.3rem;
+        }
+    }
+}
+.counters {
+    padding: 21.5rem 0 17rem;
+    .title {
+        font-size: 3.125em;
+    }
+    .count-to {
+        font-size: 5em;
+        color: $white-color;
+        margin-bottom: 2rem;
+    }
+    .count-title {
+        color: $white-color;
+        opacity: .5;
+    }
+}
+.award-section {
+    padding: 8.5rem 0 0;
+    .counter {
+        margin-bottom: 6.7rem;
+    }
+    .count-to {
+        font-size: 2.5em;
+        color: $primary-color;
+        margin-bottom: .6rem;
+    }
+    .count-title {
+        font-size: 2.4rem;
+        font-weight: 300;
+        color: $dark-color;
+        margin-bottom: .2rem;
+    }
+    .act-img {
+        position: absolute;
+        top: -12.3%;
+        right: 13.2%;
+        z-index: 10;
+    }
+}
+.seperator2 {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+.material-section {
+    padding: 11.5rem 0 1.6rem;
+    .image-box-name {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+    }
+    .image-box .image-box-content {
+        padding: 4.5rem 3rem 0;
+    }
+}
+.material-carousel .owl-item img {
+    width: auto;
+    margin: 0 auto;
+}
+.seperator3 {
+    transform: rotateY(180deg);
+}
+.variety-section {
+    position: relative;
+    padding: 17.6rem 0;
+    .title {
+        margin-left: -2px;
+    }
+    .accordion-content {
+        padding: 1rem 0 1.3rem;
+        img {
+            height: fit-content;
+        }
+    }
+    .accordion-price {
+        font-size: 3rem;
+    }
+    .act-img {
+        position: absolute;
+        top: 9.1rem;
+    }
+    .card-header a {
+        color: $primary-color-dark;
+    }
+}
+.product-section {
+    padding: 8.5rem 0 9rem;
+}
+.testimonial-info cite {
+    font-size: 1.8rem;
+    font-weight: 400;
+    span {
+        font-size: 1.6rem;
+    }
+}
+// Responsive
+@include mq(xl, max) {
+    .section-seperator svg {
+        width: auto;
+    }
+}
+@include mq(lg, max) {
+    .act-img {
+        opacity: .2;
+    }
+    .award-section {
+        .title {
+            font-size: 4rem;
+        }
+        .counter {
+            text-align: center;
+        }
+    }
+    .page-wrapper {
+        overflow: hidden;
+    }
+}
+@include mq(lg) {
+    .footer {
+        position: sticky;
+        top: auto;
+        bottom: 0;
+        left: 0;
+    }
+}
+@include mq(sm, max) {
+    .intro-banner {
+        > figure > img {
+            min-height: 90rem;
+        }
+    }
+    .banner2 {
+        > figure > img {
+            min-height: 60rem;
+        }
+        .banner-content {
+            left: 4.7%;
+        }
+    }
+}
+@media (max-width: 479px) {
+    .intro-banner {
+        > figure > img {
+            min-height: 80rem;
+        }
+    }
+}

@@ -1,0 +1,320 @@
+/* Demo4 */
+
+// base
+
+.header-search {
+    form {
+        border-radius: 3rem;
+        .btn {
+            right: .2rem;
+        }
+    }
+    input {
+        min-width: 24.8rem;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        padding: 1rem 1.9rem 0.9rem;
+    }
+}
+.footer-middle .widget-body i {
+    padding-right: 3px;
+}
+.page-wrapper {
+    overflow: hidden;
+}
+.owl-dots-line {
+    figure {
+        height: 60rem;
+    }
+    .owl-dots-container .owl-dot {
+        color: $body-color;
+    }
+}
+.owl-nav-box .owl-nav {
+    .owl-prev {
+        left: -3rem;
+        background: $white-color;
+    }
+    .owl-next {
+        right: -3rem;
+        background: $white-color;
+    }
+}
+.page-content .title {
+    justify-content: center;
+    text-align: center;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 8rem;
+        height: 2px;
+        top: 5.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $primary-color;
+    }
+}
+.icon-box-num {
+    margin-bottom: .8rem;
+    .icon-box-icon {
+        width: 1.667em;
+        line-height: 1.5; //d-s
+        background: #cfdcd7;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 3em;
+        font-weight: 300;
+        color: $white-color;
+        margin-right: 2rem;
+        padding-top: .8rem; //d-s
+    }
+    .icon-box-title {
+        font-size: 1.25em;
+        font-weight: 300;
+        margin: .2rem 0 .6rem;
+    }
+}
+// main content
+.banner-creative9 {
+    .banner-content {
+        top: 13.5%;
+        left: 8.6%;
+        img {
+            width: auto;
+            margin-bottom: 2.2rem;
+        }
+    }
+    .banner-title {
+        font-size: 2.5em;
+        margin-left: -5px;
+    }
+}
+.pos-left, .pos-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.benefit-section {
+    position: relative;
+    overflow: hidden;
+    .img-back {
+        position: absolute;
+        top: 26.2%;
+        left: 24.4%;
+        width: 64.9rem;
+    }
+    .icon-box p {
+        color: #666;
+        font-size: 1em;
+    }
+}
+.banner5 {
+    img {
+        min-height: 26rem;
+        object-fit: cover;
+    }
+    .banner-content {
+        top: 13.2%;
+        left: 6.3%;
+    }
+    .banner-title {
+        font-size: 1.625em;
+        line-height: 1.384;
+        margin-bottom: 5.9rem;
+    }
+    .old-price {
+        line-height: 2;
+    }
+    .new-price {
+        font-size: 1.875em;
+        line-height: 1.133;
+    }
+}
+.banner6 {
+    img {
+        min-height: 50rem;
+        object-fit: cover;
+    }
+    .banner-content {
+        position: absolute;
+        right: 6.7%;
+    }
+    .banner-subtitle {
+        margin-bottom: 2.2rem;
+    }
+    .banner-title {
+        font-size: 3em;
+        margin-bottom: 3.2rem;
+    }
+    .banner-price {
+        position: absolute;
+        display: inline;
+        font-size: 1.875em;
+        color: $dim-color;
+        span {
+            font-size: 1.6em;
+        }
+    }
+    .list {
+        margin-bottom: 5.2rem;
+        i {
+            color: $primary-color;
+            margin-right: 1.4rem;
+        }
+        li {
+            color: $dim-color;
+            margin-bottom: 2rem;
+        }
+    }
+}
+.banner7 {
+    min-height: 24rem;
+    height: 100%;
+    .banner-content {
+        max-width: 70%;
+        top: 8.5%;
+        right: 9%;
+    }
+    .banner-price-info {
+        letter-spacing: .1em;
+        font-weight: 400;
+        margin-bottom: .7rem;
+    }
+    .banner-title {
+        line-height: 1.2;
+    }
+}
+.trend-section {
+    .tab-pane {
+        padding: 2rem 0;
+    }
+}
+.tab-with-icon {
+    .nav i {
+        font-size: 2.3em;
+    }
+    .nav-link:after {
+        bottom: 5px;
+    }
+}
+.testimonial {
+    padding: 6rem 2rem 3.2rem;
+    background: transparent;
+}
+.testimonial-info {
+    cite {
+        font-size: 1.125em;
+        color: $primary-color-dark;
+        span {
+            font-size: .889em;
+        }
+    }
+}
+.newsletter-section {
+    padding: 3.2rem 0;
+    .newsletter-title {
+        font-weight: 400;
+        color: $white-color;
+    }
+    p {
+        opacity: .8;
+    }
+    input {
+        background: $white-color;
+        padding: 1.1em 1.429em .9em;
+    }
+    .btn-dark {
+        padding: 1.3em 2.74em .9em;
+        border-color: $primary-color-dark;
+        background-color: $primary-color-dark;
+        @media (max-width: 420px) {
+            padding: 1.25em 1em .95em;
+        }
+    }
+}
+.social-link:hover {
+    color: #17D386;
+}
+// Responsive
+@include mq(lg) {
+    .pos-right {
+        .icon-box-num {
+            .icon-box-content {
+                text-align: right;
+            }
+            .icon-box-icon {
+                margin: 0 0 0 2rem;
+                order: 1;
+            }
+        }
+    }
+}
+@include mq(md) {
+    .owl-dots-line .owl-dots-container {
+        left: 15.3%;
+        bottom: 7.5%;
+    }
+    .pos-left {
+        align-items: flex-start;
+    }
+    .pos-right {
+        align-items: flex-end;
+    }
+    .testimonial.with-double-quote {
+        &:after {
+            top: 34.5%;
+            left: 12.7%;
+        }
+        &:before {
+            bottom: 13.5%;
+        }
+    }
+}
+@include mq(lg, max) {
+    .icon-box-num {
+        .icon-box-icon {
+            margin-right: 0;
+        }
+    }
+    .benefit-section .img-back {
+        opacity: .4;
+    }
+    .banner6 {
+        .list {
+            margin-bottom: 3.5rem;
+        }
+        .banner-content {
+            padding-bottom: 6rem;
+        }
+        .banner-price {
+            display: block;
+            margin-top: 2rem;
+        }
+    }
+}
+@include mq(md, max) {
+    .header-middle {
+        .header-search {
+            display: block;
+        }
+        .header-center {
+            width: 100%;
+        }
+    }
+    .benefit-section .img-back {
+        top: 60%;
+    }
+    .banner6 img {
+        object-position: 60%;
+    }
+}
+@include mq(xs, max) {
+    .banner6 .banner-content {
+        left: 10%;
+    }
+    .newsletter-section {
+        .newsletter-title {
+            font-size: 1.56em;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+/* -------------------------------------------
+    Counter
+---------------------------------------------- */
+.count-to {
+    display: inline-block;
+    font-size: 3.75em;
+    line-height: 1;
+    margin-bottom: 2.2rem; //d-s
+    color: $dark-color;
+}
+.count-title {
+    font-weight: 400;
+}
+// counter list
+.counter-list {
+    display: flex;
+    align-items: center;
+    .count-to {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+    }
+    .count-title {
+        margin: 0 0 .4rem;
+    }
+    .count-desc {
+        margin-bottom: 0;
+    }
+}

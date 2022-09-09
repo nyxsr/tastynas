@@ -1,0 +1,270 @@
+/* -------------------------------------------
+    Helper
+---------------------------------------------- */
+// Width
+.w-100 {
+    width: 100% !important;
+}
+// Height
+.h-100 {
+    height: 100% !important;
+}
+.h-auto {
+    height: auto !important;
+}
+// Position
+.p-sticky {
+    position: sticky !important;
+}
+.p-relative {
+    position: relative !important;
+}
+.p-absolute {
+    position: absolute !important;
+}
+.x-50 {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    &.y-50 {
+        transform: translate( -50%, -50% ) !important;
+    }
+}
+.y-50 {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+// Display
+.d-none {
+    display: none !important;
+}
+.d-block {
+    display: block !important;
+}
+.d-inline-block {
+    display: inline-block !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.d-inline-flex {
+    display: inline-flex !important;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+.justify-content-start {
+    justify-content: flex-start !important;
+}
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.align-items-start {
+    align-items: flex-start !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.align-items-end {
+    align-items: flex-end !important;
+}
+.flex-column {
+    flex-direction: column !important;
+}
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+.flex-1 {
+    flex: 1 !important;
+}
+.flex-auto {
+    flex: 0 1 auto !important;
+}
+.overflow-hidden {
+    overflow: hidden !important;
+}
+@include mq(xl) {
+    .d-xl-none {
+        display: none !important;
+    }
+    .d-xl-block {
+        display: block !important;
+    }
+    .d-xl-flex {
+        display: flex !important;
+    }
+    .d-xl-inline-flex {
+        display: inline-flex !important;
+    }
+}
+@include mq(lg) {
+    .d-lg-none {
+        display: none !important;
+    }
+    .d-lg-block {
+        display: block !important;
+    }
+    .d-lg-flex {
+        display: flex !important;
+    }
+    .d-lg-inline-flex {
+        display: inline-flex !important;
+    }
+}
+@include mq(xxl, max) {
+    .d-xxl-show {
+        display: none !important;
+    }
+}
+@include mq(xl, max) {
+    .d-xl-show {
+        display: none !important;
+    }
+}
+@include mq(lg, max) {
+    .d-lg-show {
+        display: none !important;
+    }
+}
+@include mq(md, max) {
+    .d-md-show {
+        display: none !important;
+    }
+}
+@include mq(xs, max) {
+    .d-xs-show {
+        display: none !important;
+    }
+}
+// Font Family
+.font-primary {
+    font-family: $font-family !important;
+}
+.font-secondary {
+    font-family: $second-font-family !important;
+}
+
+// Font Weight
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+// Text Transform
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+.text-normal {
+    text-transform: none !important;
+}
+
+// Text Align
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center!important;
+}
+.text-right {
+    text-align: right !important;
+}
+
+// Text Color
+.text-white {
+    color: $white-color !important;
+}
+.text-light {
+    color: $lighter-color !important;
+}
+.text-grey {
+    color: $grey-color !important;
+}
+.text-body {
+    color: $body-color !important;
+}
+.text-dark {
+    color: $dark-color !important;
+}
+.text-black {
+    color: $black-color !important;
+}
+.text-primary {
+    color: $primary-color !important;
+}
+.text-secondary {
+    color: $secondary-color !important;
+}
+.text-dim {
+    color: $dim-color !important;
+}
+.text-success {
+    color: $success-color !important;
+}
+
+// Letter Spacing
+.ls-2{
+    letter-spacing: .2em !important;
+}
+.ls-1{
+    letter-spacing: .1em !important;
+}
+.ls-normal {
+    letter-spacing: 0 !important;
+}
+// Line Height
+.lh-2 {
+    line-height: 2 !important;
+}
+.lh-1 {
+    line-height: 1 !important;
+}
+.lh-0 {
+    line-height: 0 !important;
+}
+
+// Background
+.bg-white {
+    background-color: $white-color !important;
+}
+.bg-dark {
+    background-color: $dark-color !important;
+}
+.bg-grey {
+    background-color: $grey-color !important;
+}
+.bg-light {
+    background-color: $lighter-color !important;
+}
+.bg-black {
+    background-color: $black-color !important;
+}
+.bg-primary {
+    background-color: $primary-color !important;
+}
+.bg-secondary {
+    background-color: $secondary-color !important; 
+}
+.bg-dim {
+    background-color: $dim-color !important; 
+}
+.bg-success {
+    background-color: $success-color !important;
+}
+
+// Border
+.border-no {
+    border: none !important;
+}

@@ -1,0 +1,391 @@
+/* -------------------------------------------
+    Popup
+        - Popup
+        - Popup Close
+        - Popup Arrow
+        - Popup Content
+        - Popup - Login
+        - Popup - Newsletter
+        - Popup - Product
+        - Popup - Image PhotoSwipe
+        - Popup Zoom, Flip effect
+        - Responsive
+---------------------------------------------- */
+
+
+// Popup
+.mfp-wrap {
+    z-index: 3000;
+}
+.mfp-bg {
+    z-index: 3000;
+    background: #000;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    &.mfp-ready {
+        opacity: .7;
+    }
+    &.mfp-removing {
+        opacity: 0;
+    }
+}
+.mfp-container {
+    padding: 4rem 2rem;
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Popup Close
+.mfp-close {
+    transform: rotateZ(45deg);
+    transition: transform .3s, opacity .3s;
+    width: 33px;
+    height: 33px;
+    opacity: .65;
+
+    .mfp-wrap & {
+        top: 20px;
+        right: 20px;
+    }
+    .mfp-content & {
+        top: -58px;
+        right: -5px;
+    }
+    .mfp-image-holder &,
+    .mfp-iframe-holder & {
+        top: 15px;
+        right: 0;
+    }
+    // .mfp-removing &, // issue
+    span {
+        display: none;
+    }
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: calc(50% - 1px);
+    }
+    &::before {
+        width: 100%;
+        height: 1px;
+        top: calc(50% - 1px);
+        left: 0;
+    }
+    &:hover, &:focus {
+        transform: rotateZ(135deg);
+    }
+}
+// Popup Arrow
+.pswp__button--arrow--left,
+.pswp__button--arrow--right,
+.mfp-arrow {
+    width: 4.8rem;
+    height: 4.8rem;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: "panda";
+    text-align: center;
+    opacity: .5;
+    right: 10%;
+    transition: opacity .3s;
+    border: 2px solid;
+}
+.pswp__ui > button {
+    &::before {
+        background: transparent;
+        position: static;
+        line-height: 44px;
+    }
+    &.pswp__button--arrow--left::before {
+        margin-right: 3px;
+    }
+    &.pswp__button--arrow--right::before {
+        margin-left: 3px;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+.pswp__button--arrow--right::before {
+    content: "\e99d";
+    font-family: 'panda';
+}
+.mfp-arrow::before,
+.mfp-arrow::after {
+    content: "\e99d";
+    position: static;
+    display: inline;
+    margin: 0;
+    border: 0;
+}
+.mfp-arrow::after {
+    content: none;
+}
+button.mfp-arrow {
+    border: 2px solid;
+}
+.pswp__button--arrow--left,
+.mfp-arrow-left {
+    left: 10%;
+
+    &::before {
+        content: "\e99c";
+        font-family: 'panda';
+    }
+}
+
+// Popup Content
+.mfp-content > * {
+    position: relative;
+    margin: auto;
+    background-color: $bg-white;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.1);
+    opacity: 0;
+
+    .mfp-ready & {
+        opacity: 1;
+    }
+
+    .mfp-removing & {
+        opacity: 0;
+    }
+}
+
+// Popup - Login
+.login-popup {
+    max-width: 49rem;
+    padding: 4rem;
+    border-radius: .3rem;
+    margin-top: 1.8rem;
+    .nav-item .nav-link {
+        justify-content: center;
+        color: $body-color;
+        font-size: 1.25em;
+        font-weight: 300;
+        text-transform: capitalize;
+        padding-bottom: 1.5rem;
+        &.active,
+        &:hover {
+            color: $primary-color-dark;
+        }
+    }
+    .tab-pane {
+        padding: 0;
+    }
+    form {
+        margin-bottom: 2.8rem;
+    }
+    .form-group {
+        margin-bottom: 1.8rem;
+        input:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        input {
+            padding: 1em 1.429em;
+        }
+    }
+    .form-footer {
+        margin-bottom: 1rem;
+    }
+    .btn {
+        padding: 1.27em 2.78em 1.09em;
+    }
+    .lost-link {
+        font-size: .875em;
+        padding: 1.2rem 0;
+    }
+    .form-choice label {
+        display: flex;
+        align-items: center;
+        font-size: .875em;
+        margin-bottom: 2.8rem;
+        &::after, &::before {
+            content: '';
+            height: 1px;
+            flex: 1;
+            background: $border-color;
+        }
+        &::after {
+            margin-left: 2rem;
+        }
+        &::before {
+            margin-right: 2rem;
+        }
+    }
+    .social-link {
+        justify-content: center;
+        width: 3.6rem;
+        height: 3.6rem;
+        font-size: .875em;
+        margin: 0 .6rem;
+    }
+}
+
+// Popup - Newsletter
+.newsletter-popup {
+    text-align: center;
+    max-width: 50rem;
+    img {
+        min-height: 200px;
+        object-fit: cover;
+    }
+    label:before {
+        border-color: $grey-color;
+    }
+    form {
+        max-width: 40rem;
+        margin-bottom: 2.9rem;
+    }
+    h3 {
+        margin: 3.2rem 0 .3rem;
+    }
+    .social-links {
+        padding: 2.5rem 0 5rem;
+    }
+    .newsletter-content {
+        padding: 0 2rem;
+    }
+}
+// Popup - Product
+.mfp-product {
+    .mfp-content {
+        max-width: 116rem;
+    }
+    .product {
+        padding: 4rem 3.8rem 4rem 3rem;
+        min-height: 85.1rem;
+    }
+    .product-single .product-details {
+        padding: 0;
+    }
+    .mfp-close {
+        position: absolute;
+        top: -4rem;
+        right: 0;
+    }
+    .owl-nav {
+        .owl-next, .owl-prev {
+            width: 3.6rem;
+            height: 3.6rem;
+            font-size: 3rem;
+        }
+        .owl-next {
+            right: 1rem;
+        }
+        .owl-prev {
+            left: 1rem;
+        }
+    }
+    @include mq(xl, max) {
+        .mfp-container {
+            top: 2rem;
+        }
+        .product {
+            margin-bottom: 3rem;
+        }
+    }
+}
+//popup review
+.review-container {
+    max-width: 820px;
+    padding: 4.4rem 5rem 5rem;
+    .review-title {
+        line-height: 1;
+        color: $dark-color;
+    }
+    .ratings-container {
+        margin-bottom: 28px;
+    }
+    .rating-title {
+        margin-right: 10px;
+        font-size: 1.2727em;
+        letter-spacing: 0;
+        color: $dim-color;
+    }
+    input:not(.custom-checkbox) {
+        padding: 13px 20px;
+    }
+    textarea {
+        min-height: 12.2rem;
+    }
+    .form-checkbox > label {
+        font-size: 1em;
+    }
+    @include mq(sm ,max) {
+        padding: 3rem 1.5rem 3rem;
+    }
+}
+// Popup - Image PhotoSwipe
+.pswp__bg {
+    background-color: rgba(0,0,0,.7);
+}
+.pswp__img--placeholder--blank {
+    background-color: #F2F3F5;
+}
+.pswp__ui--fit .pswp__caption, .pswp__ui--fit .pswp__top-bar {
+    background-color: transparent;
+}
+.pswp__caption__center {
+    text-align: center;
+}
+
+// Popup Zoom, Flip effect
+.mfp-ready.mfp-zoom-popup .mfp-content{
+    transform: scale(1); 
+}
+.mfp-zoom-popup .mfp-content, .mfp-removing.mfp-zoom-popup .mfp-content {
+    transition: .2s ease-in-out; 
+    transform: scale(0.8); 
+}
+.mfp-ready.mfp-flip-popup .mfp-content {
+    transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+}
+.mfp-flip-popup .mfp-content, .mfp-removing.mfp-flip-popup .mfp-content {
+    transition: .3s ease-out;
+    transform: translateY(-20px) perspective( 600px ) rotateX( 20deg );
+}
+
+// Popup Video
+.mfp-content video {
+    width: 100%;
+    height: 100%;
+}
+
+.mfp-video-popup .mfp-content { max-width: 99.9rem; }
+
+.mfp-video-popup {
+    z-index: 10000;
+}
+
+// Popup Img
+.mfp-img-popup .mfp-content {
+    width: unset;
+}
+
+// Responsive
+@include mq(md, max) {
+    .mfp-product .product {
+        padding: 2rem 1rem;
+    }
+    .mfp-arrow {
+        color: #444;
+    }
+}@include mq(sm, max) {
+    .mfp-content .mfp-close {
+        top: -35px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+    }    
+}

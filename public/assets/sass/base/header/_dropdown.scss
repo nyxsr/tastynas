@@ -1,0 +1,479 @@
+/* -------------------------------------------
+    Dropdowns
+        - Dropdown
+        - Dropdown-expanded
+        - CartDropdown
+        - Category Dropdown
+---------------------------------------------- */
+// Variables
+@include set_default(
+    (
+        header: (
+            cart: (
+                label: (
+                    margin: 0 0 0 1rem,
+                    padding: false,
+                    font-size: .855em,
+                    font-weight: 300,
+                    line-height: 1.1,
+                    color: false,
+                ),
+                icon: (
+                    font-size: 1.65em,
+                    margin: 1px 2px 0 0
+                ),
+                count: (
+                    right: -10px,
+                    top: 6px,
+                    text-align: center,
+                    font-size: .458em,
+                    font-weight: 600,
+                    width: 1.9rem,
+                    height: 1.9rem,
+                    line-height: 1.9rem,
+                    border-radius: 50%,
+                    background-color: $primary-color,
+                    color:  $white-color,
+                    z-index: 1,
+                ),
+                hover: (
+                    color: $primary-color,
+                )
+            ),    
+            category: (
+                toggle: (
+                    padding: 1.7rem 1.7rem,
+                    background: $primary-color,
+                    icon: (
+                        font-size: 1.8rem
+                    ),
+                    label: (
+                        margin-left: .7rem
+                    )
+                )
+            )       
+        )
+    )
+);
+// Dropdown
+.dropdown {
+    position: relative;
+    &:hover,
+    &.show {
+        .dropdown-box {
+            visibility: visible;
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        > a {
+            color: $primary-color;
+        }
+    }  
+    a {
+        display: flex;
+        align-items: center;
+        .dropdown-image {
+            max-width: 1.4rem;
+            margin-right: .7rem;
+            height: auto;
+        }
+    }  
+    > a {
+        line-height: 1;
+        padding: .9rem 0;
+        &::after {
+            display: inline-block;
+            margin-left: 8px;
+            font: {
+                family: 'panda';
+                size: 7px;
+            }
+            line-height: 1;
+            content: '\e910';
+        }
+    }
+
+    li {
+        &.active,
+        &:hover {
+            > a {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.dropdown-box {
+    position: absolute;
+    right: 0;
+    padding: .5rem 0;
+    color: $body-color;
+    background-color: $bg-white;
+    box-shadow: 0 5px 30px 2px rgba($black-color,0.2);    
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1061;
+    transition: transform .2s ease-out, opacity .2s;
+    transform: translate3d(0, -10px, 0);
+    li {
+        line-height: 1.1;
+    }
+}
+
+// Swicher
+.switcher {
+    li a {
+        padding: .6rem 1rem .6rem .8rem;
+    }
+    img {
+        margin-bottom: 2px; //d-s
+    }
+}
+
+// Cart Dropdown
+.cart-dropdown {
+    .dropdown-box {
+        right: -1rem;
+        padding: 3rem;
+        min-width: 33.5rem;
+    }
+    .products {
+        max-height: 36rem;
+        margin-right: -.5rem;
+        padding-right: 1rem;
+        overflow: scroll;
+    }
+    .cart-toggle {
+        &:after {
+            content: none;
+        }
+        i {
+            @include print_css(header, cart, icon);
+        }
+    }
+    .cart-label {
+        display: block;
+        cursor: pointer;
+        @include print_css( header, cart, label );
+        > span {
+            display: block;
+            font-weight: 400;
+        }
+    }
+    .cart-count:not(.not-badge) {
+        position: absolute;
+        display: inline-block;
+        transition: color .4s;
+        @include print_css( header, cart, count );
+        padding-top: 1px;
+    }
+    .cart-total {
+        display: flex;
+        margin-top: 2rem;
+        margin-bottom: .3rem;
+        padding: 1.9rem 0 .9rem;
+        border-top: 1px solid $border-color;
+        label {
+            margin: 0 auto 0 .3rem;
+            color: $dim-color;
+        }
+        .price {
+            font-size: 1.125em;
+            font-weight: 400;
+            color: $primary-color;
+        }
+    }
+    .cart-action {
+        .btn {
+            justify-content: center;
+            padding: 1.27em 2.78em 1.09em;
+            letter-spacing: .01em;
+        }
+    }
+    .cart-price {
+        color: $secondary-color;
+    }
+
+    &:hover {
+        @include print_css( header, cart, hover );
+    }
+}
+// Login Dropdown
+.login-dropdown {
+    margin-left: 0;
+    .login-toggle:after {
+        content: none;
+    }
+    .btn-close {
+        position: fixed;
+        top: 2.7rem;
+        right: 39.6rem;
+        transform: rotateZ(45deg);
+        transition: transform .3s, visibility .3s;
+        width: 2.8rem;
+        height: 2.8rem;
+        opacity: 0.65;
+        visibility: hidden;
+        z-index: 3000;
+        &:after, &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #fff;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: calc(50% - 1px);
+            margin-left: 0;
+        }
+        &:before {
+            width: 100%;
+            height: 1px;
+            top: calc(50% - 1px);
+            left: 0;
+        }
+        &:hover {
+            transform: rotateZ(135deg);
+        }
+    }
+    &.opened .btn-close {
+        visibility: visible;
+    }
+}
+.off-canvas {
+    font-weight: 300;
+    .dropdown-box {
+        position: fixed;
+        top: 0;
+        right: -37rem;
+        max-width: 37rem;
+        width: 100%;
+        height: 100vh;
+        min-width: auto;
+        font-size: $font-body-size;
+        padding: 2.5rem 3rem;
+        opacity: 1;
+        visibility: visible;
+        transition: right 0.3s;
+        transform: none;
+        z-index: 2999;
+        box-shadow: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        .login-popup {
+            padding: 0;
+        }
+    }
+    .canvas-overlay {
+        position: fixed;
+        left: 0;
+        width: 100vw;
+        top: -10vh;
+        height: 120vh;
+        background: rgba($black-color,0.65);
+        z-index: 2998;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s , visibility .3s;
+    }
+    .canvas-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $border-color;
+        padding: .2rem 0 1.1rem;
+    }
+    .canvas-title {
+        font-size: 1.25em;
+        letter-spacing: -.018em;
+    }
+    .btn-close {
+        font-size: 1em;
+        font-weight: 300;
+        color: $grey-color;
+        text-transform: capitalize;
+        &:hover, &:focus, &:active {
+            color: $primary-color;
+        }
+        i { 
+            margin-right: 0;
+            font-size: inherit;
+        }
+    }
+    .product-mini {
+        margin-top: 2rem;
+    }
+    &.opened {
+        .dropdown-box {
+            right: 0;
+        }
+        .canvas-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &:hover .dropdown-box {
+        top: 0;
+    }
+}
+@include mq(xs,max) {
+    .off-canvas .dropdown-box {
+        max-width: 28.5rem;
+        padding: 1.5rem 2rem;
+    }
+    .login-dropdown .btn-close {
+        right: 29rem;
+    }
+}
+
+.product.product-mini {
+    display: flex;
+    align-items: center;
+    .product-media {
+        position: static;
+        min-width: 8.4rem;
+        margin-right: 1.9rem;
+        img {
+            height: 100%;
+        }
+    }
+    .product-detail a {
+        white-space: normal;
+        width: 95%;
+    }
+    .product-name {
+        margin-bottom: .8rem;
+        font-size: .875em;
+        &:not(:hover) {
+            color: $dim-color;
+        }
+    }
+    .price-box {
+        display: flex;
+        align-items: center;
+        font-size: 1.125em;
+        line-height: 1;
+    }
+    .product-price {
+        font-size: inherit;
+        color: $dark-color;
+    }
+    .product-quantity {
+        margin-right: .4rem;
+        &::after {
+            content: '\e96f';
+            padding-left: .3rem;
+            font-size: .833em;
+            font-family: 'panda';
+        }
+    }
+    .btn-remove {
+        position: absolute;
+        right: -.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        i {
+            position: relative;
+            top: 1px;
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@include mq(lg, max) {
+    .cart-dropdown {
+        .cart-label {
+            display: none;
+        }
+    }
+}
+
+@include mq(xs, max) {
+    .cart-dropdown {
+        .product .product-media {
+            margin-right: 1rem;
+        }
+        .dropdown-box {
+            min-width: 28.5rem;
+        }
+    }
+}
+
+// Category Dropdown
+.dropdown.category-dropdown .dropdown-box {
+    z-index: 19;
+}
+.category-dropdown {
+    > a {
+        @include print_css( header, category, toggle );
+        &::after {
+            content: none;
+        }
+        i {
+            @include print_css( header, category, toggle, icon );
+        }
+        span {
+            @include print_css( header, category, toggle, label );
+        }
+    }
+    .dropdown-box {
+        padding: 0;
+        left: 0;
+        min-width: 12rem;
+        box-shadow: none;
+        background-color: $light-color;
+        transition: opacity .2s, z-index 0s, transform .2s ease-out;
+        visibility: hidden;
+        top: 100%;
+    }
+    &.menu-fixed .dropdown-box {
+        visibility: hidden;
+    }
+    &.dropdown.show .dropdown-box {
+        visibility: visible;
+        box-shadow: 0 2px 10px rgba($black-color,0.1);
+        transform: translate3d(0, 0, 0);
+        transition: opacity .5s, z-index 0s;
+    }
+    &.has-border {
+        .dropdown-box {
+            background-color: $bg-secondary-white;
+            border: 1px solid $border-color-light;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 1000;
+            transform: rotate(45deg);
+            width: 1.2rem;
+            height: 1.2rem;
+            left: 22px;
+            background-color: #fff;
+            border: 1px solid $border-color-light;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            opacity: 0;
+            cursor: pointer;
+            visibility: hidden;
+        }
+    }
+}
+
+@include mq(lg) {
+    .sticky-header:not(.fixed) {
+        .category-dropdown.menu-fixed {
+            .dropdown-box {
+                top: calc(100% + 20px);
+                transform: none;
+                visibility: visible;
+                opacity: 1;
+            }
+            &.has-border::before {
+                top: calc(100% + 15px);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}

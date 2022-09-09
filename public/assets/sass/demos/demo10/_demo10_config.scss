@@ -1,0 +1,45 @@
+/* Demo 1
+*/
+
+@include set (
+	(
+		header: (
+            top: (
+                color: #aaa,
+                border-bottom: 1px solid rgba(170, 170, 170, .05),
+            ),
+            middle: (
+                color: $white-color,
+                border-bottom: 1px solid rgba(170, 170, 170, .05),
+            ),
+            sticky: (
+                background: #1B1B1B,
+            )
+        ),
+        footer: (
+            background: $primary-color-dark,
+            middle: (
+                padding: 8rem 0 6.8rem,
+                border-bottom: 1px solid #393939,
+                widget: (
+                    body:(
+                        icon: (
+                            padding: 2.5px 0,
+                        )
+                    )
+                )
+            ),
+            bottom: (
+                padding: 2.6rem 0 2.2rem,
+            ),
+            copyright: (
+                color: $body-color,
+            ),
+            about: (
+                p: (
+                    padding-right: 7rem,
+                )
+            )
+        ),
+    )
+);

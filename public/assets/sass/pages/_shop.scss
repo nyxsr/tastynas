@@ -1,0 +1,363 @@
+.shop-page {
+    .product-wrap {
+        margin-bottom: 3rem;
+    }
+    .product-list .product-media {
+        width: 28.8rem;
+        margin-right: 2.5rem;
+    }
+    .select-box,
+    .select-menu {
+        select {
+            max-width: 14rem;
+            width: auto;
+        }
+    }
+    .widget-title >span:first-child {
+        line-height: 2.22;
+    }
+}
+.select-box,
+.select-menu {
+    select {
+        padding: .707em 2.2em .507em 1.22em; //d-s  
+    }
+}
+.toolbox,
+.toolbox-left,
+.toolbox-right,
+.toolbox-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+.toolbox {
+    position: relative;
+    justify-content: space-between; 
+    line-height: 1.5;   
+    padding: 3.5rem .2rem 2rem;
+    margin: 0 -5px 0 -3px;
+    transition: margin .4s;
+    background-color: transparent;
+    &.sticky-toolbox {
+        padding-top: 4rem;
+    }
+    &, &-left, &-right {
+        > *:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+    label {
+        font-size: .875em;
+        margin-right: .9rem;
+        text-transform: uppercase;
+    }
+    select {
+        cursor: pointer;
+        font-size: 1em;
+    }
+    .select-box {
+        .select {
+            color: $dark-color;
+            height: 4.5rem;
+        }
+        select {
+            min-width: 8.6rem;
+            @include mq(md, max) {
+                min-width: auto;
+                padding-left: 1.5rem;
+            }
+        }
+    }
+}
+.toolbox-item {
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+    label { color: $dark-color; }
+    &.show-info {
+        margin-bottom: 0;
+    }
+}
+
+// Layout Button
+.btn-layout {
+    color: #dadada;
+    font-size: 1.5em;
+    padding: 3px 2px 0;
+    &:last-child {
+        padding-right: 0;
+    }
+    &:hover,
+    &.active {
+        color: $dim-color;
+    }
+    & + & {
+        margin-left: 8px;
+    }
+}
+
+// Select Menu
+.select-menu {
+    color: $dark-color;
+    &::before {
+        pointer-events: none;
+    }
+    ul, ul::before {
+        content: '';
+        position: absolute;
+        border: 1px solid $border-color;
+        width: 11px;
+    }
+    ul {
+        top: 100%;
+        z-index: 1000;
+        width: 20rem;
+        margin-top: 1rem;
+        padding: 1.5rem 2rem;
+        font-size: .875em;
+        background-color: $bg-secondary-white;
+        opacity: 0;
+        visibility: hidden;
+
+        &::before {
+            top: -6px;
+            left: 30px;
+            height: 11px;
+            border-width: 1px 0 0 1px;
+            background-color: $bg-secondary-white;
+            transform: rotate(45deg);
+        }
+    }
+    &.opened > ul {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.select-menu-toggle {
+    border: 1px solid $border-color;
+    padding: .8em 2.2em .67em 1.22em;
+    &:hover {
+        color: #333;
+    }
+}
+
+// Select Items
+.select-item {
+    padding: 6px .7rem 4px 1.2rem;
+    color: $dark-color;
+    background: $border-color-light;
+    i {
+        padding: .5rem .6rem .7rem;
+        margin-left: 5px;
+        font-size: .75em;
+        vertical-align: middle;
+    }
+}
+
+.select-items {
+    display: none;
+    font-size: .75em;
+    margin: -6px 0 1.8rem;
+    > * {
+        display: inline-block;
+        margin: 0 .8rem .5rem 0;
+    }
+    .filter-clean {
+        margin-left: 1.2rem;
+    }
+}
+
+// Toolbox Pagination
+.toolbox-pagination {
+    font-size: 1em;
+}
+
+// Toolbox Horizontal
+.toolbox-horizontal.fixed {
+    .sidebar-overlay, .sidebar-content {
+        min-height: 100vh;
+    }
+}
+//Left Sidebar Toggle
+.left-sidebar-toggle {
+    padding: .84em .666em .66em; //d-s
+    font-weight: 400;
+    font-size: 1em;
+    height: 4.5rem;
+}
+
+.sticky-toolbox.fixed {
+    position: fixed;
+    background-color: $bg-secondary-white;
+    padding: 1rem 2rem 0;
+}
+
+//Filter action
+.filter-actions {
+    display: block;
+	align-items: center;
+	padding: 0 0 2.5rem .2rem;
+}
+.filter-price-text {
+	font-size: .813em;
+    color: $dark-color;
+}
+.filter-clean {
+	font-size: 1.167em;
+}
+
+// Shop Sidebar
+.shop-sidebar {
+    line-height: 1.3;
+    .widget {
+        .widget-body {
+            padding: 2rem 0 3.3rem;
+        }
+        &:first-child .widget-body{
+            padding-top: 4.5rem;
+            padding-bottom: 2.2rem;
+        }
+        &:last-child .widget-body {
+            margin-bottom: .7rem;
+        }
+    }
+    .ratings-container {
+        padding: .72rem 0;
+        margin-bottom: 0;
+        font-size: .875em;
+        justify-content: space-between;
+        &:hover {
+            cursor: pointer;
+            .rating-reviews {
+                color: $primary-color;
+            }
+        }
+        .rating-reviews {
+            font-size: 1.6rem;
+            color: $dim-color;
+        }
+        &.active .rating-reviews {
+            color: $primary-color;
+        }
+    }
+    .filter-items {
+        a::before {
+            content: '';
+            position: absolute;
+            outline: 1px solid $light-color;
+            outline-offset: 4.5px;
+            width: .8rem;
+            height: .8rem;
+            top: 40%;
+            left: -2.2rem;
+            transform: translateY(-50%);
+        }
+        .active > a::before {
+            background-color: $primary-color;
+            outline-color: $primary-color;
+        }	
+    }
+}
+.noUi-tooltip {
+    border: none;
+    font-size: .875em;
+}
+.noUi-horizontal .noUi-tooltip {
+    bottom: 145%;
+}
+.noUi-target {
+    margin-top: 7px;
+}
+// Responsive
+.select-menu-toggle,
+.select-menu select {
+    min-width: 18rem;
+    @include mq(xl, max) {
+        min-width: 16.5rem;
+    }
+}
+@include mq(sm) {
+    .toolbox-horizontal .toolbox-left {
+        margin-right: auto;
+    }
+}
+@include mq(lg, max) {
+    // Shop Sidebar : Mobile
+    .toolbox {
+        .sidebar-fixed {
+            margin-right: 0;
+        }
+        .sidebar-content {
+            display: block;
+        }
+    }
+
+    // Shop Sidebar's Select Menu : Mobile
+    .sidebar-content {
+        .select-menu {
+            display: block;
+            margin: 0;
+            ul {
+                position: static;
+                padding: 0;
+                border: 0;
+                margin: 0 0 1.1rem;
+                opacity: 1;
+                visibility: visible;
+            }
+            &::before,
+            ul::before,
+            > a::before {
+                content: none;
+            }
+        }
+        .select-menu-toggle {
+            display: block;
+            border-width: 2px 0 0;
+            padding: 2rem 0 1rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        .toolbox-item:first-child a {
+            border: none;
+        }
+    }
+}
+@include mq(md,max) {
+    .toolbox-item {
+        label, > span, &.show-info {
+            display: none;
+        }
+    }
+}
+@include mq(sm, max) {
+    .toolbox-item {
+        &.select-box {
+            margin-right: 0;   
+        }
+        &.toolbox-layout {
+            display: none;
+        }
+    }
+    .toolbox .toolbox-left {
+        margin: 0;
+        .left-sidebar-toggle {
+            margin-right: 1rem;
+        }
+    }
+    .toolbox-horizontal .toolbox-right {
+        margin-left: auto;
+    }
+    .toolbox-pagination {
+        flex-direction: column;
+        > .show-info {
+            margin-right: 0;
+        }
+    }
+}
+@include mq(xs, max) {   
+    .sticky-toolbox.fixed {
+        padding: 1rem 1.5rem 0;
+    }
+}

@@ -1,0 +1,101 @@
+.account-page {
+    input {
+        min-height: 5.1rem;
+    }
+    .page-content {
+        padding-top: 4.2rem;
+    }
+    .tab-vertical {
+        .tab-pane {
+            padding: 0;
+        }
+        .nav-tabs {
+            border-right: none;
+        }
+        .nav-item {
+            border: none;
+            border-bottom: 1px solid $border-color;
+        }
+        .nav-link {
+            padding: 1.2rem 0;
+            text-transform: none;
+            font-weight: 300;
+            &.active {
+                color: $primary-color;
+            }
+        }
+        .tab-content {
+            @include mq(md, max) {
+                padding: 0 2rem;
+            }
+        }
+    }
+    .card-title {
+        border-bottom: 1px solid $border-color;
+    }
+    .icon-box {
+        p {
+            font-size: .875em;
+            transition: color .3s;
+        }
+        &:hover {
+            .icon-box-icon,
+            p {
+                color: $primary-color;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .icon-box-icon {
+        color: $dim-color;
+        font-size: 3.75em;
+        transition: color .3s;
+    }
+    fieldset {
+        margin: 7rem 0 2rem;
+        padding: 2rem;
+        border: 1px solid $lighter-color;
+    }
+    #account label {
+        display: block;
+        margin: 1rem 0;
+    }
+    #orders {
+        overflow-x: auto;
+        th:nth-child(2),
+        th:nth-child(4) {
+            min-width: 10rem;
+        }
+    }
+    .login-popup input {
+        transition: border-color .3s;
+        &:focus {
+            border-color: $grey-color;
+        }
+    }
+}
+.order-table {
+    thead th {
+        padding: .7rem 1rem;
+        color: $dark-color;
+        font-size: 2.2rem;
+        font-weight: 300;
+        text-align: left;
+        &:not(:last-child) {
+            width: calc( 86.55% / 4);
+        }
+    }
+    tbody {
+        border-bottom: 1px solid $border-color;
+        td {
+            padding: 2.1rem 1rem;
+            font-size: 1.6rem;
+            border-top: 1px solid $border-color;
+        }
+    }
+    .order-total {
+        color: $dim-color;
+    }
+}

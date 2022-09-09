@@ -1,0 +1,285 @@
+/* -------------------------------------------
+	Sidebars
+		- Base
+		- Sidebar Elements
+		- Right Sidebar
+		- Fixed Sidebar
+		- Tag
+------------------------------------------- */
+
+@include set-default( 
+    ( 
+        sidebar: ( 
+            _page-move: 250px, 
+            widget: ( 
+                title: ( 
+                    border-bottom: 1px solid $border-color, 
+                    color: $primary-color-dark, 
+                ), 
+                body: ( 
+                    padding-top: 1.9rem, 
+                    padding-bottom: 2.9rem, 
+                )
+            ), 
+            filter-item: ( 
+                body: ( 
+                    padding: 1.1rem 0 .9rem 2.7rem, //d-s
+                )
+            )
+        ), 
+    )
+);
+.sidebar-active .sidebar,
+.right-sidebar-active .right-sidebar {
+    .sidebar-overlay,
+    .sidebar-close {
+        visibility: visible;
+        opacity: 1;
+    }
+    .sidebar-content {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.page-wrapper {
+    .sidebar-active & {
+        margin-left: #{
+ if( get( base, page-wrapper, margin-left), get( base, page-wrapper, margin-left), 0)+get( sidebar, _page-move)
+    }
+    ;
+    margin-right: #{
+ if( get( base, page-wrapper, margin-right), get( base, page-wrapper, margin-right), 0) - get( sidebar, _page-move)
+}
+
+;
+
+}
+.right-sidebar-active & {
+    margin-left: #{
+ if( get( base, page-wrapper, margin-left), get( base, page-wrapper, margin-left), 0) - get( right-sidebar, _page-move)
+}
+;
+margin-right: #{
+ if( get( base, page-wrapper, margin-right), get( base, page-wrapper, margin-right), 0)+get( right-sidebar, _page-move)
+}
+;
+
+}
+
+}
+// Sidebar Elements
+.sidebar-overlay,
+.sidebar-toggle,
+.sidebar-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+}
+.sidebar-overlay {
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .4s,
+    opacity .4s;
+}
+.sidebar-close {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .4s,
+    opacity .4s;
+}
+.sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 160px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    color: $white-color;
+    background-color: rgba(28, 26, 26, 0.8);
+}
+.sidebar-close {
+    position: fixed;
+    margin: 0;
+    left: calc(100vw - 52px);
+    top: 12px;
+    font-size: 3.5rem;
+    color: $lighter-color;
+    z-index: 1201;
+    &:hover {
+        color: $lighter-color;
+    }
+}
+.sidebar-content {
+    bottom: 0;
+    width: 30rem;
+    padding: 2rem;
+    transform: translateX(-100%);
+    overflow: auto;
+    background-color: $bg-white;
+    opacity: 0;
+    transition: transform .4s,
+    opacity .4s;
+    .widget-body {
+        position: relative;
+        @include print_css(sidebar, widget, body);
+        opacity: 1;
+        transition: opacity .3s;
+        &.collapsible-line:before {
+            position: absolute;
+            content: "";
+            height: calc( 100% - 21px);
+            left: 0;
+            top: 50%;
+            border-right: 1px solid #e0dede;
+            transform: translateY(-50%);
+        }
+    }
+    .btn-filter {
+        padding: .84em 1.73em .5em;
+        font-size: .75em;
+    }
+}
+// Right Sidebar
+.right-sidebar {
+    order: 2;
+    .sidebar-toggle {
+        left: auto;
+        right: 0;
+    }
+    .sidebar-close {
+        left: 20px;
+    }
+    .sidebar-content {
+        transform: translateX(100%);
+        left: auto;
+        right: 0;
+    }
+    .sidebar-content::-webkit-scrollbar {
+        width: 0;
+    }
+}
+@include mq(lg) {
+    // Fixed Sidebar
+    .sidebar-fixed {
+        .sidebar-toggle,
+        .sidebar-overlay,
+        .sidebar-close {
+            display: none;
+        }
+        .sidebar-content {
+            position: relative;
+            width: auto;
+            transform: none;
+            overflow: visible;
+            padding: 0;
+            opacity: 1;
+            z-index: 19;
+        }
+    }
+}
+// Tag for blog & product-single
+.tag {
+    display: inline-block;
+    padding: 1rem 1.3rem .6rem;
+    margin: .5rem .6rem .5rem 0;
+    border: 1px solid $border-color;
+    font-size: .75em;
+    font-weight: 400;
+    line-height: 1.35;
+    transition: color .3s,
+    border-color .3s,
+    background .3s;
+    text-transform: uppercase;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        color: $white-color;
+        background: $dim-color;
+        border-color: $dim-color;
+    }
+}
+//Sidebar Collapsible
+.widget-collapsible {
+    .toggle-btn {
+        padding: 1rem 0;
+        &::before {
+            content: '\e911';
+            font-size: .75em;
+            font-weight: 500;
+        }
+    }
+    >.collapsed .toggle-btn::before {
+        transform: rotate(-180deg);
+    }
+    .collapsed~.widget-body {
+        opacity: .1;
+    }
+}
+.widget-search {
+    input {
+        padding: 0.68em 1.029em;
+    }
+    .btn i {
+        font-size: 1.071em;
+    }
+}
+.widget-sidebar {
+    .widget-title {
+        position: relative;
+        cursor: pointer;
+        @include print_css( sidebar, widget, title);
+        &.collapsed {
+            .title-text:before {
+                transform: scale(0);
+            }
+        }
+        .title-text {
+            line-height: 2.2;
+            padding-top: 3px;
+        }
+    }
+    .widget-tags {
+        padding-top: 2.4rem;
+        margin-bottom: 1.2rem;
+    }
+    .comment-list {
+        line-height: 1.25;
+        padding: 1rem 0;
+        margin-bottom: 0;
+        >a {
+            font-weight: 400;
+            &:not(:hover) {
+                color: $dim-color;
+            }
+        }
+    }
+    .owl-nav-top .owl-nav {
+        top: -28.8%;
+        right: -.4rem;
+    }
+}
+// Filter Items
+.filter-items {
+    // Item
+    &.search-ul li {
+        color: $dim-color;
+        padding: .7rem 0;
+    }
+    li {
+        @include print_css(sidebar, filter-item, body);
+        color: $dark-color;
+    }
+    a {
+        position: relative;
+    }
+    .active>a {
+        color: $primary-color;
+    }
+}

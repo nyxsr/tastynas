@@ -1,0 +1,192 @@
+/* -------------------------------------------
+    Testimonial
+---------------------------------------------- */
+.testimonial blockquote {    
+    position: relative;
+    margin-bottom: 2rem;
+    .testimonial-author-thumbnail img {
+        border-radius: 50%;
+    } 
+}
+.testimonial-info {
+    cite {
+        text-transform: uppercase;
+        color: $dark-color;
+        font: {
+            size: .875em;
+            weight: 400;
+            style: normal;
+        }
+        span {
+            display: block;
+            text-transform: capitalize;
+            font-weight: 300;
+        }
+    }
+}
+//double quote
+.with-double-quote {
+    &::before,
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        color: $primary-color;
+        font-size: 1.875em;
+        font-weight: 600;
+    }
+    &::before {
+        content: '\f10e';
+        bottom: 7.5%;
+        right: 12%;
+    }
+    &::after {
+        content: '\f10d';
+        top: 30.5%;
+        left: 13.5%;
+    }
+    @include mq(sm, max) {
+        &:after {
+            top: 26.5%;
+            left: 3.5%;
+        }
+        &:before {
+            bottom: 3.5%;
+        }
+    }
+}
+//one quote    
+.with-quote {
+    p {
+        position: relative;
+    }
+    &:before {
+        position: absolute;
+        top: 43%;
+        right: 12.5%;
+        font-family: "Font Awesome 5 Free";
+        content: "\f10d";
+        color: $bg-grey;
+        font-size: 7.5em;
+        font-weight: 600;
+        transform: translateY(-50%);
+    }
+}
+.with-quote.grey-section::before {
+    color: #fff;
+}
+.testimonial-lg blockquote {
+    padding: 4.5rem 5rem 5.7rem 5rem; //d-s
+    .testimonial-author-thumbnail {
+        float: left;
+        margin-right: 2rem;
+    }
+    .testimonial-title {
+        margin-bottom: 15px;
+    }
+    .testimonial-info {
+        padding: 1.4rem 0;
+    } 
+    @include mq(sm ,max) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.testimonial-md {
+    .testimonial-author-thumbnail {
+        position: absolute;
+        top: -50px;
+        &::after {
+            position: absolute;
+            content: "\f10d";
+            font-family: "Font Awesome 5 Free";
+            font-size: 1.25em;
+            font-weight: 600;
+            bottom: -0.3rem;
+            right: -1.2rem;
+            width: 4rem;
+            border-radius: 50%;
+            color: #fff;
+            background-color: $primary-color;
+            line-height: 4rem;
+            text-align: center;
+        }
+    }
+    blockquote {
+        margin-top: 5.1rem;
+        padding: 2.8rem 2.7rem 2.5rem 2.9rem;
+    }
+    .ratings-container {
+        padding-left: 130px;
+        margin-bottom: 3.9rem;
+    }
+}
+//type2 of md
+.md-type2 {
+    blockquote{
+        padding: 0 4.7rem 0 0;
+        margin-top: 78px;
+        &::after {
+            top: 53%;
+            right: 19.5%;
+        }
+        @include mq(md, max) {
+            padding-right: 0;
+        }
+    }
+    .testimonial-author-thumbnail {
+        top: -78px;
+    }
+} 
+.testimonial-sm {
+    border: 1px solid $border-color;
+    padding: 2rem;
+    .testimonial-author-thumbnail {
+        float: left;
+        padding-right: 3rem;
+    } 
+    .testimonial-info {
+        padding-bottom: 7px;
+    } 
+    blockquote {
+        margin: 0;
+        > p {
+            padding-top: 7px;
+        }
+    }
+    @include mq(sm) {
+        cite {
+            display: flex;
+        }
+        .testimonial-info {
+            span {
+                margin: 0 0 0 18px;
+            }
+        }
+    }
+    @include mq(sm ,max) {
+        blockquote {
+            text-align: center;
+        }
+        .testimonial-author-thumbnail {
+            float: unset;
+            max-width: 100px;
+            margin: 0 auto;
+        }
+    }
+}
+//  Centered
+.testimonial-centered {
+    padding: 2rem 2rem .8rem;
+    background-color: transparent;
+    text-align: center;
+    .testimonial-author-thumbnail {
+        margin: 0 auto 3.5rem;
+        width: 12rem;
+        height: 12rem;
+    } 
+    blockquote {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 94.2rem;
+    }
+}

@@ -1,0 +1,23 @@
+/***********************************
+        title - page
+***********************************/
+.vertical-title-type {
+    display: flex;
+    align-items: center;
+    .vertical-wrap {
+        display: flex;
+        justify-content: center;
+        @include css(width, base , title , vertical , _vertical-width);
+        @include mq(sm, max) {
+            @include css(width, base , title , vertical , _vertical-width-mobile);
+        }
+    }
+    .vertical-title {
+        position: relative;
+        left: 22px;
+        bottom: -25px;
+        font-size: 3.75em;
+        opacity: .1;
+        white-space: nowrap;
+    }
+}

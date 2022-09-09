@@ -1,0 +1,67 @@
+/* -------------------------------------------
+	Variables
+------------------------------------------- */
+
+// 1. Colors
+$primary-color: #fabf01 !default;
+$primary-color-dark: #000 !default;
+$secondary-color: #fabf01 !default;
+$dim-color: #000 !default;
+$alert-color: #f12a57 !default;
+$success-color: #b9cf3e !default;
+
+$body-color: #777 !default;
+$dark-color: #333 !default;
+$lighter-color: #e1e1e1 !default;
+$grey-color: #999 !default;
+$light-color: #ccc !default;
+$white-color: #fff !default;
+$black-color: #000 !default;
+
+$border-color: #e0dede !default;
+$border-color-light: #eee !default;
+$border-color-dark: #3f3e3d !default;
+$border-color-secondary-light: #ebebeb !default;
+
+$bg-white: #fefdff !default;
+$bg-secondary-white: #fff !default;
+$bg-grey: #f8f8f8 !default;
+
+// 2. Font
+$alt-font-family: sans-serif !default;
+$font-family: Josefin Sans, $alt-font-family !default;
+$second-font-family: $font-family;
+$font-text-weight: 300;
+$font-body-weight: 300;
+$font-body-size: 1.6rem;
+
+// 3. Breakpoints
+$breakpoints: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1600px,
+    xlst: 1920px,
+);
+$max-breakpoints: (
+    xs: 479px,
+    sm: 575px,
+    md: 767px,
+    lg: 991px,
+    xl: 1199px,
+    xxl: 1599px,
+);
+
+// 4. Link Colors
+$social-facebook: #3b5998;
+$social-twitter: #00aced;
+$social-linkedin: #c8232c;
+$social-email: #dc4a38;
+$social-pinterest: #6567a5;
+$social-reddit: #ea4c89;
+$social-tumblr: #007bb6;
+$social-vk: #1769ff;
+$social-whatsapp: #3c8a38;
+$social-xing: #126567;

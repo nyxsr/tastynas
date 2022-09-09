@@ -1,0 +1,174 @@
+/* Demo10 */
+
+// base
+.header .divider {
+    background: rgba(170, 170, 170, .1);
+}
+.header .social-links {
+    color: #aaa;
+}
+.footer-middle .widget-body i {
+    padding-right: 3px;
+}
+img {
+    height: 100%;
+}
+// main content
+.intro-banner {
+    img {
+        min-height: 80rem;
+        object-fit: cover;
+    }
+    .banner-content {
+        position: absolute;
+        top: 39.6%;
+        right: -.7%;
+    }
+    .banner-subtitle {
+        opacity: .7;
+        margin-bottom: 1.3rem;
+    }
+    .banner-title {
+        font-size: 3.75em;
+        margin-left: -.3rem;
+        span {
+            line-height: 1.2;
+        }
+    }
+    .title-underline > span:first-child:after{
+        bottom: 0;
+        left: 5px;
+        max-width: 10rem;
+        border-color: $body-color;
+    }
+    p {
+        max-width: 48rem;
+        margin-bottom: 5.1rem;
+    }
+    .banner-price {
+        position: absolute;
+        bottom: -1.2rem;
+        display: inline;
+        font-size: 1.5em;
+        color: #fff;
+        .price {
+            position: relative;
+            font-size: 2em;
+        }
+        span {
+            font-size: .375em;
+        }
+    }
+    &.intro2 {
+        .banner-content {
+            left: 4.7%;
+            top: 38.5%;
+        }
+        p {
+            font-size: 1.125em;
+            opacity: 1;
+        }
+    }
+}
+.banner1 {
+    .banner-title {
+        font-size: 1.562em;
+        .text-big {
+            font-size: 1.4em;
+        }
+    }
+    p {
+        font-size: 1.125em;
+        white-space: nowrap;
+    }
+}
+.banner2 {
+    img {
+        min-height: 40rem;
+        object-fit: cover;
+    }
+    .banner-title {
+        font-size: 3.125em;
+    }
+    p {
+        font-size: 1.125em;
+        opacity: .5;
+    }
+}
+.collect-section {
+    .products {
+        padding: 0 6rem;
+    }
+    .collection-img img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.newsletter-section {
+    min-height: 40.1rem;
+    padding: 8.3rem 1.5rem 8.1rem;
+    .title {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: .875em;
+        letter-spacing: .1em;
+        opacity: .6;
+    }
+    form {
+        max-width: 57.1rem;    
+        input {
+            color: $body-color;
+            background: $white-color;
+            &::placeholder {
+                color: inherit;
+            }
+        }
+    }
+    .btn {
+        border: none;
+    }
+    .social-links {
+        color: $white-color;
+    }
+    .social-link {
+        font-size: 1.312em;
+        opacity: .8;
+        margin: 0 1.9rem;
+    }
+}
+.testimonial-section {
+    padding: 9rem 0 5.5rem;
+    .testimonial-info {
+        cite {
+            font-size: 1.125em;
+        }
+        span {
+            font-size: .889em;
+        }
+    }
+}
+.gallery-section {
+    img {
+        height: 100%;
+    }
+}
+// Responsive
+
+@include mq(lg, max) {
+    .intro1 img {
+        object-position: 70%;
+    }
+    .intro2 img {
+        object-position: 30%;
+    }
+}
+@include mq(xs, max) {
+    .intro1 .banner-content {
+        left: 4.7%;
+    }
+    .collect-section .products {
+        padding: 0;
+    }
+}

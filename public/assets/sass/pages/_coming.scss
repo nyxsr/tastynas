@@ -1,0 +1,50 @@
+.coming-page {
+    height: 100vh;
+    min-height: 74rem;
+    padding: 14.5% 0;
+    font-size: 1em;
+    .banner-content {
+        @include mq(xl) {
+            max-width: 46%;
+        }
+    }
+    h1 {
+        font-size: 6rem;
+        @include mq(md, max) {
+            font-size: 3.5rem;
+        }
+    }
+    .container-fluid img {
+        vertical-align: baseline;
+    }
+    .countdown-amount {
+        font-size: 2.625em;
+        color: $success-color;
+    }
+    .countdown-period {
+        color: rgba(84, 82, 77, .6);
+        font-size: 1.5em;
+    }
+    .countdown-default.colon-split .countdown-section:not(:first-child)::before {
+        color: $success-color;
+        font-size: 4.2rem;
+        top: 35%;
+        left: -3%;
+    }
+    .countdown-section {
+        width: 130px;
+        margin: 0;
+    }
+    hr {
+        max-width: 60rem;
+    }
+    p {
+        max-width: 68rem;;
+    }
+    form {
+        max-width: 53.5rem;
+        input {
+            border-right: 0;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+/***********************************
+            slider
+**********************************/
+.slider-brand {
+    figure {
+        display: inline-block;
+    }
+    .owl-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .owl-stage {
+        display: flex;
+    }
+}
+.slider-testimonial cite{
+    font-size: 1.125em;
+    font-weight: 400;
+    color: $primary-color-dark;
+    span {
+        font-size: .8889em;
+        margin-top: 7px;
+    }
+}

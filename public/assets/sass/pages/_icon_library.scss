@@ -1,0 +1,40 @@
+@include mq( lg ) {
+    .cols-lg-10 > * {
+        width: 10%;
+    }
+}
+.sample-icon-circle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    i {
+        width: 2em;
+        height: 2em;
+        display: flex;
+        font-size: 30px;
+        color: $white-color;
+        background-color: $primary-color;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.sample-icon {
+    display: flex;
+    align-items: center;
+    color: $dim-color;
+    span {
+        padding: 7px 0;
+    }
+    i {
+        margin-right: 1rem;
+        font-size: 20px;
+    }
+    i:not(.fas, .fab) {
+        line-height: 0;
+    }
+}
+.icon-tab .tab-content {
+    border: 1px solid $border-color;
+    border-width: 0 1px 1px;
+}

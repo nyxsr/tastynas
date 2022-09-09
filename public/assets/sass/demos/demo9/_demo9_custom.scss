@@ -1,0 +1,198 @@
+/* Demo9 */
+
+.menu:not(.vertical-menu) > .submenu > a:after {
+    content: none;
+}
+.dropdown>a:after {
+    font-size: .714em;
+}
+.page-wrapper {
+    overflow: hidden;
+}
+.header {
+    border-bottom: 1px solid #3f3e3d;
+}
+// intro
+.intro-banner {
+    .banner-content {
+        top: 27.1%;
+    }
+    .banner-subtitle {
+        opacity: .48;
+    }
+    .banner-title {
+        font-size: 3.75em;
+    }
+    .btn:not(:hover) {
+        border-color: rgba(255, 255, 255, .4);
+    }
+    .act-img {
+        position: absolute;
+        bottom: -4.2%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 40rem;
+        z-index: 1;
+    }
+}
+.section-seperator {
+    svg {
+        fill: $white-color;
+        height: auto;
+        top: -17.4vw;
+    }
+}
+.banner-section {
+    padding: 11.2rem 0 10rem;
+    background-position: -0.8rem 2.9rem;
+    h2 {
+        font-size: 3em;
+        margin: 1.4rem 0 2.7rem -.2rem;
+    }
+    .second-desc {
+        img {
+            margin-bottom: 1.2rem;
+        }
+    }
+    .banner1 {
+        margin-top: 10.6rem;
+        .banner-media {
+            padding-left: 10.6%;
+        }
+    }
+}
+.product-section {
+    margin-bottom: 8rem;
+}
+.benefit-section {
+    position: relative;
+    margin-bottom: 20rem;
+    .img-back {
+        position: absolute;
+        top: 15.6%;
+        left: 22.6%;
+        width: 67.4rem;
+        z-index: -1;
+    }
+    .icon-box {
+        text-align: left;
+        margin-bottom: 6.7rem;
+        i {
+            color: #C4B687;
+            font-size: 1.95em;
+        }
+        .icon-box-content {
+            text-align: left;
+            margin-top: .7rem;
+        }
+        .icon-box-title {
+            font-size: 1.875em;
+            margin-bottom: .3rem;
+        }
+        p {
+            max-width: 30rem;
+            line-height: 1.25;
+        }
+    }
+    .icon-box-icon {
+        margin-bottom: .8rem;
+    }
+}
+.seperator2 svg {
+    fill: #f8fcf9;
+    transform: rotateY(180deg);
+    z-index: -1;
+}
+.testimonial-section {
+    padding: 8rem 0 12rem;
+    h2 {
+        font-size: 3em;
+    }
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .testimonial-info {
+        cite {
+            font-size: 1.125em;
+        }
+        span {
+            font-size: .889em;
+        }
+    }
+}
+
+.banner5 {
+    img {
+        min-height: 40rem;
+        object-fit: cover;
+    }
+    .banner-title {
+        font-size: 3em;
+    }
+    p {
+        max-width: 62rem;
+        opacity: .6;
+    }
+}
+// Responsive
+
+@include mq(md) {
+    .pos-right {
+        .icon-box,
+        .icon-box .icon-box-content {
+            text-align: right;
+        }
+        p {
+            margin-left: auto;
+        }
+    }
+}
+@include mq(md, max) {
+    .intro-banner {
+        .banner-title {
+            font-size: 3em;
+        }
+    }
+    .benefit-section {
+        margin-bottom: 10rem;
+        .icon-box {
+            text-align: center;
+            .icon-box-content {
+                text-align: center;
+            }
+            p {
+                margin: 0 auto;
+            }
+        }
+    }
+    .icon-box {
+        img {
+            transform: translateX(16%);
+        }
+    }
+    .pos-right .icon-box img {
+        transform: translateX(-16%);
+    }
+    .img-back {
+        opacity: .4;
+    }
+    .banner-section , .testimonial-section {
+        h2 {
+            font-size: 2em;
+        }
+    }
+    .banner-section {
+        background-position-y: -100rem;
+    }
+    .with-double-quote:before {
+        bottom: 0;
+    }
+}
+@include mq(xs, max) {
+    .footer-middle .widget-newsletter .btn {
+        padding: 1rem 1.65rem .5rem;
+    }
+}

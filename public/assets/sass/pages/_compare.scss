@@ -1,0 +1,144 @@
+/* -------------------------------------------
+    Compare
+---------------------------------------------- */
+@include set-default (
+    (
+        compare: (
+            list-background: (
+                background-color: #f8f8f8,
+            )
+        )
+    ),
+);
+//compare-page
+.compare-default {
+    padding: 25px 0 100px;
+    .panda-compare-table {
+        overflow-x: auto;
+        > .compare-row:nth-child(2n) .compare-col {
+            @include print_css(compare, list-background);
+        }
+    }
+    .panda-compare-table .compare-value:last-child .to-right,
+    .panda-compare-table .compare-value:nth-child(2) .to-left {
+        pointer-events: none;
+        color: #e1e1e1;
+    }
+    .compare-row {
+        display: flex;
+    }
+    .compare-col {
+        padding: 35px 0 32px;
+        @include mq('810px') {
+            min-width: 25%;
+            max-width: 25%;
+        }
+        @include mq('810px' , max) {
+            min-width: 45%;            
+        }
+        @include mq(sm , max) {
+            min-width: 63%;            
+        }
+    }
+    .compare-field {
+        color: $grey-color;
+        text-align: right;
+        padding-right: 6rem;
+    }
+    .compare-basic {
+        .compare-field {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .compare-col {
+            padding-bottom: 4rem;
+        }
+    } 
+    .compare-value {
+        position: relative;
+        padding-left: 2rem;
+        &,
+        & > .product-price {
+            color: $primary-color-dark;
+        }
+    }   
+    @include mq(sm, max) {
+        .compare-value {
+            padding-left: 10px;
+        }   
+    }
+    .ratings-container {
+        margin: 0;
+    }
+    .product:hover .product-action-float {
+        bottom: 0;
+    }
+    .btn-moving {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity .2s , visibility .2s , left .2s, right .2s;
+    }
+    .btn-right {
+        right: 0px; 
+    }
+    .btn-left {
+        left: 0px;
+    }
+    .product:hover {
+        .btn-moving {
+            visibility: visible;
+            opacity: 1;
+        }
+        .btn-left {
+            left: -5rem;
+        }
+        .btn-right {
+            right: -5rem;
+        }
+        @include mq(md, max) {            
+            .btn-left {
+                left: -3rem;
+            }
+            .btn-right {
+                right: -3rem;
+            }
+        }
+    }
+    //compare price
+    .product-price {
+        font-size: inherit;
+    }
+    .compare-availability {
+        p {
+            margin: 0;
+        }
+        .stock {
+            text-transform: capitalize;
+            color: #ff9c28;
+        }
+    }
+}
+.panda-compare-table {
+    .product-action-float {
+        position: relative;
+        display: inline-flex;
+        margin-top: 2.5rem;
+        visibility: visible;
+        opacity: 1;
+        padding: 7px 19px;
+    }
+    .btn-product-icon {
+        text-align: center;
+        line-height: 2.0625em;
+        font-size: 1.125em;
+        width: 2.0625em;
+        height: 2.0625em;
+        &:not(:hover) {
+            color: $body-color;
+        }
+    }
+} 

@@ -1,0 +1,55 @@
+/* Demo 2
+*/
+
+@include set (
+	(
+		header: (
+            middle: (
+                padding-bottom: 2.5rem,
+            ),
+            bottom: (
+                letter-spacing: .1em,
+                padding: 0,
+                color: $white-color,
+                background: #353431,
+            )
+        ),
+        footer: (
+            background: #222,
+            middle: (
+                padding: 8rem 0 6.8rem,
+                border-bottom: 1px solid #393939,
+            ),
+            bottom: (
+                padding: 2.3rem 0 1.9rem,
+            ),
+            copyright: (
+                color: $body-color,
+            )
+        ),
+        post: (
+            list: (
+                width: 213px,
+            ),
+        ),
+        tabs: (
+            link: (
+                font-size: 1.8rem,
+                text-transform: capitalize,
+            ),
+            pane: (
+                padding: 2rem 0,
+            )
+        ),
+        product: (
+            label: (
+                new: (
+                    color: #6dae4d,
+                )
+            ),
+            rating: (
+                _star-color: $primary-color,
+            )
+        )
+    )
+);

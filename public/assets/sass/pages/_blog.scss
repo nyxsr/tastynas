@@ -1,0 +1,257 @@
+/* -------------------------------------------
+    Blog Page
+---------------------------------------------- */
+
+.posts {
+    .title-underline>span:first-child {
+        line-height: 1.9;
+    }
+}
+.post-single {
+    .post-details {
+        padding: 1.9rem 0 .9rem;
+    }
+    .post-meta {
+        font-size: 1em;
+        white-space: nowrap;
+        overflow: auto;
+        color: $body-color;
+        a {
+            font-weight: 400;
+            color: $dim-color;    
+            &:hover {
+                color: $primary-color;
+                mark {
+                    color: $primary-color;
+                }
+            }
+        }
+        mark {
+            transition: color .3s;
+        }
+        i {
+            font-size: .875em; 
+            margin-bottom: 2px;
+        }
+    }
+    mark {
+        font-size: .875em;
+        font-weight: 400;
+        background-color: transparent;
+    }
+    .post-title {
+        font-size: 2.25em;
+        margin-bottom: 1.8rem;
+    }
+    p {
+        margin-bottom: 1.6rem;
+    }
+    .divider {
+        height: 1em;
+        border-left: 1px solid $border-color;
+        margin-bottom: .5rem;
+    }
+    .testimonial {
+        position: relative;
+        padding: 0.2em 1.8em 0;
+        margin-top: 5.1rem;
+        margin-bottom: 5.6rem;
+        border-left: 4px solid $primary-color;
+        line-height: 1.42;
+        background-color: transparent;
+        p {
+            position: relative;
+            font-size: 1.5em;
+            line-height: 1.43;
+            color: $primary-color-dark;
+            margin-bottom: 2.5rem;
+        }
+        cite {
+            font-size: .875em;
+            font-weight: 400;
+            font-style: normal;
+            text-transform: uppercase;
+            color: $dim-color;
+        }
+        &:before {
+            position: absolute;
+            top: 62%;
+            right: 16%;
+            content: "\f10e";
+            color: #f8f8f8;
+            font-family: "Font Awesome 5 Free";
+            font-size: 7.5em;
+            font-weight: 600;
+            transform: translateY(-50%);
+        }
+    }
+    .banner-wrapper {
+        padding: 2.7rem 0 2.5rem;
+        .banner-desc {
+            margin-left: -1.3rem;
+        }
+        .title {
+            margin: 1.9rem 0 2.2rem;
+        }
+    }
+    .list li {
+        margin-bottom: 1.5rem;
+    }
+    .list-circle i {
+        font-size: .812em;
+    }
+    .post-tags {
+        padding: 1rem 0 3.5rem;
+        label {
+            font-size: 1.25em;
+            color: $primary-color-dark;
+            padding-right: .5rem;
+        }
+    }
+    .post-author-detail {
+        display: flex;
+        border: 1px solid $border-color;
+        padding: 3rem 3rem 2.3rem;
+        margin-bottom: 5.1rem;
+        figure {
+            width: 11.4rem;
+            flex: 0 0 auto;
+            margin-right: 3rem;
+        }
+        .author-name {
+            margin: 1.6rem 0 0;
+        }
+        .author-link {
+            font-weight: 400;
+            color: $dim-color;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        span {
+            font-size: .75em;
+        }
+    }
+    .social-links {
+        color: $dim-color;
+        padding-bottom: 4.5rem;
+        .social-link {
+            font-size: .875em;
+            margin: 0 1.25rem;
+        }
+    }
+    .nav-links {
+        display: flex;
+        > * {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+        .nav-next {
+            text-align: right;
+            margin-left: auto;
+        }
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        a {
+            font-weight: 400;
+            color: $primary-color-dark;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+.related-posts {
+    margin-bottom: 4.6rem;
+    .owl-nav-top .owl-nav {
+        top: -8.5rem;
+        i {
+            font-size: 2.4rem;
+        }
+    }
+    .owl-theme .owl-nav {
+        .owl-next {
+            right: 0;
+        }
+        .owl-prev {
+            left: -6rem;
+        }
+    }
+}
+.calendar {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid $border-color;
+    caption {
+        font-weight: 400;
+        font-size: 1.125em;
+        color: $primary-color-dark;
+        line-height: 3.13;
+    }
+    th {
+        padding: .3rem 0 .6rem 0;
+        font-size: .812em;
+        font-weight: 600;
+        color: $primary-color-dark;
+    }
+    td {
+        padding: .8rem 0;
+        text-align: center;
+        color: $primary-color-dark;
+        transition: background .3s;
+        &.disabled {
+            color: $light-color;
+        }
+        &:hover {
+            background: $dim-color;
+            color: $white-color;
+        }
+        &.today {
+            color: $primary-color;
+        }
+        &.today:hover {
+            background: $primary-color;
+            color: $white-color;
+        }
+    }
+    a {
+        padding: .5rem;
+        &:hover {
+            color: $white-color;
+        }
+    }
+    .calendar-nav {
+        position: absolute;
+        top: 2.2rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: .937em;
+        padding: 0 1.7rem;
+    }
+}
+@include mq(lg, max) {
+    .posts .post-classic.post-classic-sm .post-details {
+        padding: 4.4rem 3rem 4.3rem;
+    }
+}
+@include mq(sm, max) {
+    .posts .post-classic .post-details {
+        padding: 4.4rem 1.5rem 5rem;
+    }
+    .post-single {
+        .testimonial p {
+            font-size: 1.8rem;
+        }
+        .post-author-detail {
+            flex-direction: column;
+        }
+        .nav-links a {
+            font-size: 1.4rem;
+        }
+    }
+}

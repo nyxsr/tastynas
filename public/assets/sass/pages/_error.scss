@@ -1,0 +1,36 @@
+.error-page {
+    font-size: 1em;
+    padding: 13.1% 0;
+    h1 {
+        font-family: 'Mukta', $alt-font-family;
+        font-size: 9.625em;
+        line-height: .7;
+    }
+    .banner-subtitle {
+        font-size: 5em;
+    }
+    .banner-content {
+        left: 7.7%;
+        max-width: 80vw;
+        @include mq(md) {
+            max-width: 47%;
+        }
+    }
+    .btn {
+        padding: 1.18em 2.85em;
+    }
+    @include mq(lg, max) {
+        background-position: 10%;
+    }
+    @include mq(md, max) {
+        h1 {
+            font-size: 7em;
+        }
+        .banner-subtitle {
+            font-size: 3em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+    }
+}

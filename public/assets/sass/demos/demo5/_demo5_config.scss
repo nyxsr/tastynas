@@ -1,0 +1,108 @@
+/* Demo 2
+*/
+
+@include set (
+	(
+        base: (
+            _container-fluid-width: 1881px,
+            _container-width: 1570px,
+            title: (
+                border: (
+                    color: #eee,
+                ),
+            ),
+        ),
+        sidebar: (
+			widget: (
+				title: (
+                    display: block,
+                    font-size: 1em,
+					text-transform: capitalize,
+					border-bottom: 0,
+                    padding: 1.2rem 0 1.2rem,
+                ),
+                body:(
+                    padding-top: 4px,
+                    padding-bottom: 4px,
+                ),
+            ),
+            filter-item: (
+                body: (
+                    padding: 4px 0 4px 15px,
+                )
+            )
+		),
+		header: (
+            middle: (
+                font-weight: 400,
+				padding-top: 3.5rem,
+                padding-bottom: 2.8rem,
+                background: transparent,
+                color: rgba(#fff, .8),
+                border-bottom: 1px solid rgba(#fff, .1),
+                login: (
+                    icon: (
+                        font-size: 2.1rem,
+                    )
+                )
+            ),
+            wishlist: (
+                icon: (
+                    font-size: 2.4rem
+                ),
+            ),
+            sticky: (
+                background: #333,
+            ),
+            mmenu-toggle: (
+                color: $white-color,
+            ),
+            newsletter: (
+                title: (
+                    color: #e1e1e1,
+                ),
+            ),
+        ),
+        footer: (
+            background: #222,
+            middle: (
+                display: false,
+                padding: 8.2rem 0 6.5rem,
+                border-bottom: 1px solid #393939,
+            ),
+            about: (
+                p: (
+                    color: #666,
+                )
+            ),
+            newsletter: (
+                title: (
+                    margin: 1.2rem 0 1rem,
+                    color: #eee,
+                ),
+                desc: (
+                    color: #777,
+                    margin-bottom: 2.6rem,
+                ),
+                form: (
+                    max-width: 32.7rem,
+                    input: (
+                        padding: 0.307em 0,
+                        color: $dim-color,
+                    ),
+                ),
+                btn: (
+                    _color: #999,
+                ),
+            ),
+            copyright: (
+                color: $body-color,
+            )
+        ),
+        menu: (
+            ancestor: (
+                color: rgba(#fff, .8),
+            ),
+        )
+    )
+);

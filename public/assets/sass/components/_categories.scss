@@ -1,0 +1,169 @@
+/* -------------------------------------------
+    Categories
+---------------------------------------------- */
+
+@include set-default(
+	(
+		category: (
+            content: (
+                padding: 2.3rem 0, //d-s
+            )
+        ),
+    )
+);
+.category {
+    position: relative;
+    .category-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transition: background 0.3s;
+        @include css(padding, category, content, padding);
+    }
+}
+.category-absolute {
+    .category-content {
+        cursor: pointer;
+        position: absolute;
+    }
+}
+.category-name {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.category-count {
+    font-size: .875em;
+}
+// Simple
+.category-simple {
+    figure {
+        border: 1px solid $border-color;
+        transition: border-color .3s;
+    }
+    &:hover figure {
+        border-color: $primary-color;
+    }
+}
+
+// With Icon
+.category-icon {
+    text-align: center;
+    i {
+        font-size: 3.3125em;
+        transition: color .3s;
+    }
+    &:hover i {
+        color: $primary-color;
+    }
+    .category-content {
+        padding-top: .5rem;
+    }
+}
+
+// Classic
+.category-classic {
+    .category-content {
+        width: 87%;
+        bottom: 0;
+        transform: translateY(-50%);
+        background-color: $dark-color;
+        color: $white-color;
+        margin: 0 auto;
+        padding: 1.65rem 0;
+    }
+    .category-name {
+        text-transform: uppercase;
+        color: $white-color;
+        transform: translateY(10px);
+        transition: transform .3s;
+    }
+    .category-count {
+        display: block;
+        font-size: .75em;
+        line-height: 1.5;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity .3s, transform .3s;
+    }
+    &:hover {
+        .category-count {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .category-name {
+            transform: translateY(0);
+        }
+    }
+}
+
+// Ellipse
+.category-ellipse {
+    img {
+        border: 1px solid transparent;
+        border-radius: 50%;
+        transition: padding .3s;
+    }
+    .category-content {
+        padding-top: 1.7rem;
+    }
+    .category-name {
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+    &:hover img,
+    &.active img {
+        padding: 1rem;
+        border-color: $primary-color;
+    }
+}
+
+// Banner
+.category-banner {
+    overflow: hidden;
+    color: $white-color;
+    .category-content {
+        left: 2.8rem;
+        bottom: 1.6rem; //d-s
+        align-items: flex-start;
+        z-index: 1;
+        padding: 0;
+    }
+    .category-name {
+        text-transform: none;
+        color: $white-color;
+        line-height: 1;
+        transform: translateY(10px);
+        transition: transform .3s;
+    }
+    .category-count {
+        display: block;
+        font-size: .75em;
+        line-height: 1.5;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity .3s, transform .3s;
+    }
+    &:hover {
+        .category-count {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .category-name {
+            transform: translateY(0);
+        }
+    }
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 36.5%;
+        background: linear-gradient(to bottom,rgba(125,185,232,0) 0,#000 100%);
+        opacity: 0.7;
+        z-index: 1;
+    }
+}

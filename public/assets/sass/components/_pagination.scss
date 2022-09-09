@@ -1,0 +1,49 @@
+/* -------------------------------------------
+    Pagination
+---------------------------------------------- */
+
+ul.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.125em;
+    color: $dim-color;
+}
+.page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.1rem;
+    transition: color .3s;
+    :hover:not(.disabled) > &,
+    .active > & {
+        color: $primary-color;
+    }
+    .disabled > & {
+        color: #aaa;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+.page-link-prev, .page-link-next {
+    min-width: 2rem;
+}
+.page-item:not(:last-child) {
+    margin-right: 1.7rem;
+}
+.page-item-dots {
+    white-space: nowrap;
+    &::before {
+        content: '.''.''.';
+        margin-top: -.6em;
+        display: inline-block;
+        vertical-align: middle;
+        letter-spacing: .2em;
+    }
+}
+.show-info {
+    color: $dark-color;
+    span {
+        margin: 0 .5rem;
+    }
+}

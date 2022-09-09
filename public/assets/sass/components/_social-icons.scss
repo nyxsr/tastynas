@@ -1,0 +1,180 @@
+/* -------------------------------------------
+    Social Links
+        - Default Style
+        - Other Styles
+            - Active Style
+            - Inline Style
+            - Border Style
+---------------------------------------------- */
+
+// Default Style
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: $dim-color;
+}
+
+.social-link {
+    text-align: center;
+    margin: 0 1.3rem;
+    transition: color .4s, border .4s, background .4s, opacity .4s;
+    &.social-facebook {
+        color: $social-facebook;
+    }
+    &.social-twitter {
+        color: $social-twitter;
+    }
+    &.social-linkedin {
+        color: $social-linkedin;
+    }
+    &.social-email {
+        color: $social-email;
+    }
+    &.social-pinterest {
+        color: $social-pinterest;
+    }
+    &.social-reddit {
+        color: $social-reddit;
+    }
+    &.social-tumblr {
+        color: $social-tumblr;
+    }
+    &.social-vk {
+        color: $social-vk;
+    }
+    &.social-whatsapp {
+        color: $social-whatsapp;
+    }
+    &.social-xing {
+        color: $social-xing;
+    }
+    &:hover {
+        color: $primary-color;
+        opacity: .8;
+    }
+}
+
+.social-lg .social-link {
+    width: 2.5em;
+    line-height: 2.5em;
+    margin: 1.5rem;
+    font-size: 1.5em;
+}
+.social-md .social-link {
+    width: 2.68em;
+    line-height: 2.68em;
+    margin: .5rem;
+    font-size: 1em;
+}
+// Active Style
+.social-link-active {
+    .social-link {
+        color: $white-color;
+    }
+    .social-facebook {
+        background: $social-facebook;
+    }
+    .social-twitter {
+        background: $social-twitter;
+    }
+    .social-linkedin {
+        background: $social-linkedin;
+    }
+    .social-email {
+        background: $social-email;
+    }
+    .social-pinterest {
+        background: $social-pinterest;
+    }
+    .social-reddit {
+        background: $social-reddit;
+    }
+    .social-tumblr {
+        background: $social-tumblr;
+    }
+    .social-vk {
+        background: $social-vk;
+    }
+    .social-youtube { // not specified color yet.
+        background: $primary-color; 
+    }
+    .social-whatsapp {
+        background: $social-whatsapp;
+    }
+    .social-xing {
+        background: $social-xing;
+    }
+}
+// Circle
+.social-circle .social-link {
+    border-radius: 50%;
+}
+// Inline Style
+.social-links.dirVertical {
+    flex-direction: column;
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 2.8rem;
+        height: 2.8rem;
+        &:hover {
+            color: $primary-color;
+            background: none;
+        }
+    }
+}
+// border
+.social-border .social-link {
+    border: 1px solid $border-color;
+    &:hover {
+        color: $white-color;
+    }
+    &.social-facebook:hover {
+        background: $social-facebook;
+        border-color: $social-facebook;
+    }
+    &.social-twitter:hover {
+        background: $social-twitter;
+        border-color: $social-twitter;
+    }
+    &.social-linkedin:hover {
+        background: $social-linkedin;
+        border-color: $social-linkedin;
+    }
+    &.social-email:hover {
+        background: $social-email;
+        border-color: $social-email;
+    }
+    &.social-pinterest:hover {
+        background: $social-pinterest;
+        border-color: $social-pinterest;
+    }
+    &.social-reddit:hover {
+        background: $social-reddit;
+        border-color: $social-reddit;
+    }
+    &.social-tumblr:hover {
+        background: $social-tumblr;
+        border-color: $social-tumblr;
+    }
+    &.social-vk:hover {
+        background: $social-vk;
+        border-color: $social-vk;
+    }
+    &.social-youtube:hover { // not specified color yet.
+        background: $primary-color; 
+        border-color: $primary-color;
+    }
+    &.social-whatsapp:hover {
+        background: $social-whatsapp;
+        border-color: $social-whatsapp;
+    }
+    &.social-xing:hover {
+        background: $social-xing;
+        border-color: $social-xing;
+    }
+}

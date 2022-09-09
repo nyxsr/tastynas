@@ -1,0 +1,141 @@
+/* -------------------------------------------
+    Accordion
+---------------------------------------------- */
+@include set-default(
+	(
+		accordion: (
+			card: (
+				padding: 1.9rem 0,
+			),
+            header: (
+				font-size: 1.25em,
+				color: $dark-color,
+				text-transform: false,
+				padding-right: 2.5rem,
+            ),
+        ),
+    )
+);
+// Default
+.accordion {
+	.collapsed,
+	.expanding {
+		display: none;
+	}
+}
+.card-header {
+	@include print_css(accordion, header);
+	a {
+		position: relative;
+		display: block;
+		&::after {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: -2.5rem;
+			font: {
+				family: "panda";
+				size: .7em;
+			}
+		}
+		&:hover {
+			color: inherit;
+		}
+	}
+	i {
+		margin-right: 1.5rem;
+		font-size: .9em;
+		letter-spacing: -.01em;
+	}
+}
+.expand {
+	&::after {
+		content: '\e910';
+	}
+}
+.collapse {
+	&::after {
+		content: '\e911';
+	}
+}
+.card {
+	@include css( padding, accordion, card, padding );
+}
+.card-body {
+	margin-top: 2rem;
+}
+
+// Simple
+.accordion-simple {
+	.card {
+		border-top: 1px solid $border-color;
+	}
+	.card:last-child {
+		border-bottom: 1px solid $border-color;
+	}
+}
+
+// Gutter
+.accordion-gutter-md {
+	.card {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.accordion-gutter-sm {
+	.card {
+		&:not(:last-child) {
+			margin-bottom: 2px;
+		}
+	}
+}
+
+// Boxed Style
+.accordion-boxed {
+	.card {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+}
+
+// Background Style
+.accordion-background {
+	.card {
+		background-color: $bg-white;
+		border-color: $white-color;
+	}
+}
+
+// Drop Shadow Style
+.accordion-dropshadow {
+	.card {
+		box-shadow: 0 5px 25px 0 rgb(0 0 0 / 5%);
+		background-color: $bg-white;
+		border-color: $white-color;
+		margin-bottom: 2rem;
+	}
+}
+
+// Card with Border
+.accordion-card-border {
+	.card {
+		border-top: 1px solid #464644;
+	}
+	.card-body {
+		padding: 0 2rem;
+		border-left: 2px solid #464644;
+	}
+}
+
+// Border Style
+.accordion-border {
+	.card {
+		border: solid $border-color;
+		border-width: 1px 1px 0;
+	}
+	.card:last-child {
+		border-bottom: 1px solid $border-color;
+	}
+}

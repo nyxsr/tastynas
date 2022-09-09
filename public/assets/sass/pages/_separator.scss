@@ -1,0 +1,19 @@
+/* -------------------------------------------
+    Section Seperator
+---------------------------------------------- */
+.section-seperator {
+    svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: relative;
+        fill: $white-color;
+    }
+}
+.seperator-absolute {
+    position: relative;
+    svg {
+        position: absolute;
+        top: -25rem;
+        height: 25rem;
+    }
+}

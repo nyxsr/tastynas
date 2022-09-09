@@ -1,0 +1,86 @@
+/* -------------------------------------------
+    Icon Box
+---------------------------------------------- */
+.icon-box p {
+    margin: 0;
+}
+.icon-box-icon {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 2.7em;
+    color: $primary-color;
+    line-height: 0;
+}
+//only border-bottom
+.ib-bottom {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        width: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 1px solid $primary-color;
+    }
+    .icon-box-content {
+        padding-bottom: 2.2rem;
+        text-align: center;
+    }
+}
+//border
+.ib-border {
+    padding: 41px 10px 38px;    
+    border: 1px solid $border-color;
+    text-align: center;
+    .icon-box-icon {
+        margin-bottom: 1.8rem;
+    }
+    .icon-box-title {
+        margin-bottom: 10px;
+    }
+}
+//icon box side
+.icon-box-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 1.9rem; //d-s
+    .icon-box-title { 
+        font-size: .875em;
+        font-weight: 400;
+    }
+    .icon-box-icon {    
+        margin: 0 1.9rem .3rem 0;
+    }
+    p {
+        font-size: .875em;
+    }
+}
+.icon-box-tiny {
+    .icon-box-icon {
+        margin: 0 1.9rem 0 0;
+    }
+    .icon-box-title {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        margin-bottom: .8rem;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    .icon-box-content {
+        padding-right: 2rem;
+    }
+}
+@include mq(lg, max) {
+    .icon-box-side {
+        flex-direction: column;
+        .icon-box-icon {
+            margin: 0 0 2rem 0;
+        }
+        .icon-box-content {
+            text-align: center;
+        }
+    }
+}

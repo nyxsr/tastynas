@@ -1,0 +1,27 @@
+// Counter
+
+.counter-divider {
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 45%;
+        top: 37%;
+        left: 0;
+        transform: translateY(-50%);
+        border-left: 1px solid $border-color;
+    }
+    &.divider-dark {
+        &:before {
+            height: 54%;
+            top: 49%;
+            border-color: #555;
+        }
+    }
+}
+
+@include mq(lg, max) {
+    .counter-divider:before {
+        display: none;
+    }
+}

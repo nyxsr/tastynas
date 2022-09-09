@@ -1,0 +1,200 @@
+/* -------------------------------------------
+    Cart Page
+---------------------------------------------- */
+
+.cart {
+    .product-thumbnail figure {
+        display: block;
+    }
+}
+.step-by {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: .9rem 2rem;
+
+    .title.title-step {
+        margin: 0 5.4rem 0 1rem;
+        font-size: 1.75em;
+        text-transform: capitalize;
+        padding: .4rem 0;
+        
+        &:not(:last-child)::after {
+            position: absolute;
+            content: '\e913';
+            right: -3.8rem;
+            top: 47%;
+            line-height: 0;
+            font-family: 'panda';
+            font-weight: 700;
+            font-size: .6071em;
+            color: $body-color;
+        }
+        &.active {
+            color: $primary-color;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+//for cart & checkout page
+.summary-subtitle {
+    padding: 2.5rem 0 2.1rem;
+}
+.summary-subtotal-price {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.summary-total-price {
+    font-size: 1.375em;
+    font-weight: 400;
+    color: $dark-color;
+    margin-bottom: 0;
+}
+@include mq(md, max) {
+    .cart .shop-table {
+        td {
+            padding: 5px 0;
+        }
+        .product-subtotal,
+        .product-quantity { 
+            margin-bottom: .5rem; 
+        }
+        .product-thumbnail {
+            padding-right: 0;
+        }
+    } 
+}
+.shipping-address {
+    padding-bottom: 3.1rem;
+    border-bottom: 1px solid $border-color;
+    label {
+        display: block;
+        font-size: 1.125em;
+        color: $primary-color-dark;
+    }
+    .form-control {
+        margin-bottom: 2rem;
+        padding: 1.6rem 1.9rem 1.3rem;
+    }
+}
+.shipping-address, .checkout {
+    input.form-control,
+    .select-box {
+        .form-control {
+            font-size: .875em;
+            color: $body-color;
+        }
+        &::before {
+            font-size: .85em;
+            pointer-events: none;
+        }
+    }
+}
+.cart-table {
+    .shop-table td.product-subtotal {
+        color: #54524d;
+    }
+    .product-name {
+        font-size: 1em;
+        color: $dark-color;
+    }
+    .product-subtotal {
+        font-weight: 400;
+    }
+    .product-quantity {
+        width: 135px;
+    }
+    .input-group {
+        height: 4rem;
+    }
+    button {
+        width: 3.9rem;
+    }
+}
+.cart-actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .btn-icon-left {
+        i {
+            margin-right: .8rem;
+        }
+    }
+}
+.cart-coupon-box .coupon-title {
+    font-size: 1.625em;
+}
+#coupon_code {
+    padding: 12px 16px;
+    letter-spacing: 0.05em;
+    border: none;
+    color: #666;
+    border-bottom: 1px solid $border-color;
+}
+@include mq( lg ) {
+    .cart.main {
+        .product-thumbnail {
+            width: 11rem;
+        }
+        .product-price {
+            width: 11.2rem;
+        }
+        .product-quantity {
+            width: 11.5rem;
+        }
+        .product-subtotal {
+            width: 9rem;
+        }
+    }
+}
+@include mq(xl) {
+    .cart.main {
+        .product-quantity {
+            width: 16.5rem;
+        }
+        .product-subtotal {
+            width: 16rem;
+        }
+    }
+}
+.summary {
+    padding: 2.4rem 3rem 3rem;
+    border:1px solid $border-color;
+    .form-control {
+        width: 100%;
+        max-width: 100%;
+    }
+    .summary-subtitle {
+        font-size: 1.25em;
+    }
+}
+
+.summary-subtotal {
+    border-bottom: 1px solid $border-color;
+}
+.summary-title {
+    padding-bottom: 1.9rem;
+    border-bottom: 1px solid $border-color;
+}
+//option
+.cart,
+.checkout {
+    .shipping-row-last {
+        li {
+            padding: .3rem 0 1rem;
+            color: $dark-color;
+        }
+        label {
+            font-size: 1em;
+            vertical-align: middle;
+        }
+    }
+}

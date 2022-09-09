@@ -1,0 +1,121 @@
+.order {
+    .order-message {
+        display: flex;
+        justify-content: center;
+        padding: 3.9rem;
+        border: 1px solid #ffd7a8;
+        .icon-box-icon {
+            margin-right: 1.5rem;   
+        }
+        svg {
+            width: 4rem;
+            stroke: $primary-color;
+        }
+    }
+    .detail-title  {
+        font-size: 1.625em;
+    }
+    .summary-subtotal:last-child {
+        border-bottom: none;
+    }
+    tbody tr:nth-child(3) {
+        border-bottom: 1px solid $border-color;
+        .product-name,
+        .product-price {
+            padding-bottom: 21px;
+        }
+    }
+    .order-details {
+        border: 1px solid $border-color;
+        padding: 0 3rem;
+    }
+}
+.overview-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 42px;
+        border-right: 1px solid $border-color-secondary-light;
+    }
+    span {
+        font-size: .875em;
+        text-transform: uppercase;
+        color: #666;
+    }
+    label {
+        font-size: 1.375em;
+        color: $primary-color-dark;
+        letter-spacing: -.025em;
+    }
+}
+
+.order-details-table {
+    .product-subtitle {
+        font-size: 1.25em;
+        color: $dim-color;
+    }
+    .product-name {
+        padding-top: 1.4rem;
+        i {
+            font-size: .5em;
+        }
+    }
+    .summary-value { 
+        font-size: 1.25em;
+    }
+    .product-price {
+        font-size: 1em;
+        font-weight: 300;
+        padding-top: 1.4rem;
+    }
+    thead {
+        border-bottom: 1px solid $border-color;
+    }
+    tbody {
+        .summary-subtitle {
+            font-size: 1.25em;
+        }
+        tr:first-child {
+            td { 
+                padding-top: 2.4rem;
+            }
+        }
+    } 
+}
+
+@include mq(md, 'max') {
+    .order {
+        .overview-item {
+            flex-direction: row;
+            width: 100%;
+            &:not(:last-child)::after {
+                content: none;
+            }
+            span {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+@include mq(sm, 'max') {
+    .order .order-details {
+        padding: 0 3rem;
+    }
+}
+@include mq(xs, 'max') {
+    .order {
+        .order-details {
+            padding: 0 1.5rem;
+        }
+        .overview-item {
+            font-size: .875em;
+        }
+    }
+}

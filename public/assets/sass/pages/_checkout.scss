@@ -1,0 +1,104 @@
+/* -------------------------------------------
+    Checkout Page
+---------------------------------------------- */
+
+.checkout {
+    .check-detail {
+        .title {
+            font-size: 1.625em;
+        }
+        label:not(.form-control-label) {
+            display: block;
+            padding-left: .2rem;
+            margin-bottom: 1.7rem;
+            font-size: 1em;
+            color: $dim-color;
+            line-height: .9;
+        }
+    } 
+    .form-control-label {
+        font-size: 1em;
+    }
+    .form-control {
+        margin-bottom: 3.1rem;
+        padding: 1.4rem 2rem;
+    }
+    .form-checkbox {
+        padding: 4px 0 12px;
+    }
+    .product-name {
+        white-space: normal;
+        padding: .5rem 0 .8rem;
+    }
+    .card-header {
+        line-height: 3rem;
+        font-size: 1em;
+        a {
+            padding: 0 0 0 2.5rem;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 45%;
+                transform: translateY(-50%);
+            }
+            &::before {
+                border: 1px solid $light-color;
+                width: 18px;
+                height: 18px;                
+                left: 0;
+                text-indent: 1px; // issue
+            }
+            &:after {
+                left: 5px;
+            }
+            &.collapse::after {
+                width: 8px;
+                height: 8px;
+                background-color: $primary-color;
+            }
+            &.collapse::before {
+                border-color: $primary-color;
+            }
+        }
+    }
+    .card-body {
+        padding: 0rem 0 9px 2.9rem;
+        margin: 0;
+        line-height: 2;
+    }
+    .payment.accordion {
+        border-bottom: 1px solid $border-color;
+        color: $dark-color;
+        .card {
+            padding: 0;
+        }
+    }
+    .product-quantity {
+        margin-left: .4rem;
+    }
+}
+.summary .title {
+    padding-bottom: 1.9rem;
+    margin-bottom: 2.3rem;
+    border-bottom: 1px solid $border-color;
+}
+.order-sidebar {
+    color: $dark-color;
+    th {
+        font-size: 1.25em;
+        font-weight: 300;
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+    tbody > tr:not(:first-child) {
+        border-bottom: 1px solid $border-color;
+    }
+    tbody > tr:nth-child(2) td {
+        padding-bottom: 2.2rem;
+    }
+    .product-total {
+        font-size: 1.125em;
+        font-weight: 400;
+    }
+}

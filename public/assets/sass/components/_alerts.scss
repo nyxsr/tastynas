@@ -1,0 +1,170 @@
+/* -------------------------------------------
+    Alert
+---------------------------------------------- */
+
+// Default
+.alert {
+    position: relative;
+    max-width: 82rem;
+    padding: 2.4rem 4.4rem 2rem 2.8rem;  //d-s
+    border:  1px solid $dark-color;
+    line-height: 1.75;
+    b {
+        font-weight: 600;
+    }
+    .btn-close {
+        position: absolute;
+        top: 50%;
+        right: 2.3rem;
+        transform: translateY(-50%);
+        i {   
+            font-size: 1.1429em;
+        }
+    }
+    &.alert-icon {
+        padding-top: 2rem;  //d-s
+        padding-bottom: 1.7rem; //d-s
+    }
+}
+.alert-title {
+    display: inline;
+    text-transform: uppercase;
+    line-height: inherit;
+    color: inherit;
+}
+
+// Color types
+.alert-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $primary-color;
+}
+
+.alert-success {
+    background-color: $success-color;
+    border-color: $success-color;
+    color: $success-color;
+}
+
+.alert-warning {
+    background-color: $dim-color;
+    border-color: $dim-color;
+    color: $dim-color;
+}
+
+.alert-danger {
+    background-color: $alert-color;
+    border-color: $alert-color;
+    color: $alert-color;
+}
+
+//  Simple
+.alert-simple {
+    &.alert-primary {
+        background-color: #FFF4E7;
+        border-color: #FFF4E7;
+        .btn-close {
+            color: $primary-color;
+        }
+
+    }
+    &.alert-warning {
+        background-color: #E6E5E4;
+        border-color: #E6E5E4;
+        .btn-close {
+            color: $dim-color;
+        }
+
+    }
+    &.alert-success {
+        background-color: #F4F7E1;
+        border-color: #F4F7E1;
+        .btn-close {
+            color: $success-color;
+        }
+
+    }
+    &.alert-danger {
+        background-color: #FDDFE6;
+        border-color: #FDDFE6;
+        .btn-close {
+            color: $alert-color;
+        }
+    }
+    @include mq(md) {
+        padding-left: 4.4rem;
+    }
+}
+
+.alert-colored {
+    color: $white-color;
+    .btn-close {
+        color: $white-color;
+    }
+}
+
+//  Icon
+.alert-icon > i {
+    vertical-align: middle;
+    margin-right: 1.2rem;
+    font-size: 1.8em;
+    line-height: 1.2em;
+}
+
+// Outline
+.alert-outline {
+    background-color: $white-color;
+    &.alert-primary {
+        color: $primary-color;
+        border-color: #ffd7a9;
+        i {
+            color: $primary-color;
+        }
+    }
+    &.alert-warning {
+        color: $dim-color;
+        border-color: #d7d6d6;
+        i {
+            color: $dim-color;
+        }
+    }
+    &.alert-success {
+        color: $success-color;
+        border-color: #e0eaaf;
+        i {
+            color: $success-color;
+        }
+    }
+    &.alert-danger {
+        color: $alert-color;
+        border-color: #fcd4de;
+        i {
+            color: $alert-color;
+        }
+    }
+}
+//  Buttons
+.alert-btn {
+    &.alert {
+        padding: 1rem 4.4rem 1rem 1rem;
+    }
+    .btn:not(.btn-close) {
+        padding: 1em 2.3em 0.8em;
+        margin-right: 1.8rem;
+        @include mq(lg, max) {
+            float: left;
+        }
+    }
+    p {
+        margin-bottom: 0;
+    }
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    @include mq(lg) {
+        display: flex;
+        align-items: center;
+    }
+}

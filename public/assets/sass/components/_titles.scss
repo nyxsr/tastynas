@@ -1,0 +1,112 @@
+/* -------------------------------------------
+                Titles
+---------------------------------------------- */
+
+// Variables
+@include set-default(
+	(
+		base: (
+            title: (
+                margin-bottom: 2.6rem,
+                font-size: false,
+                border: (
+                    color: $border-color,
+                    _height: 1px,
+                    line-height: 2.6,
+                ),
+                vertical: (
+                    _vertical-width: 7%,
+                    _vertical-width-mobile: 25%,
+                ),
+                double: (
+                    font-size: 2em,
+                    opacity: .1,
+                    top: 50%,
+                    _mobile-font-size: 1.333em,
+                )
+            ),
+            subtitle: (
+                font-size: 1.125em,
+                font-weight: 400,
+                color: $body-color,
+                margin-bottom: 1rem,
+            )
+        )
+    )
+);
+.title {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    @include print_css( base, title );
+    &.title-center {
+        justify-content: center;
+    }
+    &.with-link {
+        justify-content: space-between;
+        @include mq(sm ,max) {
+            font-size: 1.4375em;
+        }
+    }
+}
+.subtitle {
+    @include print_css( base, subtitle );
+}
+//Title Line
+.title-line {
+    border-bottom: 1px solid #{get(base, title ,border, color)};
+}
+//Title Decoration
+.title-decoration {
+    flex-direction: column;
+}
+// Title Vertical
+.vertical-title-type .vertical-wrap {
+    transform: rotate(90deg);
+}
+
+//Title Duplex
+.title-duplex {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate3d(-50%, -50%, 0);
+    @include print_css(base , title , double);
+    @include mq(sm ,max) {
+        @include css(font-size, base, title, double, _mobile-font-size);
+    }
+}
+
+//Title Underline
+.title-underline > span {
+    &:first-child {
+        position: relative;
+        display: inline-block;
+        @include css( line-height, base, title, border, line-height );
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            margin-bottom: -1px;
+            border-bottom: #{get(base, title ,border, _height)} solid $primary-color;
+        }
+    }
+}
+.title-underline2 > span {
+    &:first-child {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            width: 98%;
+            height: 73%;
+            background-color: $primary-color;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    }
+}

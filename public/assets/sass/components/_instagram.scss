@@ -1,0 +1,61 @@
+/* -------------------------------------------
+    Instagram
+---------------------------------------------- */
+
+.instagram {
+    a {
+        display: block;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: $black-color;
+            opacity: 0;
+            transition: opacity .3s;
+            z-index: 1;
+        }
+        &::after {
+            content: '\e903';
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(90deg) scale(2);
+            font: {
+                size: 3rem;
+                family: "panda";
+            }
+            color: $white-color;
+            opacity: 0;
+            transition: opacity .3s, transform .3s;
+            z-index: 1;
+        }
+    }
+    img {
+        display: block;
+        transition: transform .3s;
+        width: 100%;
+        height: auto;
+    }
+    &:hover {
+        a {
+            &::before {
+                opacity: .5;
+            }
+            &::after {
+                opacity: 1;
+                transform: translate(-50%,-50%) rotate(0deg) scale(1);
+            }
+        }
+        img {
+            transform: scale(1.15);
+        }
+    }
+}

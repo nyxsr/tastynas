@@ -1,0 +1,63 @@
+.element-hotspot {
+    .tooltip-type1 {
+        padding: 1rem;
+    }
+    .tooltip-type2 {
+        padding: 1.45rem 1.9rem 1.1rem; //d-s
+        background-color: $dark-color;
+        h5 {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        p {
+            color: rgba(255, 255, 255, .6);
+            margin-bottom: 0;
+        }
+    }
+    .hotspot-container {
+        > figure img {
+            object-fit: cover;
+            min-height: 35rem;
+        }
+    }
+    .hotspot1 {
+        top: 70.9%;
+        left: 26.1%;
+    }
+    .hotspot2 {
+        top: 84.5%;
+        left: 44.5%;
+    }
+    .hotspot4 {
+        top: 69%;
+        left: 65.75%;
+    }
+    .hotspot5 {
+        top: 13%;
+        left: 33.3%;
+    }
+    .hotspot6 {
+        top: 23.2%;
+        left: 53.4%;
+    }
+    .hotspot7 {
+        top: 82.9%;
+        left: 58.2%
+    }
+    @include mq(lg, max) {
+        .hotspot1 {
+            left: calc( 50% - 19rem );
+        }
+        .hotspot4 {
+            left: calc( 50% + 15rem );
+        }
+        .hotspot5 {
+            left: calc( 50% - 16rem );
+        }
+        .hotspot7 {
+            left: calc( 50% + 8rem );
+        }
+    }
+}

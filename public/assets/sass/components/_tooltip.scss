@@ -1,0 +1,38 @@
+/* -------------------------------------------
+	Tooltips 
+------------------------------------------- */
+.tooltiptext {
+	font-family: $font-family;
+	position: absolute;
+	padding: .7rem .5rem .5rem;
+	bottom : 150%;
+	left : 48%;
+	background-color: #333;
+	color: $white-color;
+	font-size: 1.272em;
+	font-weight: 400;
+	letter-spacing : 0.01em;
+	visibility: hidden;
+	opacity: 0;
+	transform : translateX(-50%);
+	z-index: 10;
+	transition: opacity .3s;
+	text-indent: 0;
+}
+.tooltip-top::after ,
+.tooltip-bottom::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -6px;
+	border-width: 6px;
+	border-style: solid;
+}
+.tooltip-top::after {
+	top: 96%;
+	border-color: #333 transparent transparent transparent;
+}
+.tooltip-bottom::after {
+	top: -35%;
+	border-color: transparent transparent #333 transparent;
+}

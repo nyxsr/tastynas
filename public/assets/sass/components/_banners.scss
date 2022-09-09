@@ -1,0 +1,50 @@
+/* -------------------------------------------
+    Banner
+---------------------------------------------- */
+
+// Default
+.banner {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    figure img {
+		display: block;
+        width: 100%;
+        height: auto;
+    }
+    .banner-content {
+        position: relative;
+    }
+}
+.banner-fixed {
+    > .container,
+    > .container-fluid,
+    > .banner-content {
+        position: absolute;
+        z-index: 1;
+    }
+    > .container,
+    > .container-fluid {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .intro-slider {
+        .banner img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.banner {
+    @include mq(lg , max) {
+        font-size: .9em;
+    }
+    @include mq(xs , max) {
+        font-size: .7em;
+    }
+}

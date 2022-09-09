@@ -1,0 +1,537 @@
+/* -------------------------------------------
+    Menu
+ ------------------------------------------- */
+
+// Variables
+@include set-default( ( menu: ( // Active color
+active: ( border-color: rgba($primary-color, .3), ), // Ancestor
+ancestor: ( _gap: 3rem, padding: 1.3rem 0, font-weight: 400, text-transform: uppercase, color: inherit), // MegaMenu
+megamenu: ( padding: 1.5rem, min-width: 71.5rem, background: $bg-white, title: ( padding-left: 1rem, font-size: 1.429em, line-height: 2.75, text-transform: capitalize), ), // SubMenu
+submenu: ( padding: 2rem 0, background: $bg-white, font-size: 1.14em, text-transform: false, color: $body-color)), mobile-menu: ( color: #e1e1e1, text-transform: uppercase, font-size: .75em, font-weight: 700, line-height: 1.5, // Mobile Menu Container
+container: ( max-width: 296px, padding: 2rem 1.5rem, background: #222529, border-color: #2e3237, ), // Mobile Menu Item
+item: ( padding: 1.3rem .6rem 1.3rem 1rem), // Overlay
+overlay: ( background: $black-color, opacity: .65)), category-menu: ( padding: false, border: false, // Ancestor
+ancestor: ( font-weight: 300, line-height: 1.46, text-transform: capitalize, _split-line: 1px solid $border-color-light, margin: false, min-height: false, ), // Icon
+icon: ( margin-right: 1rem, padding-left: .2rem, font-size: 2rem, color: $primary-color-dark, ), )));
+// Default Menu Styles
+.menu {
+    display: flex;
+    align-items: center;
+    a {
+        display: inline-block;
+    }
+    .menu-title {
+        margin-bottom: 1rem;
+        font-size: 1em;
+        span {
+            @include print_css( menu, megamenu, title);
+            &::after {
+                max-width: 5rem;
+            }
+        }
+    }
+    ul {
+        @include print_css( menu, submenu);
+        ul {
+            font-size: 1em;
+        }
+    }
+    li {
+        position: relative;
+        a {
+            font-weight: 300;
+            padding: 1rem 0 1rem 1rem;
+            line-height: 1;
+        }
+        >ul {
+            min-width: 21.6rem;
+            li {
+                padding: 0 2rem;
+            }
+        }
+    }
+    &:not(.toggle-menu) li {
+        >ul,
+        .megamenu {
+            position: absolute;
+            top: -9999px;
+            left: 100%;
+            box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+            z-index: 1041;
+            visibility: hidden;
+            opacity: 0;
+            transition: transform .2s ease-out;
+            transform: translate3d(0, -10px, 0);
+        }
+    }
+    >li.submenu-container .megamenu {
+        width: 1280px;
+    }
+    li:hover,
+    .show {
+        >ul,
+        .megamenu {
+            visibility: visible;
+            opacity: 1;
+            top: -2rem;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    &:not(.category-menu) li:hover,
+    .active {
+        >a:not(.menu-title):before {
+            transform: scale(1, 1);
+            width: 100%;
+            @include print_css(menu, active);
+        }
+    }
+    >li {
+        @include css( margin-right, menu, ancestor, _gap);
+        &:last-child {
+            margin-right: 0;
+        }
+        >a {
+            @include print_css( menu, ancestor);
+            &::before {
+                position: absolute;
+                content: '';
+                bottom: 12px;
+                border-bottom: 10px solid transparent;
+                transform: scale(0, 1);
+                transform-origin: left center;
+                transition: transform .3s;
+            }
+            &::after {
+                margin-left: .8rem;
+            }
+        }
+        &:hover,
+        &.show {
+            >ul,
+            .megamenu {
+                top: 100%;
+            }
+        }
+    }
+    &:not(.toggle-menu) li {
+        >ul,
+        .megamenu {
+            left: -1.9rem;
+        }
+    }
+    .submenu {
+        >a {
+            position: relative;
+            display: block;
+        }
+    }
+    &:not(.vertical-menu)>.submenu {
+        >a {
+            z-index: 10;
+            &::after {
+                position: static;
+                content: '\e910';
+                font-family: 'panda';
+                margin-top: -4px; //d-s -2px on normal font style
+            }
+        }
+    }
+    &.no-arrow .submenu>a::after {
+        content: none;
+    }
+}
+
+.menu-type2>li {
+    &.active>a,
+    &:hover>a {
+        color: $primary-color;
+    }
+    >a::before {
+        content: none;
+    }
+}
+
+.submenu {
+    >a {
+        &::after {
+            display: inline-block;
+            position: absolute;
+            right: .5rem;
+            top: 50%;
+            line-height: 0;
+            vertical-align: middle;
+            font-family: 'panda';
+            font-weight: 700;
+            font-size: .7142em;
+            content: '\e913';
+        }
+    }
+}
+
+// Vertical Menu
+.vertical-menu {
+    display: block;
+    >li {
+        margin-right: 0;
+        padding: 0 1rem;
+        &:hover,
+        &.show {
+            ul,
+            .megamenu {
+                left: 100.5%;
+                top: -.9rem;
+            }
+        }
+    }
+}
+
+.toggle-menu {
+    display: block;
+    >li {
+        margin-right: 0;
+    }
+    .submenu li {
+        padding: 0 .5rem;
+    }
+    li>ul {
+        display: none;
+        background: transparent;
+    }
+}
+
+// MobileMenu SlideToggle Button
+.toggle-btn {
+    position: absolute;
+    padding: 6px;
+    right: 0;
+    top: 50%;
+    transform: translateY( -50%);
+    &::before {
+        display: block;
+        content: "\e910";
+        font-family: 'panda';
+        font-size: .625em;
+        font-weight: 600;
+        line-height: 1;
+        transition: transform .5s;
+        .show>a & {
+            transform: rotate(630deg);
+        }
+    }
+}
+
+// Underline Hover Style
+.menu-active-underline {
+    >li {
+        >a {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 9px;
+                left: 0;
+                width: 100%;
+                border-bottom: 2px solid;
+                transform-origin: right center;
+                transform: scale(0, 1);
+                transition: transform .3s;
+            }
+        }
+        &.active,
+        &:hover {
+            >a {
+                color: inherit;
+                &::before {
+                    transform-origin: left center;
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+}
+
+// Main Menu
+.main-nav {
+    @include print_css( header, main-nav);
+}
+
+// Mega menu
+.megamenu {
+    display: flex;
+    @include print_css( menu, megamenu);
+    ul {
+        padding: 0 0 3px;
+    }
+    .row {
+        flex: 1;
+        padding: 0 1rem;
+        >* {
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+// Menu Banner
+.megamenu .menu-banner {
+    font-size: .7143em;
+    padding: 0;
+    figure,
+    img {
+        height: 100%;
+    }
+    .btn-link:hover {
+        color: $primary-color;
+    }
+    .banner-content {
+        top: 30px;
+        left: 30px;
+    }
+    .banner-subtitle {
+        font-size: 1.3em;
+        line-height: 1.2;
+    }
+    .banner-title {
+        font-size: 2.8em;
+        line-height: 1.2;
+        margin: 0 0 8px -2px;
+        color: $primary-color-dark;
+    }
+    .banner-descri {
+        font-size: 1.6em;
+        span {
+            font-size: 1.25em;
+        }
+    }
+    .btn {
+        font-size: 1.2em;
+        padding: 1.3rem 2.4rem .9em; //d-s
+    }
+}
+
+// Mobile Menu
+// Mobile Menu Wrapper
+.mobile-menu-wrapper {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    transition: visibility .4s;
+}
+
+// Mobile Menu Container
+.mobile-menu-container {
+    @include css( max-width, mobile-menu, container, max-width);
+    @include css( padding, mobile-menu, container, padding);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    @include css( background, mobile-menu, container, background);
+    box-shadow: 1px 0 5px rgba(0, 0, 0, .5);
+    margin-left: -#{get( mobile-menu, container, max-width )};
+    transition: margin .4s;
+    form {
+        display: flex;
+        margin-bottom: .6rem;
+        input {
+            @include css( border-color, mobile-menu, container, border-color);
+            padding: .707em 1.22em .507em; //d-s
+            &:focus {
+                border-color: $dim-color;
+            }
+        }
+        .btn-search {
+            padding: 4px 0 0;
+            width: 4rem;
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $white-color;
+            i {
+                margin: 0;
+                font-size: inherit;
+            }
+        }
+    }
+    &.scrollable::-webkit-scrollbar-thumb {
+        margin-right: 2px;
+        background: rgba($black-color, .1);
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    .nav-tabs {
+        border-bottom: 1px solid $border-color-dark;
+    }
+    .tab-nav-underline .nav-link {
+        color: #fff;
+    }
+    .tab-nav-underline .nav-item.show .nav-link,
+    .tab-nav-underline .nav-link.active,
+    .tab-nav-underline .nav-link:hover {
+        color: $primary-color;
+    }
+}
+
+// MobileMenu
+.mobile-menu {
+    @include print_css(mobile-menu);
+    padding: 5px 0;
+    ul {
+        display: none;
+    }
+    li {
+        a {
+            display: block;
+            position: relative;
+            @include css( padding, mobile-menu, item, padding);
+        }
+        // List Padding
+        li {
+            a {
+                padding-left: 2.4rem;
+            }
+            li a {
+                padding-left: 3.6rem;
+            }
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid #{get( mobile-menu, container, border-color )};
+        }
+    }
+    .tab-pane.active>ul {
+        display: block;
+        li a>i {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+// MobileMenu Overlay
+.mobile-menu-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    @include css( background, mobile-menu, overlay, background);
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+// MobileMenu Close Button
+.mobile-menu-close {
+    position: fixed;
+    left: calc(100vw - 50px);
+    top: 25px;
+    z-index: 10001;
+    i {
+        font-size: 2.8rem;
+        color: #e1e1e1;
+    }
+    transition: opacity .3s;
+    opacity: 0;
+}
+
+// MobileMenu Animation ( new )
+.mmenu-anim {
+    transform: translateY(30%);
+    &,
+    >li {
+        transition: transform .4s, opacity .3s;
+        transition-timing-function: cubic-bezier(0.5, 0, 0.3, 1);
+    }
+    @for $i from 0 through 12 {
+        >li:nth-child(#{$i}) {
+            opacity: 0;
+            transform: translateY( #{$i*50}px);
+        }
+    }
+}
+
+.mmenu-active {
+    overflow: hidden;
+    .mmenu-anim {
+        >li,
+        & {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .page-wrapper {
+        // if page wrapper has margin-left, then recalculate it's movement
+        margin-left: #{get( mobile-menu, container, max-width )};
+        margin-right: -#{
+ get( mobile-menu, container, max-width) - if( get( base, page-wrapper, margin-left), get( base, page-wrapper, margin-left), 0)
+    }
+    ;
+}
+
+.mobile-menu-wrapper {
+    visibility: visible;
+}
+
+.mobile-menu-container {
+    margin: 0;
+}
+
+.mobile-menu-overlay {
+    @include css( opacity, mobile-menu, overlay, opacity);
+}
+
+.mobile-menu-close {
+    opacity: 1;
+}
+
+
+}
+@include mq( '400px', 'max') {
+    .mobile-menu-close {
+        left: calc(100vw - 40px);
+        top: 10px;
+    }
+}
+// CategoryMenu
+.category-menu {
+    @include print_css( category-menu);
+    i {
+        vertical-align: -2px;
+        line-height: 0;
+        color: $primary-color-dark;
+        transition: color .3s;
+        @include print_css( category-menu, icon);
+    }
+    
+    >li {
+        >a {
+            display: block;
+            @include print_css( category-menu, ancestor);
+        }
+        &:not(:last-child) {
+            >a {
+                @include css( border-bottom, category-menu, ancestor, _split-line);
+            }
+        }
+    }
+    
+    li:hover>a i {
+        color: inherit;
+    }
+    
+    .menu-banner {
+        .banner-title {
+            font-size: 2.4em;
+        }
+        .banner-descri {
+            font-size: 1.8em;
+            span {
+                font-size: 1em;
+            }
+        }
+        a:hover i {
+            color: $primary-color;
+        }
+    }
+}

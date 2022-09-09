@@ -1,0 +1,64 @@
+/* -------------------------------------------
+    Video
+---------------------------------------------- */
+
+.video-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 3.225em;
+    height: 3.225em;
+    border-radius: 50%;
+    color: $white-color;
+    background: radial-gradient(rgba(255,255,255,0.4),rgba(117,111,100,0.4));
+    border: 3px solid rgba(255,255,255,0.3);
+    font-size: 1.937em;
+    transition: .3s;
+    i {
+        margin-left: 5px;
+        color: $white-color;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        width: 1.935em;
+        height: 1.935em;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        transition: .3s;
+    }
+    &:hover {
+        &:before {
+            width: 2.42em;
+            height: 2.42em;
+            background-color: $white-color;
+            opacity: .3;
+        }
+    }
+}
+.inner-video {
+    video {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &.paused video, &.playing video {
+        display: block;
+    }
+    &.paused {
+        .video-play i {
+            margin-left: 0;
+            &:before {
+                content: "\f04c";
+            }
+        }
+    }
+}
