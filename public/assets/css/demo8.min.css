@@ -8836,7 +8836,7 @@ input.quantity {
     color: #54524d;
     border-bottom: 1px solid #e0dede;
     font-size: 0.75em;
-    background-color: rgb(254, 253, 255)!important;
+    background-color: rgb(254, 253, 255) !important;
     text-transform: uppercase;
 }
 .header-top .header-right > * {
@@ -10380,7 +10380,7 @@ input.quantity {
     color: #54524d;
 }
 .best-section {
-    margin-top: -8.8rem;
+    margin-top: 5rem;
 }
 .best-section .icon-box-icon {
     height: 6.4rem;
