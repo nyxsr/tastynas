@@ -58,7 +58,11 @@
                       </video>
                 </section>
                 <section class="best-section container mb-10 pb-10 appear-animate">
-
+                    <h2 class="title title-underline underline-center text-center with-double mt-4 mb-10">
+                        <span class="pb-8">Apa itu <span class="bold-tastynas">Delipel-Tastynas</span>?</span>
+                    </h2>
+                    <p class="paragraph-about"><span style="font-weight:600">Delipel-Tastynas</span> merupakan salah satu inovasi produk homemade kuliner olahan buah nanas Subang dalam bidang bakery serta olahan makanan minuman lainnya, yang diproduksi setiap hari dengan menggunakan bahan-bahan berkualitas sehingga menghadirkan ragam produk kuliner yang dapat dijadikan camilan sehat, lezat, dan kaya akan serat buah nanas serta dikemas dengan desain modern dan elegan, sehingga sangat cocok juga dijadikan sebagai "Oleh-oleh Khas kota Subang, bercitarasa homemade dengan nuansa modern"</p>
+                    <img src="{{ asset('assets/images/first-logo.png') }}" alt="bigLogo Tastynas" class="bigLogo">
                 </section>
                 <section class="banner-section appear-animate" style="background: #f8f8f8;">
                     <div class="container">
