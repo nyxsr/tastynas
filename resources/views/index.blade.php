@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preload" href="assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <script>
         WebFontConfig = {
@@ -52,98 +53,9 @@
         <main class="main">
             <div class="page-content">
                 <section class="intro-section">
-                    <div class="intro-slider owl-carousel owl-theme owl-nav-arrow row animation-slider cols-1 gutter-no"
-                        data-owl-options="{
-                                        'nav': true,
-                                        'dots': false,
-                                        'loop': false,
-                                        'items': 1,
-                                        'responsive': {
-                                            '0': {
-                                                'nav': false,
-                                                'autoplay': true
-                                            },
-                                            '1400': {
-                                                'nav': true
-                                            }
-                                        }
-                                    }">
-                        <div class="banner banner-fixed intro-banner">
-                            <figure>
-                                <img src="images/demos/demo8/banner/banner1.jpg" width="1903" height="1082"
-                                    alt="banner" />
-                                <div class="floating act-img">
-                                    <img class="layer" src="images/demos/demo8/banner/banner1.png" width="701"
-                                        height="915" alt="banner" />
-                                </div>
-                            </figure>
-                            <div class="container">
-                                <div class="banner-content y-50">
-                                    <h3 class="banner-title title-underline"><span class="pb-4">Fresh Season
-                                            Fruit<br>Collection</span></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="shop.html" class="btn btn-secondary mr-4 mr-sm-6">Shop now<i
-                                            class="p-icon-arrow-long-right"></i></a>
-                                    <h4 class="banner-price text-body">Only <span
-                                            class="price text-dark">29<span>.00</span></span></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner banner-fixed intro-banner banner2">
-                            <figure>
-                                <img src="images/demos/demo8/banner/banner2.jpg" width="1903" height="1082"
-                                    alt="banner" />
-                            </figure>
-                            <div class="container">
-                                <div class="banner-content text-right y-50">
-                                    <h5 class="banner-subtitle text-uppercase font-weight-normal ls-1">New Arrivals</h5>
-                                    <h3 class="banner-title title-underline text-right"><span class="pb-4">Organic
-                                            Potato<br>
-                                            Crisp Food</span></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        tempor incididunt ut labore et dolore magna</p>
-                                    <a href="shop.html" class="btn btn-secondary">Shop now<i class="
-                                        p-icon-arrow-long-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row gutter-no y-50 appear-animate">
-                            <div class="col-sm-6">
-                                <div class="banner banner-fixed banner1">
-                                    <figure>
-                                        <img src="images/demos/demo8/banner/banner3.jpg" width="620" height="350"
-                                            alt="banner" />
-                                    </figure>
-                                    <div class="banner-content y-50">
-                                        <h3 class="banner-title mb-2">Double Choc<br>Mocha</h3>
-                                        <p class="pb-10 mb-10">Up to <span class="text-primary font-weight-normal">25%
-                                                Off</span></p>
-                                        <a href="shop.html" class="btn btn-underline btn-link">Shop
-                                            Now<i class="p-icon-arrow-long-right pl-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="banner banner-fixed banner1">
-                                    <figure>
-                                        <img src="images/demos/demo8/banner/banner4.jpg" width="620" height="350"
-                                            alt="banner" />
-                                    </figure>
-                                    <div class="banner-content y-50">
-                                        <h3 class="banner-title text-white mb-2">Potato Crisp &<br>Munich Beer</h3>
-                                        <p class="pb-10 mb-10 text-body">Up to <span
-                                                class="text-primary font-weight-normal">30%
-                                                Off</span></p>
-                                        <a href="shop.html" class="btn btn-underline btn-link text-white">Shop
-                                            Now<i class="p-icon-arrow-long-right pl-1"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <video playsinline autoplay muted loop class="videoHeader" id="bgvid">
+                        <source src="{{ asset('assets/header.mp4') }}" type="video/mp4">
+                      </video>
                 </section>
                 <section class="best-section container mb-10 pb-10 appear-animate">
                     <h3 class="subtitle text-center">HOT ITEMS

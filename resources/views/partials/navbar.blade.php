@@ -113,17 +113,6 @@
                                                 <button class="btn btn-dark btn-block"
                                                     type="submit">Login</button>
                                             </form>
-                                            <div class="form-choice text-center">
-                                                <label>or Login With</label>
-                                                <div class="social-links social-link-active ">
-                                                    <a href="#" title="facebook"
-                                                        class="social-link social-facebook fab fa-facebook-f"></a>
-                                                    <a href="#" title="twitter"
-                                                        class="social-link social-twitter fab fa-twitter"></a>
-                                                    <a href="#" title="linkedin"
-                                                        class="social-link social-linkedin fab fa-linkedin-in mr-0"></a>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="tab-pane" id="register">
                                             <form action="#">
@@ -154,17 +143,6 @@
                                                 <button class="btn btn-dark btn-block"
                                                     type="submit">Register</button>
                                             </form>
-                                            <div class="form-choice text-center">
-                                                <label class="ls-m">or Register With</label>
-                                                <div class="social-links social-link-active ">
-                                                    <a href="#" title="facebook"
-                                                        class="social-link social-facebook fab fa-facebook-f"></a>
-                                                    <a href="#" title="twitter"
-                                                        class="social-link social-twitter fab fa-twitter"></a>
-                                                    <a href="#" title="linkedin"
-                                                        class="social-link social-linkedin fab fa-linkedin-in mr-0"></a>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

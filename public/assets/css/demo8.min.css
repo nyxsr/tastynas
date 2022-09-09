@@ -8836,6 +8836,7 @@ input.quantity {
     color: #54524d;
     border-bottom: 1px solid #e0dede;
     font-size: 0.75em;
+    background-color: rgb(254, 253, 255)!important;
     text-transform: uppercase;
 }
 .header-top .header-right > * {
@@ -8875,7 +8876,7 @@ input.quantity {
     padding-top: 2.9rem;
     padding-bottom: 2.7rem;
     color: #222;
-    background: transparent;
+    background: rgba(254, 253, 255, 0.9);
     font-size: 0.875em;
 }
 .header-middle.has-border {
