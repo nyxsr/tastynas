@@ -62,7 +62,7 @@
                         <source src="{{ asset('assets/header2.mp4') }}" type="video/mp4">
                     </video>
                 </section>
-                <section class="best-section container mb-10 pb-10 appear-animate">
+                <section class="best-section container appear-animate">
                     <div class="gridder">
                         <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoTop">
                         <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoSide">
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="banner-section appear-animate" style="background: #f8f8f8;">
+                {{-- <section class="banner-section appear-animate" style="background: #f8f8f8;">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6 mb-4 mb-lg-0">
@@ -561,7 +561,7 @@
                             </a>
                         </figure>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </main>
         <!-- End Main -->
@@ -665,37 +665,16 @@
         <!-- End Footer -->
     </div>
     <!-- Sticky Footer -->
-    <div class="sticky-footer sticky-content fix-bottom">
+    {{-- <div class="sticky-footer sticky-content fix-bottom">
         <a href="demo8.html" class="sticky-link">
             <i class="p-icon-home"></i>
             <span>Home</span>
-        </a>
-        <a href="shop.html" class="sticky-link">
-            <i class="p-icon-category"></i>
-            <span>Categories</span>
-        </a>
-        <a href="wishlist.html" class="sticky-link">
-            <i class="p-icon-heart-solid"></i>
-            <span>Wishlist</span>
         </a>
         <a href="account.html" class="sticky-link">
             <i class="p-icon-user-solid"></i>
             <span>Account</span>
         </a>
-        <div class="header-search hs-toggle dir-up">
-            <a href="#" class="search-toggle sticky-link">
-                <i class="p-icon-search-solid"></i>
-                <span>Search</span>
-            </a>
-            <form action="#" class="form-simple">
-                <input type="text" name="search" autocomplete="off" placeholder="Search your keyword..."
-                    required />
-                <button class="btn btn-search" type="submit">
-                    <i class="p-icon-search-solid"></i>
-                </button>
-            </form>
-        </div>
-    </div>
+    </div> --}}
     <!-- Scroll Top -->
     <a id="scroll-top" class="scroll-top" href="#top" title="Top" role="button"> <i
             class="p-icon-arrow-up"></i>

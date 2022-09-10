@@ -5,6 +5,10 @@
     margin-top: 3vh;
 }
 
+.best-section {
+    height: 100vh;
+}
+
 .bold-tastynas {
     font-weight: 800;
     color: #fabf01;
@@ -31,6 +35,11 @@
 .sub-content > p {
     flex: 1;
 }
+.sub-content > svg:hover {
+    scale: 120%;
+    transition: all;
+    transition-duration: 100ms;
+}
 .bigLogoTop {
     grid-area: logoTop;
     height: 25vh;
@@ -54,4 +63,84 @@
     grid-template-columns: 1fr 3fr;
     column-gap: 5rem;
     grid-template-rows: 1fr 0.4fr 3fr;
+}
+@media screen and (max-width: 320px) {
+    .best-section {
+        height: 350vh;
+    }
+}
+@media screen and (max-width: 767px) {
+    .bigLogoSide {
+        width: 80vw;
+        height: 15vh;
+        margin: auto;
+    }
+    .bigLogoTop {
+        margin: auto;
+    }
+    .gridder {
+        grid-template-areas:
+            "logoTop logoTop"
+            "bigTitle bigTitle"
+            "content content"
+            "logoSide logoSide";
+    }
+    .sub-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        text-align: center;
+        margin: 5rem auto;
+    }
+    .content > p {
+        text-align: center;
+    }
+    .bigTitle > h2 {
+        text-align: center;
+        justify-content: center;
+    }
+    .best-section {
+        min-height: 240vh;
+    }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .best-section {
+        height: 300vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .bigLogoSide {
+        width: 80vw;
+        height: 15vh;
+        margin: auto;
+    }
+    .bigLogoTop {
+        margin: auto;
+    }
+    .gridder {
+        grid-template-areas:
+            "logoTop logoTop"
+            "bigTitle bigTitle"
+            "content content"
+            "logoSide logoSide";
+    }
+    .sub-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        text-align: center;
+        margin: 5rem auto;
+    }
+    .content > p {
+        text-align: center;
+    }
+    .bigTitle > h2 {
+        text-align: center;
+        justify-content: center;
+    }
+    .best-section {
+        height: 150vh;
+    }
 }
