@@ -64,6 +64,35 @@
     column-gap: 5rem;
     grid-template-rows: 1fr 0.4fr 3fr;
 }
+
+.sertifikasi {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-areas:
+        "title logoHalal"
+        "content logoHalal";
+    align-items: center;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    column-gap: 5rem;
+}
+.logoHalal {
+    width: 20rem;
+    grid-area: logoHalal;
+}
+.logoHalal:hover {
+    scale: 120%;
+    transition: all 100ms;
+}
+.sertifikasi > ul {
+    grid-area: content;
+}
+.sertifikasi > h2 {
+    grid-area: title;
+}
+.sertifikasi > ul > li > a {
+    text-decoration: underline;
+}
 @media screen and (max-width: 320px) {
     .best-section {
         height: 350vh;
