@@ -16,19 +16,24 @@
     <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
     <!-- Preload Font -->
 
-    <link rel="preload" href="assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
-        crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preload" href="assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
-        crossorigin="anonymous">
+    <link rel="preload" href="assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" href="assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <script>
         WebFontConfig = {
-            google: { families: ['Lato:300,400,600,700'] }
+            google: {
+                families: ['Lato:300,400,600,700']
+            }
         };
-        (function (d) {
-            var wf = d.createElement('script'), s = d.scripts[0];
+        (function(d) {
+            var wf = d.createElement('script'),
+                s = d.scripts[0];
             wf.src = 'assets/js/webfont.js';
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
@@ -48,21 +53,97 @@
 
 <body class="home">
     <div class="page-wrapper">
-@include('partials.navbar')
+        @include('partials.navbar')
         <!-- End Header -->
         <main class="main">
             <div class="page-content">
                 <section class="intro-section">
                     <video playsinline autoplay muted loop class="videoHeader" id="bgvid">
                         <source src="{{ asset('assets/header2.mp4') }}" type="video/mp4">
-                      </video>
+                    </video>
                 </section>
                 <section class="best-section container mb-10 pb-10 appear-animate">
-                    <h2 class="title title-underline underline-center text-center with-double mt-4 mb-10">
-                        <span class="pb-8">Apa itu <span class="bold-tastynas">Delipel-Tastynas</span>?</span>
-                    </h2>
-                    <p class="paragraph-about"><span style="font-weight:600">Delipel-Tastynas</span> merupakan salah satu inovasi produk homemade kuliner olahan buah nanas Subang dalam bidang bakery serta olahan makanan minuman lainnya, yang diproduksi setiap hari dengan menggunakan bahan-bahan berkualitas sehingga menghadirkan ragam produk kuliner yang dapat dijadikan camilan sehat, lezat, dan kaya akan serat buah nanas serta dikemas dengan desain modern dan elegan, sehingga sangat cocok juga dijadikan sebagai "Oleh-oleh Khas kota Subang, bercitarasa homemade dengan nuansa modern"</p>
-                    <img src="{{ asset('assets/images/first-logo.png') }}" alt="bigLogo Tastynas" class="bigLogo">
+                    <div class="gridder">
+                        <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoTop">
+                        <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoSide">
+                        <div class="bigTitle">
+                            <h2 class="title with-double mt-4 mb-10">
+                                <span class="pb-8">Apa itu <span class="bold-tastynas">Delipel-Tastynas</span>?</span>
+                            </h2>
+                        </div>
+                        <div class="content">
+                            <p class=""><span style="font-weight:600">Delipel-Tastynas</span> merupakan salah satu
+                                inovasi produk homemade kuliner olahan buah nanas Subang dalam bidang bakery serta
+                                olahan makanan minuman lainnya, yang diproduksi setiap hari dengan menggunakan
+                                bahan-bahan berkualitas sehingga menghadirkan ragam produk kuliner yang dapat dijadikan
+                                camilan sehat, lezat, dan kaya akan serat buah nanas serta dikemas dengan desain modern
+                                dan elegan, sehingga sangat cocok juga dijadikan sebagai "Oleh-oleh Khas kota Subang,
+                                bercitarasa homemade dengan nuansa modern"</p>
+                            <div class="sub-content">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" fill="#fabf01" style="enable-background:new 0 0 512 512;width:10rem" xml:space="preserve">
+                                    <g>
+                                      <g>
+                                        <path d="M226.932,399.948c-19.96,18.445-47.567,22.576-72.053,10.786c-8.852-4.263-16.322-10.149-22.17-17.199l-33.341,73.744
+                                              c-1.517,3.355,0.177,5.884,0.975,6.815c0.798,0.93,3.039,2.989,6.585,2.003l24.272-6.756c2.766-0.769,5.562-1.14,8.319-1.14
+                                              c11.631,0,22.578,6.583,27.849,17.492l10.962,22.685c1.601,3.315,4.604,3.646,5.854,3.621c1.226-0.016,4.242-0.414,5.758-3.769
+                                              l53.033-117.304C237.148,392.603,231.63,395.606,226.932,399.948z"/>
+                                      </g>
+                                    </g>
+                                    <g>
+                                      <g>
+                                        <path d="M412.631,467.279l-33.341-73.744c-5.848,7.051-13.318,12.937-22.17,17.199c-24.487,11.79-52.093,7.659-72.053-10.786
+                                              c-4.698-4.342-10.216-7.345-16.045-9.022l53.033,117.304c1.517,3.356,4.533,3.753,5.758,3.769c1.25,0.025,4.253-0.306,5.854-3.621
+                                              l10.962-22.685c5.27-10.909,16.218-17.492,27.849-17.492c2.757,0,5.554,0.371,8.319,1.14l24.272,6.756
+                                              c3.546,0.987,5.788-1.072,6.585-2.003C412.454,473.162,414.148,470.633,412.631,467.279z"/>
+                                      </g>
+                                    </g>
+                                    <g>
+                                      <g>
+                                        <path d="M438.821,207.791c-27.69-18.96-36.282-56.605-19.56-85.702c10.051-17.491,4.82-34.775-3.427-45.118
+                                              c-8.248-10.34-23.936-19.285-43.223-13.38c-32.084,9.827-66.877-6.925-79.201-38.141C286.002,6.686,269.227,0,256,0
+                                              c-13.227,0-30.002,6.686-37.41,25.451c-12.324,31.217-47.114,47.967-79.201,38.141c-19.289-5.904-34.974,3.039-43.223,13.38
+                                              c-8.247,10.343-13.478,27.625-3.427,45.118c16.722,29.096,8.13,66.742-19.56,85.702c-16.646,11.399-19.431,29.24-16.489,42.136
+                                              c2.942,12.896,13.194,27.761,33.137,30.808c33.174,5.068,57.248,35.256,54.809,68.727c-1.468,20.121,10.745,33.423,22.662,39.163
+                                              c11.918,5.739,29.932,6.995,44.748-6.698c12.322-11.387,28.141-17.083,43.953-17.083c15.818,0,31.628,5.693,43.952,17.083
+                                              c14.818,13.694,32.833,12.438,44.75,6.698c11.917-5.739,24.129-19.041,22.662-39.162c-2.439-33.471,21.635-63.659,54.809-68.728
+                                              c19.943-3.047,30.193-17.913,33.137-30.808C458.252,237.03,455.465,219.189,438.821,207.791z M256,335.923
+                                              c-72.575,0-131.619-59.044-131.619-131.619S183.424,72.684,256,72.684c72.576,0,131.619,59.044,131.619,131.619
+                                              C387.618,276.878,328.575,335.923,256,335.923z"/>
+                                      </g>
+                                    </g>
+                                    <g>
+                                      <g>
+                                        <path d="M255.999,97.225c-59.044,0-107.079,48.036-107.079,107.079c0,59.043,48.034,107.079,107.079,107.079
+                                              s107.079-48.036,107.079-107.079S315.043,97.225,255.999,97.225z M310.874,193.922l-66.642,48.675
+                                              c-2.115,1.545-4.653,2.362-7.237,2.362c-0.666,0-1.335-0.054-2.001-0.164c-3.249-0.537-6.147-2.358-8.041-5.054l-19.934-28.382
+                                              c-3.895-5.547-2.556-13.2,2.989-17.095c5.546-3.895,13.198-2.557,17.094,2.989l12.75,18.154l56.548-41.302
+                                              c5.473-3.995,13.15-2.803,17.146,2.671C317.543,182.248,316.346,189.924,310.874,193.922z"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                <p>Upaya kami dalam menjaga mutu pangan : Penggunaan bahan baku yang berkualitas, konsisten dalam memperpanjang halal setiap habis masa berlaku, serta menjaga higienitas sarana & prasarana produksi & sanitasi tempat di lingkungan sekitar.</p>
+                            </div>
+                            <div class="sub-content mt-5">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 360 360" style="enable-background:new 0 0 512 512; width:10rem" fill="#fabf01" xml:space="preserve">
+                                    <g id="XMLID_232_">
+                                      <g id="XMLID_233_">
+                                        <circle id="XMLID_235_" cx="164.999" cy="120.012" r="45"/>
+                                      </g>
+                                      <g id="XMLID_236_">
+                                        <path id="XMLID_237_" d="M165,165.013c-38.659,0-70,31.337-70,70h139.999C234.999,196.35,203.658,165.013,165,165.013z"/>
+                                      </g>
+                                      <g id="XMLID_238_">
+                                        <path id="XMLID_239_" d="M355.606,334.381l-63.854-63.855C315.619,241.903,330,205.107,330,165.013c0-90.981-74.019-165-165-165
+                                              S0,74.031,0,165.013s74.019,165,165,165c40.107,0,76.914-14.391,105.541-38.271l63.853,63.853
+                                              c2.929,2.929,6.768,4.393,10.606,4.393s7.678-1.464,10.606-4.393C361.465,349.736,361.465,340.239,355.606,334.381z M30,165.013
+                                              c0-74.439,60.561-135,135-135s135,60.561,135,135c0,74.439-60.561,135-135,135S30,239.452,30,165.013z"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                <p>Untuk sistem perekrutan SDM, kami memberdayakan muda-mudi / ibu2 berusia produktif yang tidak terserap oleh pabrik / kantoran dikarenakan jenjang pendidikan / keterbatasan tertentu (kaum difable)</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="banner-section appear-animate" style="background: #f8f8f8;">
                     <div class="container">
@@ -106,8 +187,8 @@
                                     <img src="images/demos/demo8/banner/banner5-2.png" width="648" height="621"
                                         alt="banner" />
                                     <div class="floating d-xxl-show" data-floating-depth="1">
-                                        <img class="layer" src="images/demos/demo8/banner/banner5-leaf.png" width="118"
-                                            height="138" alt="leaf img" />
+                                        <img class="layer" src="images/demos/demo8/banner/banner5-leaf.png"
+                                            width="118" height="138" alt="leaf img" />
                                     </div>
                                 </figure>
                                 <img class="act-img skrollr d-xs-show"
@@ -125,7 +206,8 @@
                     </h2>
                     <p class="text-uppercase text-white mb-7">Get Updates For new Products</p>
                     <form action="#" class="inline-form mx-auto mb-10">
-                        <input type="email" name="email" id="email" placeholder="Your email address..." required="">
+                        <input type="email" name="email" id="email" placeholder="Your email address..."
+                            required="">
                         <button class="btn btn-primary ml-2" type="submit">sign up</button>
                     </form>
                     <div class="social-links">
@@ -147,7 +229,8 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393" height="491">
+                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                            height="491">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-compare" title="Compare">
@@ -167,13 +250,13 @@
                                 </div>
                                 <div class="product-hide-details">
                                     <div class="product-action">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
-                                                class="p-icon-heart-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
                                                 class="p-icon-cart-solid"></i><span>Add to cart</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick View"><i
-                                                class="p-icon-search-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-quickview"
+                                            title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +266,8 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393" height="491">
+                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                            height="491">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-compare" title="Compare">
@@ -203,13 +287,13 @@
                                 </div>
                                 <div class="product-hide-details">
                                     <div class="product-action">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
-                                                class="p-icon-heart-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
                                                 class="p-icon-cart-solid"></i><span>Add to cart</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick View"><i
-                                                class="p-icon-search-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-quickview"
+                                            title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +303,8 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393" height="491">
+                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                            height="491">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-compare" title="Compare">
@@ -239,13 +324,13 @@
                                 </div>
                                 <div class="product-hide-details">
                                     <div class="product-action">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
-                                                class="p-icon-heart-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
                                                 class="p-icon-cart-solid"></i><span>Add to cart</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick View"><i
-                                                class="p-icon-search-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-quickview"
+                                            title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +340,8 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393" height="491">
+                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                            height="491">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-compare" title="Compare">
@@ -275,13 +361,13 @@
                                 </div>
                                 <div class="product-hide-details">
                                     <div class="product-action">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
-                                                class="p-icon-heart-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
                                                 class="p-icon-cart-solid"></i><span>Add to cart</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick View"><i
-                                                class="p-icon-search-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-quickview"
+                                            title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -291,7 +377,8 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393" height="491">
+                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                            height="491">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-compare" title="Compare">
@@ -311,13 +398,13 @@
                                 </div>
                                 <div class="product-hide-details">
                                     <div class="product-action">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
-                                                class="p-icon-heart-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
                                                 class="p-icon-cart-solid"></i><span>Add to cart</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick View"><i
-                                                class="p-icon-search-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-quickview"
+                                            title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +414,8 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393" height="491">
+                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                            height="491">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-compare" title="Compare">
@@ -347,13 +435,13 @@
                                 </div>
                                 <div class="product-hide-details">
                                     <div class="product-action">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
-                                                class="p-icon-heart-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
                                                 class="p-icon-cart-solid"></i><span>Add to cart</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick View"><i
-                                                class="p-icon-search-solid"></i></a>
+                                        <a href="#" class="btn-product-icon btn-quickview"
+                                            title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -388,30 +476,37 @@
                                                             }
                                                         }">
                             <figure class="">
-                                <img src="images/elements/slider/brand/brand1.png" alt="user" width="163" height="47" />
+                                <img src="images/elements/slider/brand/brand1.png" alt="user" width="163"
+                                    height="47" />
                             </figure>
                             <figure class="">
-                                <img src="images/elements/slider/brand/brand2.png" alt="user" width="121" height="51" />
+                                <img src="images/elements/slider/brand/brand2.png" alt="user" width="121"
+                                    height="51" />
                             </figure>
                             <figure class="">
-                                <img src="images/elements/slider/brand/brand3.png" alt="user" width="154" height="39" />
+                                <img src="images/elements/slider/brand/brand3.png" alt="user" width="154"
+                                    height="39" />
                             </figure>
 
                             <figure class="">
-                                <img src="images/elements/slider/brand/brand4.png" alt="user" width="144" height="37" />
+                                <img src="images/elements/slider/brand/brand4.png" alt="user" width="144"
+                                    height="37" />
                             </figure>
                             <figure class="">
-                                <img src="images/elements/slider/brand/brand5.png" alt="user" width="138" height="42" />
+                                <img src="images/elements/slider/brand/brand5.png" alt="user" width="138"
+                                    height="42" />
                             </figure>
                             <figure class="">
-                                <img src="images/elements/slider/brand/brand3.png" alt="user" width="154" height="39" />
+                                <img src="images/elements/slider/brand/brand3.png" alt="user" width="154"
+                                    height="39" />
                             </figure>
 
                         </div>
                     </div>
                 </div>
                 <div class="gallery-section appear-animate">
-                    <div class="owl-carousel owl-theme owl-nav-outer row cols-lg-5 cols-md-3 cols-2" data-owl-options="{
+                    <div class="owl-carousel owl-theme owl-nav-outer row cols-lg-5 cols-md-3 cols-2"
+                        data-owl-options="{
                                         'nav': false,
                                         'dots': false,
                                         'loop': true,
@@ -431,38 +526,38 @@
                                     }">
                         <figure class="instagram">
                             <a href="#">
-                                <img src="images/demos/demo8/gallery/img1.jpg" alt="Instagram" width="320" height="320"
-                                    style="background-color: #585f29;">
+                                <img src="images/demos/demo8/gallery/img1.jpg" alt="Instagram" width="320"
+                                    height="320" style="background-color: #585f29;">
                             </a>
                         </figure>
                         <figure class="instagram">
                             <a href="#">
-                                <img src="images/demos/demo8/gallery/img2.jpg" alt="Instagram" width="320" height="320"
-                                    style="background-color: #E9E9EB;">
+                                <img src="images/demos/demo8/gallery/img2.jpg" alt="Instagram" width="320"
+                                    height="320" style="background-color: #E9E9EB;">
                             </a>
                         </figure>
                         <figure class="instagram">
                             <a href="#">
-                                <img src="images/demos/demo8/gallery/img3.jpg" alt="Instagram" width="320" height="320"
-                                    style="background-color: #515254;">
+                                <img src="images/demos/demo8/gallery/img3.jpg" alt="Instagram" width="320"
+                                    height="320" style="background-color: #515254;">
                             </a>
                         </figure>
                         <figure class="instagram">
                             <a href="#">
-                                <img src="images/demos/demo8/gallery/img4.jpg" alt="Instagram" width="320" height="320"
-                                    style="background-color: #DAA362;">
+                                <img src="images/demos/demo8/gallery/img4.jpg" alt="Instagram" width="320"
+                                    height="320" style="background-color: #DAA362;">
                             </a>
                         </figure>
                         <figure class="instagram">
                             <a href="#">
-                                <img src="images/demos/demo8/gallery/img5.jpg" alt="Instagram" width="320" height="320"
-                                    style="background-color: #3E3733;">
+                                <img src="images/demos/demo8/gallery/img5.jpg" alt="Instagram" width="320"
+                                    height="320" style="background-color: #3E3733;">
                             </a>
                         </figure>
                         <figure class="instagram">
                             <a href="#">
-                                <img src="images/demos/demo8/gallery/img6.jpg" alt="Instagram" width="320" height="320"
-                                    style="background-color: #DCDDE1;">
+                                <img src="images/demos/demo8/gallery/img6.jpg" alt="Instagram" width="320"
+                                    height="320" style="background-color: #DCDDE1;">
                             </a>
                         </figure>
                     </div>
@@ -593,7 +688,8 @@
                 <span>Search</span>
             </a>
             <form action="#" class="form-simple">
-                <input type="text" name="search" autocomplete="off" placeholder="Search your keyword..." required />
+                <input type="text" name="search" autocomplete="off" placeholder="Search your keyword..."
+                    required />
                 <button class="btn btn-search" type="submit">
                     <i class="p-icon-search-solid"></i>
                 </button>
@@ -601,10 +697,11 @@
         </div>
     </div>
     <!-- Scroll Top -->
-    <a id="scroll-top" class="scroll-top" href="#top" title="Top" role="button"> <i class="p-icon-arrow-up"></i>
+    <a id="scroll-top" class="scroll-top" href="#top" title="Top" role="button"> <i
+            class="p-icon-arrow-up"></i>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
-            <circle id="progress-indicator" fill="transparent" stroke="#000000" stroke-miterlimit="10" cx="35" cy="35"
-                r="34" style="stroke-dasharray: 108.881, 400;"></circle>
+            <circle id="progress-indicator" fill="transparent" stroke="#000000" stroke-miterlimit="10"
+                cx="35" cy="35" r="34" style="stroke-dasharray: 108.881, 400;"></circle>
         </svg>
     </a>
 
@@ -617,7 +714,8 @@
         <!-- End CloseButton -->
         <div class="mobile-menu-container scrollable">
             <form action="#" class="inline-form">
-                <input type="search" name="search" autocomplete="off" placeholder="Search your keyword..." required />
+                <input type="search" name="search" autocomplete="off" placeholder="Search your keyword..."
+                    required />
                 <button class="btn btn-search" type="submit">
                     <i class="p-icon-search-solid"></i>
                 </button>
@@ -790,7 +888,8 @@
             <h3>Join Our Mailing List</h3>
             <p>Stay informed! Monthly tips and discount.</p>
             <form action="#" method="get" class="inline-form mx-auto">
-                <input type="email" name="email" id="email2" placeholder="Email address here..." required="">
+                <input type="email" name="email" id="email2" placeholder="Email address here..."
+                    required="">
                 <button class="btn btn-dark" type="submit">SUBMIT</button>
             </form>
             <div class="form-checkbox">

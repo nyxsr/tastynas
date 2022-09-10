@@ -10380,7 +10380,7 @@ input.quantity {
     color: #54524d;
 }
 .best-section {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 .best-section .icon-box-icon {
     height: 6.4rem;
@@ -10519,7 +10519,7 @@ input.quantity {
         object-position: 70%;
     }
     .best-section {
-        margin-top: -20.8rem;
+        margin-top: 10rem;
     }
     .title {
         font-size: 1.875em;
