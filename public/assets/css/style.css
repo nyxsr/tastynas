@@ -16,7 +16,6 @@
     font-weight: 800;
     color: #fabf01;
 }
-
 .paragraph-about {
     text-indent: 5rem;
 }
@@ -114,6 +113,31 @@
 }
 .sertifikasi > ul > li > a {
     text-decoration: underline;
+}
+.pine-section {
+    width: 100vw;
+    height: 40vh;
+    background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(250, 191, 1, 0.3)
+        ),
+        url(../images/bigPineapple.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.pine-section > h1 {
+    color: #fefdff;
+}
+.pine-section > h1 > q {
+    font-weight: 700;
 }
 @media screen and (max-width: 767px) {
     .bigLogoSide {

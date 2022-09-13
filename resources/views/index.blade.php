@@ -527,6 +527,11 @@
                         </div>
                     </div>
                 </section>
+                <section class="pine-section">
+                    <h1><q>Let food be thy medicine,
+                        thy medicine shall be thy food</q><br>
+                        <cite>Hippocrates</cite></h1>
+                </section>
                 {{-- <div class="brand-section appear-animate" style="background: url(images/demos/demo8/brand-back.jpg);">
                     <div class="container">
                         <div class="owl-carousel owl-theme owl-nav-outer slider-brand row cols-lg-5 cols-md-3 cols-2"
