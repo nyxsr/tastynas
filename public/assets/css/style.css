@@ -133,10 +133,11 @@
     align-items: center;
     text-align: center;
 }
-.pine-section > h1 {
+.pine-section > p {
     color: #fefdff;
+    font-size: 5rem;
 }
-.pine-section > h1 > q {
+.pine-section > p > q {
     font-weight: 700;
 }
 @media screen and (max-width: 767px) {
@@ -150,6 +151,10 @@
     }
     .icon-box-num .icon-box-icon {
         margin-right: 0;
+    }
+    .pine-section > p {
+        color: #fefdff;
+        font-size: 2rem;
     }
     .gridder {
         grid-template-areas:
@@ -175,6 +180,7 @@
     }
     .best-section {
         min-height: 240vh;
+        margin-bottom: 10rem;
     }
     .benefit-section {
         height: 150vh;
@@ -220,6 +226,14 @@
     }
     .pos-right .icon-box-num .icon-box-icon {
         margin: 0;
+    }
+    .sertifikasi {
+        place-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .pine-section > p {
+        color: #fefdff;
+        font-size: 3rem;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {

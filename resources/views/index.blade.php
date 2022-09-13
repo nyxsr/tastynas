@@ -62,7 +62,7 @@
                         <source src="{{ asset('assets/header2.mp4') }}" type="video/mp4">
                     </video>
                 </section>
-                <section class="best-section container appear-animate mb-10">
+                <section class="best-section container appear-animate">
                     <div class="gridder">
                         <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoTop">
                         <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoSide">
@@ -528,9 +528,9 @@
                     </div>
                 </section>
                 <section class="pine-section">
-                    <h1><q>Let food be thy medicine,
+                    <p><q>Let food be thy medicine,
                         thy medicine shall be thy food</q><br>
-                        <cite>Hippocrates</cite></h1>
+                        <cite>Hippocrates</cite></p>
                 </section>
                 {{-- <div class="brand-section appear-animate" style="background: url(images/demos/demo8/brand-back.jpg);">
                     <div class="container">
