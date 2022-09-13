@@ -62,7 +62,7 @@
                         <source src="{{ asset('assets/header2.mp4') }}" type="video/mp4">
                     </video>
                 </section>
-                <section class="best-section container appear-animate">
+                <section class="best-section container appear-animate mb-10">
                     <div class="gridder">
                         <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoTop">
                         <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoSide">
@@ -143,7 +143,7 @@
                                 <p>Untuk sistem perekrutan SDM, kami memberdayakan muda-mudi / ibu2 berusia produktif yang tidak terserap oleh pabrik / kantoran dikarenakan jenjang pendidikan / keterbatasan tertentu (kaum difable)</p>
                             </div>
                             <div class="sertifikasi">
-                                <h3 class="text-left">Sertifikasi Halal</h3>
+                                <h3>Sertifikasi Halal</h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="#fabf01" xml:space="preserve" class="logoHalal">
                                     <path d="M452.62 11.19C304.89 26.33 173.44 105.46 90.09 229.82 59.43 275.8 30.69 344.2 19.77 398.05 11.53 438.67 10 454.57 10 499.6c0 45.03 1.53 60.55 9.77 101.55 10.73 53.08 39.47 121.68 70.32 168.24 92.16 137.77 245.84 220.73 409.47 220.73 185.09 0 355.63-105.96 438.6-272.28 83.16-166.89 65.34-363.1-46.75-512.37C813.81 102 699.23 33.98 568.55 13.86c-23.96-3.63-91.41-5.36-115.93-2.67zm88.33 45.98c89.87 8.62 174.37 44.07 244.11 102.13 20.5 17.24 54.03 52.69 70.51 74.92 44.64 59.97 72.24 126.85 84.12 202.34 4.6 30.47 4.6 95.81-.19 126.27-11.5 75.11-39.85 142.94-84.31 202.92-19.54 26.06-63.42 69.94-89.48 89.48-59.97 44.45-127.8 72.81-202.92 84.31-30.47 4.79-95.81 4.79-126.27.19C313.31 920.57 208.5 856 136.07 754.83 76.3 671.09 46.98 561.3 57.14 458.21c8.05-84.12 37.75-159.42 90.63-229.74 14.75-19.74 60.93-65.91 80.67-80.67 58.82-44.07 117.07-70.51 184.9-83.92 43.88-8.62 85.84-10.92 127.61-6.71z"/>
                                     <path d="m317.92 301.86-13.6 14.95 4.6 18.2c4.79 18.01 4.79 18.01 4.79 126.08v108.26l-9.58 9.01c-13.03 12.84-29.7 18.01-57.48 18.01-17.25 0-21.65-.77-30.27-4.6-19.54-8.82-31.04-29.13-31.04-54.42 0-7.86 2.11-22.8 4.79-34.87 2.68-11.69 5.36-23.76 5.94-26.83l.96-5.75-4.41 5.37c-5.17 5.94-20.69 43.88-25.68 62.66-3.83 15.14-4.79 52.89-1.34 64.19 6.71 21.46 23.95 39.47 44.45 46.37 16.09 5.17 46.94 4.79 63.81-.96 33.15-11.5 62.66-41.01 72.43-72.81 3.64-11.5 3.83-18.01 3.83-108.07v-95.61l5.75-13.6c3.26-7.28 5.75-14.18 5.75-15.33 0-.96-2.49-5.37-5.56-9.77-6.71-9.77-16.1-28.55-19.16-38.32-1.34-3.83-3.07-7.09-4.02-7.09-.78-.02-7.68 6.69-14.96 14.93zm220.73 23.95c-9.2 14.37-9.58 15.52-8.24 23.95 2.88 18.39 4.03 83.73 1.92 105.96-3.83 40.81-14.75 73-33.34 97.91-4.41 5.94-8.24 10.54-8.62 10.16-.38-.38.38-7.47 1.72-15.71 1.34-8.24 2.49-27.97 2.3-43.69 0-33.53-3.45-49.82-15.9-74.92-20.12-41.2-66.11-89.48-77.99-82.01-5.36 3.26-11.5 15.71-15.14 30.08-5.36 21.84-1.53 35.26 15.33 54.23 8.05 9.2 9.58 10.16 21.65 12.26 22.99 4.22 26.83 6.9 39.28 25.68 13.41 20.69 19.93 53.46 17.44 88.14-1.34 19.54-1.15 19.35-25.1 35.06-19.74 13.03-42.15 23.38-69.94 32.57-11.69 3.83-22.23 7.47-22.99 8.24-3.07 2.68 24.91 6.52 47.52 6.32 37.17-.19 59.59-6.71 82.78-24.33 16.86-12.84 31.81-31.62 42.92-53.84 11.31-22.99 16.86-43.11 18.59-68.98l1.53-19.16 2.49 14.37c4.41 24.72 13.41 53.84 22.42 72.62 7.09 14.37 11.5 20.69 23.38 32.57 25.68 25.67 50.2 38.32 82.01 42.54 18.4 2.3 24.53 1.72 71.66-8.62 30.66-6.71 60.17-10.73 77.22-10.73h14.37l9.96-25.29c5.94-15.33 9.01-25.67 7.66-26.06-8.43-2.87-30.85-21.65-59.59-49.63-48.29-46.95-65.53-57.29-94.66-55.76-23.18 1.34-38.13 10.73-53.46 33.72-12.83 19.55-13.03 20.32-2.29 15.72 33.33-14.18 55.75-12.46 82 6.32 19.54 13.99 50.01 47.52 46.37 50.97-5.37 4.98-58.63 13.99-83.16 13.99-14.75.19-21.08-.77-33.53-4.98-8.43-2.87-18.39-7.09-22.04-9.39-31.62-18.97-57.1-52.31-68.79-90.06-8.43-27.78-19.35-89.1-25.67-144.09l-2.3-21.08-9.77 14.95z"/>
@@ -228,20 +228,22 @@
                         <a href="#" title="Pinterest" class="social-link fab fa-pinterest"></a>
                         <a href="#" title="Linkedin" class="social-link fab fa-linkedin-in"></a>
                     </div>
-                </section>
-                <section class="product-section container pt-10 mt-10 pb-10 mb-10 appear-animate">
-                    <h3 class="subtitle text-center">EXCLUSIVE SELECTION
+                </section> --}}
+                <section class="product-section container pt-10 pb-10 mb-10 appear-animate" style="margin-top: 20rem">
+                    <h3 class="subtitle text-center">PILIHAN EKSLUSIF
                     </h3>
                     <h2 class="title title-underline underline-center with-double mt-4 mb-10">
-                        <span class="pb-8">Featured Products</span>
-                        <label class="title-duplex">Featured Product</label>
+                        <span class="pb-8">BEST SELLER TASTYNAS</span>
+                        <label class="title-duplex">BEST SELLER TASTYNAS</label>
                     </h2>
                     <div class="row cols-md-3 cols-2 gutter-lg" id="products-row">
                         <div class="product-wrap">
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                        <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/45.png') }}" alt="product" width="393"
+                                            height="491">
+                                            <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/46.png') }}" alt="product" width="393"
                                             height="491">
                                     </a>
                                     <div class="product-action-vertical">
@@ -253,20 +255,19 @@
                                 <div class="product-details">
                                     <h5 class="product-name">
                                         <a href="product-simple.html">
-                                            Low-Fat Peanut Oil
+                                            Cake Nanas Topping Mix
                                         </a>
                                     </h5>
                                     <span class="product-price">
-                                        <span class="price">$12.00</span>
+                                        <span class="price">Rp.50.000</span>
                                     </span>
                                 </div>
                                 <div class="product-hide-details">
                                     <div class="product-action">
                                         <a href="#" class="btn-product-icon btn-wishlist"
                                             title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
-                                        <a href="#" class="btn-product btn-cart" data-toggle="modal"
-                                            data-target="#addCartModal" title="Add to cart"><i
-                                                class="p-icon-cart-solid"></i><span>Add to cart</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><i
+                                                class="p-icon-cart-solid"></i><span>Beli Sekarang</span></a>
                                         <a href="#" class="btn-product-icon btn-quickview"
                                             title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
@@ -278,7 +279,9 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                        <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/24.png') }}" alt="product" width="393"
+                                            height="491">
+                                            <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/23.png') }}" alt="product" width="393"
                                             height="491">
                                     </a>
                                     <div class="product-action-vertical">
@@ -290,11 +293,11 @@
                                 <div class="product-details">
                                     <h5 class="product-name">
                                         <a href="product-simple.html">
-                                            Greenhouse Broccoli
+                                            Pie Nanas Mini Original
                                         </a>
                                     </h5>
                                     <span class="product-price">
-                                        <span class="price">$12.00</span>
+                                        <span class="price">Rp.30.000</span>
                                     </span>
                                 </div>
                                 <div class="product-hide-details">
@@ -303,7 +306,7 @@
                                             title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
-                                                class="p-icon-cart-solid"></i><span>Add to cart</span></a>
+                                                class="p-icon-cart-solid"></i><span>Beli Sekarang</span></a>
                                         <a href="#" class="btn-product-icon btn-quickview"
                                             title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
@@ -315,7 +318,9 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                        <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/19.png') }}" alt="product" width="393"
+                                            height="491">
+                                            <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/20.png') }}" alt="product" width="393"
                                             height="491">
                                     </a>
                                     <div class="product-action-vertical">
@@ -327,11 +332,11 @@
                                 <div class="product-details">
                                     <h5 class="product-name">
                                         <a href="product-simple.html">
-                                            Walnut
+                                            Nastar Tugu Nanas
                                         </a>
                                     </h5>
                                     <span class="product-price">
-                                        <span class="price">$12.00</span>
+                                        <span class="price">Rp25.000</span>
                                     </span>
                                 </div>
                                 <div class="product-hide-details">
@@ -340,7 +345,7 @@
                                             title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
-                                                class="p-icon-cart-solid"></i><span>Add to cart</span></a>
+                                                class="p-icon-cart-solid"></i><span>Beli Sekarang</span></a>
                                         <a href="#" class="btn-product-icon btn-quickview"
                                             title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
@@ -352,7 +357,9 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                        <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/17.png') }}" alt="product" width="393"
+                                            height="491">
+                                            <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/15.png') }}" alt="product" width="393"
                                             height="491">
                                     </a>
                                     <div class="product-action-vertical">
@@ -364,11 +371,11 @@
                                 <div class="product-details">
                                     <h5 class="product-name">
                                         <a href="product-simple.html">
-                                            Milky Choco Cake
+                                            Nastar Klasik & Black Nastar
                                         </a>
                                     </h5>
                                     <span class="product-price">
-                                        <span class="price">$12.00</span>
+                                        <span class="price">Rp.32.000</span>
                                     </span>
                                 </div>
                                 <div class="product-hide-details">
@@ -377,7 +384,7 @@
                                             title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
-                                                class="p-icon-cart-solid"></i><span>Add to cart</span></a>
+                                                class="p-icon-cart-solid"></i><span>Beli Sekarang</span></a>
                                         <a href="#" class="btn-product-icon btn-quickview"
                                             title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
@@ -389,7 +396,9 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                        <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/14.png') }}" alt="product" width="393"
+                                            height="491">
+                                        <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/13.png') }}" alt="product" width="393"
                                             height="491">
                                     </a>
                                     <div class="product-action-vertical">
@@ -401,11 +410,11 @@
                                 <div class="product-details">
                                     <h5 class="product-name">
                                         <a href="product-simple.html">
-                                            Crown Daisy
+                                            Feeva Cookies
                                         </a>
                                     </h5>
                                     <span class="product-price">
-                                        <span class="price">$12.00</span>
+                                        <span class="price">Rp.22.000</span>
                                     </span>
                                 </div>
                                 <div class="product-hide-details">
@@ -414,7 +423,7 @@
                                             title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
-                                                class="p-icon-cart-solid"></i><span>Add to cart</span></a>
+                                                class="p-icon-cart-solid"></i><span>Beli Sekarang</span></a>
                                         <a href="#" class="btn-product-icon btn-quickview"
                                             title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
@@ -426,7 +435,9 @@
                             <div class="product product-slideup-content text-center">
                                 <figure class="product-media shadow-media">
                                     <a href="product-simple.html">
-                                        <img src="images/products/393x491.jpg" alt="product" width="393"
+                                        <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/33.png') }}" alt="product" width="393"
+                                            height="491">
+                                        <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/34.png') }}" alt="product" width="393"
                                             height="491">
                                     </a>
                                     <div class="product-action-vertical">
@@ -438,11 +449,11 @@
                                 <div class="product-details">
                                     <h5 class="product-name">
                                         <a href="product-simple.html">
-                                            Nutri-Grain
+                                            Cireng Stick Sambel Nanas
                                         </a>
                                     </h5>
                                     <span class="product-price">
-                                        <span class="price">$12.00</span>
+                                        <span class="price">Rp.40.000</span>
                                     </span>
                                 </div>
                                 <div class="product-hide-details">
@@ -451,7 +462,7 @@
                                             title="Add to wishlist"><i class="p-icon-heart-solid"></i></a>
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"
                                             data-target="#addCartModal" title="Add to cart"><i
-                                                class="p-icon-cart-solid"></i><span>Add to cart</span></a>
+                                                class="p-icon-cart-solid"></i><span>Beli Sekarang</span></a>
                                         <a href="#" class="btn-product-icon btn-quickview"
                                             title="Quick View"><i class="p-icon-search-solid"></i></a>
                                     </div>
@@ -461,12 +472,12 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a class="btn btn-secondary btn-load" href="ajax/ajax-products-demo8.html"
+                        <a class="btn btn-secondary btn-load" href="assets/ajax/ajax-products-demo8.html"
                             data-load-to="#products-row">View
                             all</a>
                     </div>
                 </section>
-                <div class="brand-section appear-animate" style="background: url(images/demos/demo8/brand-back.jpg);">
+                {{-- <div class="brand-section appear-animate" style="background: url(images/demos/demo8/brand-back.jpg);">
                     <div class="container">
                         <div class="owl-carousel owl-theme owl-nav-outer slider-brand row cols-lg-5 cols-md-3 cols-2"
                             data-owl-options="{

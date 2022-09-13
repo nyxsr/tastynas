@@ -75,6 +75,7 @@
     grid-template-columns: 1.5fr 2fr;
     grid-template-rows: 1fr 2fr;
     column-gap: 5rem;
+    margin-bottom: 5rem;
 }
 .logoHalal {
     width: 20rem;
@@ -89,14 +90,10 @@
 }
 .sertifikasi > h2 {
     grid-area: title;
+    text-align: left;
 }
 .sertifikasi > ul > li > a {
     text-decoration: underline;
-}
-@media screen and (max-width: 320px) {
-    .best-section {
-        height: 350vh;
-    }
 }
 @media screen and (max-width: 767px) {
     .bigLogoSide {
@@ -131,6 +128,17 @@
     }
     .best-section {
         min-height: 240vh;
+    }
+    .sertifikasi {
+        grid-template-areas:
+            "title title"
+            "logoHalal logoHalal"
+            "content content";
+        place-items: center;
+        grid-template-columns: auto;
+    }
+    .sertifikasi > h2 {
+        text-align: center !important;
     }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
