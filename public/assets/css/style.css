@@ -8,7 +8,10 @@
 .best-section {
     height: 100vh;
 }
-
+.benefit-section {
+    margin-bottom: 10rem;
+    height: 100vh;
+}
 .bold-tastynas {
     font-weight: 800;
     color: #fabf01;
@@ -77,6 +80,23 @@
     column-gap: 5rem;
     margin-bottom: 5rem;
 }
+.benefit-section {
+    position: relative;
+    overflow: hidden;
+}
+.benefit-section .img-back {
+    position: absolute;
+    top: 16.2%;
+    left: 24.4%;
+    width: 64.9rem;
+}
+.icon-box-title {
+    color: #000;
+}
+.benefit-section .icon-box p {
+    color: #666;
+    font-size: 1em;
+}
 .logoHalal {
     width: 20rem;
     grid-area: logoHalal;
@@ -104,6 +124,9 @@
     .bigLogoTop {
         margin: auto;
     }
+    .icon-box-num .icon-box-icon {
+        margin-right: 0;
+    }
     .gridder {
         grid-template-areas:
             "logoTop logoTop"
@@ -129,6 +152,9 @@
     .best-section {
         min-height: 240vh;
     }
+    .benefit-section {
+        height: 150vh;
+    }
     .sertifikasi {
         grid-template-areas:
             "title title"
@@ -144,6 +170,32 @@
 @media screen and (max-width: 767px) and (orientation: landscape) {
     .best-section {
         height: 300vh;
+    }
+    .benefit-section .img-back {
+        top: 60%;
+    }
+}
+@media (max-width: 991px) {
+    .benefit-section .img-back {
+        opacity: 0.4;
+    }
+    .icon-box-num .icon-box-icon {
+        margin-right: 0;
+    }
+    .icon-box-side {
+        flex-direction: column;
+    }
+    .icon-box-side .icon-box-icon {
+        margin: 0 0 2rem 0;
+    }
+    .icon-box-side .icon-box-content {
+        text-align: center;
+    }
+    .pos-right .icon-box-num .icon-box-content {
+        text-align: right;
+    }
+    .pos-right .icon-box-num .icon-box-icon {
+        margin: 0;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {

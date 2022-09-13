@@ -233,8 +233,8 @@
                     <h3 class="subtitle text-center">PILIHAN EKSLUSIF
                     </h3>
                     <h2 class="title title-underline underline-center with-double mt-4 mb-10">
-                        <span class="pb-8">BEST SELLER TASTYNAS</span>
-                        <label class="title-duplex">BEST SELLER TASTYNAS</label>
+                        <span class="pb-8">Best Seller Tastynas</span>
+                        <label class="title-duplex">Best Seller Tastynas</label>
                     </h2>
                     <div class="row cols-md-3 cols-2 gutter-lg" id="products-row">
                         <div class="product-wrap">
@@ -473,8 +473,58 @@
                     </div>
                     <div class="text-center">
                         <a class="btn btn-secondary btn-load" href="assets/ajax/ajax-products-demo8.html"
-                            data-load-to="#products-row">View
-                            all</a>
+                            data-load-to="#products-row">Lihat Selengkapnya</a>
+                    </div>
+                </section>
+                <section class="benefit-section container mt-10 pt-7 pb-10 appear-animate">
+                    <h4 class="subtitle text-uppercase text-center">Produk Kami
+                    </h4>
+                    <h2 class="title text-center pb-md-10 mb-6" style="justify-content: center">Keunggulan Produk Tastynas</h2>
+                    <figure class="img-back floating">
+                        <img class="layer" src="assets/images/highlightProduct.png" width="649" height="492"
+                            alt="banner" />
+                    </figure>
+                    <div class="row pt-10">
+                        <div class="col-md-6 pos-left">
+                            <div class="icon-box icon-box-side icon-box-num">
+                                <span class="icon-box-icon">1</span>
+                                <div class="icon-box-content">
+                                    <a href="#" class="icon-box-title">Low Glycemic Index</a>
+                                </div>
+                            </div>
+                            <div class="icon-box icon-box-side icon-box-num">
+                                <span class="icon-box-icon">2</span>
+                                <div class="icon-box-content">
+                                    <a href="#" class="icon-box-title">Low Glutten</a>
+                                </div>
+                            </div>
+                            <div class="icon-box icon-box-side icon-box-num">
+                                <span class="icon-box-icon">3</span>
+                                <div class="icon-box-content">
+                                    <a href="#" class="icon-box-title">Low Fat</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pos-right">
+                            <div class="icon-box icon-box-side icon-box-num">
+                                <span class="icon-box-icon">4</span>
+                                <div class="icon-box-content">
+                                    <a href="#" class="icon-box-title">Low Cholesterol</a>
+                                </div>
+                            </div>
+                            <div class="icon-box icon-box-side icon-box-num">
+                                <span class="icon-box-icon">5</span>
+                                <div class="icon-box-content">
+                                    <a href="#" class="icon-box-title">Rich of Fiber</a>
+                                </div>
+                            </div>
+                            <div class="icon-box icon-box-side icon-box-num">
+                                <span class="icon-box-icon">6</span>
+                                <div class="icon-box-content">
+                                    <h4 class="icon-box-title">Low Price, High Quality</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 {{-- <div class="brand-section appear-animate" style="background: url(images/demos/demo8/brand-back.jpg);">

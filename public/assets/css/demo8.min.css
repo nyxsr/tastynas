@@ -10379,6 +10379,66 @@ input.quantity {
     font-size: 1.5em;
     color: #54524d;
 }
+.icon-box p {
+    margin: 0;
+}
+.icon-box-icon {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 2.7em;
+    color: #0d5135;
+    line-height: 0;
+}
+.icon-box-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 1.9rem;
+}
+.icon-box-side .icon-box-title {
+    font-size: 0.875em;
+    font-weight: 400;
+}
+.icon-box-side .icon-box-icon {
+    margin: 0 1.9rem 0.3rem 0;
+}
+.icon-box-side p {
+    font-size: 0.875em;
+}
+.icon-box-tiny .icon-box-icon {
+    margin: 0 1.9rem 0 0;
+}
+.icon-box-tiny .icon-box-title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    font-size: 1em;
+    font-weight: 400;
+}
+.icon-box-tiny .icon-box-content {
+    padding-right: 2rem;
+}
+.icon-box-num {
+    margin-bottom: 0.8rem;
+}
+.icon-box-num .icon-box-icon {
+    width: 1.667em;
+    line-height: 1.5;
+    background: #b9cf3e;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 300;
+    color: #fff;
+    margin-right: 0;
+    padding-top: 0.8rem;
+}
+.icon-box-num .icon-box-title {
+    font-size: 1.25em;
+    font-weight: 300;
+    margin: 0.2rem 0 0.6rem;
+}
 .best-section {
     margin-top: 10rem;
 }
@@ -10397,8 +10457,8 @@ input.quantity {
     position: absolute;
     top: 35%;
     right: -23%;
-}section
-.best-section .curve2 {
+}
+section .best-section .curve2 {
     position: absolute;
     top: -11%;
     left: -22.5%;
@@ -10485,6 +10545,7 @@ input.quantity {
     position: relative;
     z-index: 2;
 }
+
 .brand-section {
     padding: 8.4rem 0;
 }
