@@ -89,6 +89,370 @@
     column-gap: 5rem;
     margin-bottom: 5rem;
 }
+.testimonial blockquote {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.testimonial blockquote .testimonial-author-thumbnail img {
+    border-radius: 50%;
+}
+.testimonial-info cite {
+    text-transform: uppercase;
+    color: #333;
+    font-size: 0.875em;
+    font-weight: 600;
+    font-style: normal;
+}
+.testimonial-info cite span {
+    display: block;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.testimonial > blockquote > p {
+    color: #000;
+    font-size: 2.5rem;
+}
+.testimonial-lg blockquote {
+    padding: 4.5rem 5rem 5.7rem 5rem;
+}
+.testimonial-lg blockquote .testimonial-author-thumbnail {
+    float: left;
+    margin-right: 2rem;
+}
+.testimonial-lg blockquote .testimonial-title {
+    margin-bottom: 15px;
+}
+.testimonial-lg blockquote .testimonial-info {
+    padding: 1.4rem 0;
+}
+.title-testi {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.post .btn {
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.post .post-details > :last-child {
+    margin-bottom: 0;
+}
+.post.post-center {
+    text-align: center;
+}
+.post.post-center .post-meta {
+    justify-content: center;
+}
+.post .post-calendar {
+    padding: 1rem 1.4rem 0.6rem 1.5rem;
+    color: #fff;
+    background-color: #333;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.post .post-calendar:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 1rem solid #333;
+    border-bottom: 3rem solid transparent;
+    transform: translateX(100%);
+}
+.post .post-media {
+    position: relative;
+}
+.post .post-media img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    max-height: 260px;
+    object-fit: cover;
+}
+.post .post-media .post-calendar {
+    position: absolute;
+    top: 2rem;
+}
+.post .post-media.calendar-bottom {
+    overflow: visible;
+}
+.post .post-media.calendar-bottom .post-calendar {
+    top: unset;
+    bottom: 0;
+    z-index: 2;
+    transform: translateY(50%);
+}
+.post-type2 .post-details {
+    padding: 5rem 3.5rem 3.5rem;
+}
+.post-type2 .post-title {
+    margin-bottom: 1rem;
+}
+.post-type2 .post-content {
+    margin-bottom: 2.1rem;
+}
+.post-type2 .btn {
+    padding: 1.3rem 2.9rem 1.3rem;
+}
+.post-border .post-details {
+    border: 1px solid #e0dede;
+}
+.post-border .post-details > * {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.post-details {
+    padding: 2.3rem 0 2rem;
+}
+.post-cats {
+    margin-bottom: 8px;
+    font-size: 0.875em;
+    text-transform: capitalize;
+}
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+    font-size: 0.875em;
+    line-height: 1.2;
+    color: #999;
+}
+.post-meta a:not(.social-link):not(:hover) {
+    color: #333;
+}
+.post-meta .post-agent {
+    max-width: 3.1rem;
+    margin-right: 1rem;
+    border-radius: 100%;
+}
+.post-meta .post-author {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+.post-meta .post-author span {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-left: 3px;
+}
+.post-meta .post-comments {
+    margin-right: 1.6rem;
+}
+.post-meta .post-comments i {
+    vertical-align: middle;
+    font-size: 1.357em;
+    margin-right: 8px;
+}
+.post-share {
+    position: relative;
+}
+.post-share .social-links {
+    position: absolute;
+    bottom: 50%;
+    left: -9px;
+    padding: 3px;
+    font-size: 0.75em;
+    background-color: #54524d;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s, bottom 0.3s;
+}
+.post-share:hover {
+    cursor: pointer;
+}
+.post-share:hover .social-links {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.08);
+    visibility: visible;
+    opacity: 1;
+    bottom: 130%;
+}
+.post-share > i {
+    font-size: 1.1423em;
+}
+.post-share .social-link:not(:hover) {
+    color: #fff;
+}
+.post-title {
+    margin-bottom: 1.1rem;
+    line-height: 1.21;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.post-content {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.post-content > a {
+    margin-left: 10px;
+    color: #0d5135;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+.post-content > a:hover {
+    border-color: inherit;
+}
+.post-list {
+    margin-bottom: 2rem;
+}
+@media (min-width: 576px) {
+    .post-list {
+        display: flex;
+        align-items: center;
+    }
+    .post-list .post-details {
+        padding: 0.5rem 0 0.5rem 3rem;
+        width: calc(100% - 50%);
+    }
+    .post-list .post-media {
+        width: 50%;
+    }
+}
+.post-list-sm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.post-list-sm .post-media {
+    max-width: 9rem;
+    flex: 0 0 9rem;
+    height: 9rem;
+}
+.post-list-sm .post-media img {
+    height: 100%;
+    object-fit: cover;
+}
+.post-list-sm .post-details {
+    padding: 0;
+    margin-left: 1.6rem;
+}
+.post-list-sm .post-meta {
+    margin-bottom: 1rem;
+}
+.post-list-sm .post-meta a {
+    font-size: 0.857em;
+    color: #54524d;
+}
+.post-outer .post-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.post-outer .post-details {
+    background-color: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: calc(100% - 60px);
+    min-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-24%);
+}
+.post-classic {
+    margin-bottom: 8.1rem;
+}
+.post-classic .post-details {
+    position: relative;
+    padding: 4.9rem 8.5rem 5rem;
+}
+.post-classic .post-meta a:not(:first-child) {
+    margin-left: 0.5rem;
+}
+.post-classic .post-cats {
+    margin-bottom: 1.6rem;
+}
+.post-classic .post-title {
+    margin-bottom: 1.6rem;
+    white-space: normal;
+    font-size: 1.75em;
+}
+.post-classic .post-content {
+    margin-bottom: 3.1rem;
+}
+.post-classic .post-calendar {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    padding: 1.2rem 2rem;
+}
+.post-classic .post-calendar:after {
+    border-left-width: 1.4rem;
+    border-bottom-width: 4rem;
+}
+.post-classic .btn {
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: -0.1em;
+    text-transform: uppercase;
+    padding: 1.3rem 2.9rem 1rem;
+}
+.post-classic.post-classic-sm {
+    margin-bottom: 0;
+}
+.post-classic.post-classic-sm .post-details {
+    padding: 4.7rem 2.5rem 4.2rem;
+}
+.post-classic.post-classic-sm .post-title {
+    font-size: 1.5em;
+    margin-bottom: 0.8rem;
+}
+.post-classic.post-classic-sm .post-content {
+    line-height: 1.5em;
+    margin-bottom: 2.2rem;
+}
+.post-classic.post-classic-sm .post-calendar {
+    font-size: 0.875em;
+    padding: 1rem 1.4rem 0.6rem 1.5rem;
+}
+.post-classic.post-classic-sm .post-calendar:after {
+    border-left-width: 1rem;
+    border-bottom-width: 3rem;
+}
+@media (max-width: 575px) {
+    .testimonial-lg blockquote {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.testimonial-md .testimonial-author-thumbnail {
+    position: absolute;
+    top: -50px;
+}
+.testimonial-md .testimonial-author-thumbnail:after {
+    position: absolute;
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.25em;
+    font-weight: 600;
+    bottom: -0.3rem;
+    right: -1.2rem;
+    width: 4rem;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #0d5135;
+    line-height: 4rem;
+    text-align: center;
+}
+.testimonial-md blockquote {
+    margin-top: 5.1rem;
+    padding: 2.8rem 2.7rem 2.5rem 2.9rem;
+}
+.testimonial-md .ratings-container {
+    padding-left: 130px;
+    margin-bottom: 3.9rem;
+}
+
 .benefit-section {
     position: relative;
     overflow: hidden;
@@ -150,6 +514,59 @@
 .pine-section > p > q {
     font-weight: 700;
 }
+.md-type2 .testimonial-author-thumbnail {
+    top: -78px;
+}
+.testimonial-sm {
+    border: 1px solid #e0dede;
+    padding: 2rem;
+}
+.testimonial-sm .testimonial-author-thumbnail {
+    float: left;
+    padding-right: 3rem;
+}
+.testimonial-sm .testimonial-info {
+    padding-bottom: 7px;
+}
+.testimonial-sm blockquote {
+    margin: 0;
+}
+.testimonial-sm blockquote > p {
+    padding-top: 7px;
+}
+@media (min-width: 576px) {
+    .testimonial-sm cite {
+        display: flex;
+    }
+    .testimonial-sm .testimonial-info span {
+        margin: 0 0 0 18px;
+    }
+}
+@media (max-width: 575px) {
+    .testimonial-sm blockquote {
+        text-align: center;
+    }
+    .testimonial-sm .testimonial-author-thumbnail {
+        float: unset;
+        max-width: 100px;
+        margin: 0 auto;
+    }
+}
+.testimonial-centered {
+    padding: 2rem 2rem 0.8rem;
+    background-color: transparent;
+    text-align: center;
+}
+.testimonial-centered .testimonial-author-thumbnail {
+    margin: 0 auto 3.5rem;
+    width: 12rem;
+    height: 12rem;
+}
+.testimonial-centered blockquote {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 94.2rem;
+}
 @media screen and (max-width: 767px) {
     .bigLogoSide {
         width: 80vw;
@@ -209,10 +626,24 @@
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
     .best-section {
-        height: 300vh;
+        height: 370vh;
     }
     .benefit-section .img-back {
-        top: 60%;
+        top: 20%;
+    }
+    .benefit-section {
+        height: 300vh;
+    }
+    .pine-section {
+        height: 60vh;
+    }
+    .post .post-media img {
+        margin: auto;
+    }
+    .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 @media (max-width: 991px) {

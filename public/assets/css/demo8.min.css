@@ -63,6 +63,7 @@
 .owl-theme .owl-nav .owl-prev:not(.disabled):hover {
     background-color: transparent;
     color: #fabf01;
+    border: 1px solid #fefdff;
 }
 .owl-theme .owl-nav .owl-next.disabled,
 .owl-theme .owl-nav .owl-prev.disabled {
@@ -110,6 +111,7 @@
 .owl-nav-arrow .owl-nav .owl-prev:not(.disabled):hover {
     background-color: transparent;
     color: #fabf01;
+    border: 1px solid #fefdff;
 }
 .owl-nav-arrow .owl-nav .owl-next.disabled,
 .owl-nav-arrow .owl-nav .owl-prev.disabled {
@@ -193,6 +195,7 @@
     background-color: #fabf01;
     border-color: #fabf01;
     color: #fff;
+    border: 1px solid #fefdff;
 }
 .owl-nav-top .owl-nav {
     position: absolute;
@@ -8377,7 +8380,7 @@ input.quantity {
 .with-double-quote:before {
     font-family: "Font Awesome 5 Free";
     position: absolute;
-    color: #fabf01;
+    color: #fefdff;
     font-size: 1.875em;
     font-weight: 600;
 }
@@ -10060,6 +10063,7 @@ input.quantity {
     padding: 8rem 0 6.8rem;
     border-bottom: 1px solid #e0dede;
     border-color: #393939;
+    justify-content: center;
 }
 .footer-middle .footer-left,
 .footer-middle .footer-right,
@@ -10111,7 +10115,7 @@ input.quantity {
     margin-bottom: 2.3rem;
     line-height: 1.5;
     letter-spacing: -0.001em;
-    padding-right: 7rem;
+    padding-right: 10rem;
 }
 .footer-middle .widget-newsletter form {
     max-width: 29.5rem;
