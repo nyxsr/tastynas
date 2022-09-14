@@ -8254,7 +8254,7 @@ input.quantity {
 }
 @media (max-width: 767px) {
     .nav-link {
-        font-size: 0.875em;
+        font-size: 0.675em;
         padding: 1.2rem 1.5rem;
     }
     .tab-nav-solid .nav-link {

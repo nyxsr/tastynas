@@ -10,7 +10,7 @@
 }
 .benefit-section {
     margin-bottom: 10rem;
-    height: 100vh;
+    height: 90vh;
 }
 .bold-tastynas {
     font-weight: 800;
@@ -48,6 +48,9 @@
     width: 90vw;
     object-fit: cover;
 }
+.our-product-section {
+    margin-top: 5rem;
+}
 .bigLogoSide {
     grid-area: logoSide;
     height: 80vh;
@@ -67,6 +70,13 @@
     grid-template-rows: 1fr 0.4fr 3fr;
 }
 
+.underline-divider {
+    width: 20%;
+    border-width: 0.8px;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    border-color: #fabf01;
+}
 .sertifikasi {
     margin-top: 5rem;
     display: grid;
@@ -229,7 +239,6 @@
     }
     .sertifikasi {
         place-items: center;
-        grid-template-columns: 1fr 1fr;
     }
     .pine-section > p {
         color: #fefdff;

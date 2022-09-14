@@ -532,6 +532,1418 @@
                         thy medicine shall be thy food</q><br>
                         <cite>Hippocrates</cite></p>
                 </section>
+                <section class="our-product-section">
+                    <div class="container-fluid pt-5">
+                        <h2 class="title title-center pt-4 mb-5">Produk Kami</h2>
+                        <hr class="underline-divider">
+                        <div class="tab tab-nav-center product-tab-nav-type1 tab-nav-underline">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#cake">
+                                        <div class="nav-title">Cake</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#cireng" >
+                                        <div class="nav-title">Cireng,Pempek & Sambel</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#dessert">
+                                        <div class="nav-title">Dessert</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#nastar">
+                                        <div class="nav-title">Nastar / Cookies</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#pastry">
+                                        <div class="nav-title">Pastry / Cheese Stick</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#pie">
+                                        <div class="nav-title">Pie</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#selai">
+                                        <div class="nav-title">Selai</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#sirup">
+                                        <div class="nav-title">Sirup & Jus</div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="cake">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Ambassador & Birthday Cake/4.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Ambassador & Birthday Cake/6.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                {{-- <div class="product-label-group">
+                                                    <label class="product-label label-sale">-40%</label>
+                                                </div> --}}
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Ambassador Cake & Birthday Cake
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.90.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Kering Nanas/1.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                        <img src="{{ asset('assets/images/product/cake/Cake Kering Nanas/2.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">New</label>
+                                                    <label class="product-label label-sale">-25%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cake Kering Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price"></del> --}}
+                                                    <ins class="new-price">Rp.22.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Almond/7.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Almond/8.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cake Nanas Topping Almond
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    <span class="price">Rp.26.000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Coklat/11.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Coklat/12.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">new</label>
+                                                    <label class="product-label label-sale">-38%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cake Nanas Topping Coklat
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$54.00</del> --}}
+                                                    <ins class="new-price">Rp.42.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Cranberry/9.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Cranberry/10.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">new</label>
+                                                    <label class="product-label label-sale">-38%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cake Nanas Topping Cranberry
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$54.00</del> --}}
+                                                    <ins class="new-price">Rp.42.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Keju/43.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Keju/44.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">new</label>
+                                                    <label class="product-label label-sale">-38%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cake Nanas Topping Keju
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$54.00</del> --}}
+                                                    <ins class="new-price">Rp.42.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/45.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/46.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">new</label>
+                                                    <label class="product-label label-sale">-38%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cake Nanas Topping Mix
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$54.00</del> --}}
+                                                    <ins class="new-price">Rp.42.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Cupcake Nanas/41.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Cupcake Nanas/42.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">new</label>
+                                                    <label class="product-label label-sale">-38%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cupcake Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$54.00</del> --}}
+                                                    <ins class="new-price">Rp.42.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cake/Diet Cake Nanas/47.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cake/Diet Cake Nanas/48.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">new</label>
+                                                    <label class="product-label label-sale">-38%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Diet Cake Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$54.00</del> --}}
+                                                    <ins class="new-price">Rp.42.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="cireng">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/33.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/34.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cireng Stick Sambel Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.30.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Pempek Dos Kuah Nanas/56.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Pempek Dos Kuah Nanas/57.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">New</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Pempek Dos Kuah Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$42.00</del> --}}
+                                                    <ins class="new-price">Rp.36.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Sambel Nanas/35.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Sambel Nanas/36.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-sale">-24%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Sambel Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    <span class="price">Rp.16.000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="dessert">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/dessert/Cheese Cake Nanas/31.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                        <img src="{{ asset('assets/images/product/dessert/Cheese Cake Nanas/32.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cheese Cake Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Ro.49.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/dessert/Choco Pineapple Dessert/27.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                    <img src="{{ asset('assets/images/product/dessert/Choco Pineapple Dessert/28.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-sale">-24%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Choco Pineapple Dessert
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    <span class="price">Rp.16.000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/dessert/Pineapple Dessert/29.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                    <img src="{{ asset('assets/images/product/dessert/Pineapple Dessert/30.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-sale">-24%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Pineapple Dessert
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    <span class="price">Rp.16.000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="nastar">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/13.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/14.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">New</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Feeva Cookies
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.15.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/15.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/16.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Nastar Black
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.15.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/17.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/18.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Nastar Black
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.15.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/19.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/20.png') }}" alt="product" width="600"
+                                                        height="750" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Nastar Tugu Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.15.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="pastry">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/pastry-cheestik/Cheese Stick Nanas/52.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/pastry-cheestik/Cheese Stick Nanas/53.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Cheese Stick Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.12.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/pastry-cheestik/Pastry Nanas/50.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/pastry-cheestik/Pastry Nanas/51.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">New</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Pastry Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$42.00</del> --}}
+                                                    <ins class="new-price">Rp.36.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="pie">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/pie/Birthday Pie/21.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/pie/Birthday Pie/22.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Birthday Pie
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.32.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Large/54.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Large/55.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">New</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Pie Nanas Large
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$42.00</del> --}}
+                                                    <ins class="new-price">Rp.36.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/23.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/24.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-sale">-24%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Pie Nanas Mini Original
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    <span class="price">Rp.46.000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Topping/25.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Topping/26.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-sale">-24%</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Pie Nanas Mini Topping
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    <span class="price">Rp.46.000</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="selai">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/selai/Selai Nanas Isian/58.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/selai/Selai Nanas Isian/FPK2022062394.jpg') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Selai Nanas Isian
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.12.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/selai/Selai Nanas Olesan/FPK2022062320.jpg') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/selai/Selai Nanas Olesan/FPK2022062321.jpg') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">New</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Selai Nanas Olesan
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$42.00</del> --}}
+                                                    <ins class="new-price">Rp.36.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="sirup">
+                                    <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                                    'items': 4,
+                                                                    'nav': false,
+                                                                    'dots': true,
+                                                                    'margin': 20,
+                                                                    'loop': false,
+                                                                    'responsive': {
+                                                                        '0': {
+                                                                            'items': 2
+                                                                        },
+                                                                        '768': {
+                                                                            'items': 3
+                                                                        },
+                                                                        '992': {
+                                                                            'items': 4
+                                                                        }
+                                                                    }
+                                                                }">
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/sirup-jus/Milky Juice Nanas/39.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/sirup-jus/Milky Juice Nanas/40.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Milky Juice Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$20.00</del> --}}
+                                                    <ins class="new-price">Rp.10.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+
+                                        <div class="product shadow-media text-center">
+                                            <figure class="product-media">
+                                                <a href="product-simple.html">
+                                                    <img src="{{ asset('assets/images/product/sirup-jus/Sirup Nanas/37.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                    <img src="{{ asset('assets/images/product/sirup-jus/Sirup Nanas/38.png') }}" alt="product" width="295"
+                                                        height="369" />
+                                                </a>
+                                                <div class="product-label-group">
+                                                    <label class="product-label label-new">New</label>
+                                                </div>
+                                                <div class="product-action-float">
+                                                    <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
+                                                        data-target="#addCartModal" title="Add to Cart">
+                                                        <i class="p-icon-cart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-wishlist"
+                                                        title="Add to Wishlist">
+                                                        <i class="p-icon-heart-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-compare" title="Compare">
+                                                        <i class="p-icon-compare-solid"></i>
+                                                    </a>
+                                                    <a href="#" class="btn-product-icon btn-quickview"
+                                                        title="Quick View">
+                                                        <i class="p-icon-search-solid"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                            <div class="product-details">
+                                                <h4 class="product-name">
+                                                    <a href="product-simple.html">
+                                                        Sirup Nanas
+                                                    </a>
+                                                </h4>
+                                                <span class="product-price">
+                                                    {{-- <del class="old-price">$42.00</del> --}}
+                                                    <ins class="new-price">Rp.16.000</ins>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- End .product -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 {{-- <div class="brand-section appear-animate" style="background: url(images/demos/demo8/brand-back.jpg);">
                     <div class="container">
                         <div class="owl-carousel owl-theme owl-nav-outer slider-brand row cols-lg-5 cols-md-3 cols-2"
