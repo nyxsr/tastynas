@@ -10396,7 +10396,7 @@ input.quantity {
 .icon-box-side {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 2rem 0 1.9rem;
 }
 .icon-box-side .icon-box-title {

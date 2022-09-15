@@ -56,8 +56,11 @@
     height: 80vh;
     width: 15vw;
     object-fit: cover;
+    object-position: 47%;
 }
-
+.col-md-6 .right {
+    justify-content: flex-end;
+}
 .gridder {
     height: 55vw;
     display: grid;
