@@ -1,16 +1,15 @@
 @extends('index')
 @section('main')
-    <main class="main">
-        <div class="page-content">
+
             <section class="intro-section">
                 <video playsinline autoplay muted loop class="videoHeader" id="bgvid">
-                    <source src="{{ asset('assets/header2.mp4') }}" type="video/mp4">
+                    <source src="{{ asset('assets/header.mp4') }}" type="video/mp4">
                 </video>
             </section>
-            <section class="best-section container appear-animate">
+            <section class="best-section container"  id="about">
                 <div class="gridder">
-                    <img src="{{ asset('assets/images/Untitled.png') }}" alt="bigLogo Tastynas" class="bigLogoTop">
-                    <img src="{{ asset('assets/images/logoSide.png') }}" alt="bigLogo Tastynas" class="bigLogoSide">
+                    <img loading="lazy"src="{{ asset('assets/images/Untitled.png') }}" loading="lazy" alt="bigLogo Tastynas" class="bigLogoTop">
+                    <img loading="lazy"src="{{ asset('assets/images/logoSide.png') }}" loading="lazy" alt="bigLogo Tastynas" class="bigLogoSide">
                     <div class="bigTitle">
                         <h2 class="title with-double mt-4 mb-10">
                             <span class="pb-8">Apa itu <span class="bold-tastynas">Delipel-Tastynas</span>?</span>
@@ -103,7 +102,7 @@
                                 terserap oleh pabrik / kantoran dikarenakan jenjang pendidikan / keterbatasan tertentu (kaum
                                 difable)</p>
                         </div>
-                        <div class="sertifikasi">
+                        <div class="sertifikasi" id="sertifikasi">
                             <h3>Sertifikasi Halal</h3>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="#fabf01"
                                 xml:space="preserve" class="logoHalal">
@@ -125,79 +124,7 @@
                     </div>
                 </div>
             </section>
-            {{-- <section class="banner-section appear-animate" style="background: #f8f8f8;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h3 class="banner-subtitle text-capitalize mb-3">Organic Store</h3>
-                        <h2 class="title title-underline"><span>We believe in working with
-                                accredited farmers</span></h2>
-                        <p class="banner-desc mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor ut labore et dolore magna aliqua. Venenatis tellus in metus
-                            vulputate eu sceleris Nunc id cursus metus aliquam.</p>
-                        <div class="row mb-6">
-                            <div class="col-6">
-                                <div class="icon-box icon-box-side">
-                                    <span class="icon-box-icon mr-lg-5">
-                                        <i class="p-icon-fruit"></i>
-                                    </span>
-                                    <div class="icon-box-content">
-                                        <h4 class="icon-box-title mb-2">Why Organic?</h4>
-                                        <p>Lorem ipsum dolor sit amet cursus metus aliquam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="icon-box icon-box-side">
-                                    <span class="icon-box-icon mr-lg-5">
-                                        <i class="p-icon-hand-leaf"></i>
-                                    </span>
-                                    <div class="icon-box-content">
-                                        <h4 class="icon-box-title mb-2">Special Products</h4>
-                                        <p>Lorem ipsum dolor sit amet cursus metus aliquam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="shop.html" class="btn btn-secondary">View Store<i
-                                class="p-icon-arrow-long-right"></i></a>
-                    </div>
-                    <div class="col-lg-6">
-                        <figure class="banner-media">
-                            <img src="images/demos/demo8/banner/banner5-2.png" width="648" height="621"
-                                alt="banner" />
-                            <div class="floating d-xxl-show" data-floating-depth="1">
-                                <img class="layer" src="images/demos/demo8/banner/banner5-leaf.png"
-                                    width="118" height="138" alt="leaf img" />
-                            </div>
-                        </figure>
-                        <img class="act-img skrollr d-xs-show"
-                            data-options='{"data-bottom-top":"transform: translate(0, 0) scale(.6); transform-origin: center;", "data-center":"transform: translate(0, 0) scale(1);"}'
-                            src="images/demos/demo8/banner/banner5-1.png" width="241" height="241"
-                            alt="banner" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="newsletter-section text-center appear-animate"
-            style="background: url(images/demos/demo8/newsletter.jpg); background-size: cover; background-repeat: no-repeat;">
-            <h2 class="title title-underline underline-center text-white mb-5">
-                <span class="pb-4">Subscribe to Our Newsletter</span>
-            </h2>
-            <p class="text-uppercase text-white mb-7">Get Updates For new Products</p>
-            <form action="#" class="inline-form mx-auto mb-10">
-                <input type="email" name="email" id="email" placeholder="Your email address..."
-                    required="">
-                <button class="btn btn-primary ml-2" type="submit">sign up</button>
-            </form>
-            <div class="social-links">
-                <a href="#" title="Facebook" class="social-link fab fa-facebook-f"></a>
-                <a href="#" title="Twitter" class="social-link fab fa-twitter"></a>
-                <a href="#" title="Pinterest" class="social-link fab fa-pinterest"></a>
-                <a href="#" title="Linkedin" class="social-link fab fa-linkedin-in"></a>
-            </div>
-        </section> --}}
-            <section class="product-section container pt-10 pb-10 mb-10 appear-animate" style="margin-top: 20rem">
+            <section class="product-section container pt-10 pb-10 mb-10 " id="best-seller" style="margin-top: 20rem">
                 <h3 class="subtitle text-center">PILIHAN EKSLUSIF
                 </h3>
                 <h2 class="title title-underline underline-center with-double mt-4 mb-10">
@@ -209,9 +136,9 @@
                         <div class="product product-slideup-content text-center">
                             <figure class="product-media shadow-media">
                                 <a href="product-simple.html">
-                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/45.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/45.png') }}"
                                         alt="product" width="393" height="491">
-                                    <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/46.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/46.png') }}"
                                         alt="product" width="393" height="491">
                                 </a>
                                 <div class="product-action-vertical">
@@ -247,9 +174,9 @@
                         <div class="product product-slideup-content text-center">
                             <figure class="product-media shadow-media">
                                 <a href="product-simple.html">
-                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/24.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/24.png') }}"
                                         alt="product" width="393" height="491">
-                                    <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/23.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/23.png') }}"
                                         alt="product" width="393" height="491">
                                 </a>
                                 <div class="product-action-vertical">
@@ -286,9 +213,9 @@
                         <div class="product product-slideup-content text-center">
                             <figure class="product-media shadow-media">
                                 <a href="product-simple.html">
-                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/19.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/19.png') }}"
                                         alt="product" width="393" height="491">
-                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/20.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/20.png') }}"
                                         alt="product" width="393" height="491">
                                 </a>
                                 <div class="product-action-vertical">
@@ -325,9 +252,9 @@
                         <div class="product product-slideup-content text-center">
                             <figure class="product-media shadow-media">
                                 <a href="product-simple.html">
-                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/17.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/17.png') }}"
                                         alt="product" width="393" height="491">
-                                    <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/15.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/15.png') }}"
                                         alt="product" width="393" height="491">
                                 </a>
                                 <div class="product-action-vertical">
@@ -364,9 +291,9 @@
                         <div class="product product-slideup-content text-center">
                             <figure class="product-media shadow-media">
                                 <a href="product-simple.html">
-                                    <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/14.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/14.png') }}"
                                         alt="product" width="393" height="491">
-                                    <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/13.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/13.png') }}"
                                         alt="product" width="393" height="491">
                                 </a>
                                 <div class="product-action-vertical">
@@ -403,9 +330,9 @@
                         <div class="product product-slideup-content text-center">
                             <figure class="product-media shadow-media">
                                 <a href="product-simple.html">
-                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/33.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/33.png') }}"
                                         alt="product" width="393" height="491">
-                                    <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/34.png') }}"
+                                    <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/34.png') }}"
                                         alt="product" width="393" height="491">
                                 </a>
                                 <div class="product-action-vertical">
@@ -440,17 +367,17 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a class="btn btn-secondary btn-load" href="assets/ajax/ajax-products-demo8.html"
+                    <a class="btn btn-secondary btn-load" href="{{ asset('assets/ajax/ajax-products-demo8.html') }}"
                         data-load-to="#products-row">Lihat Selengkapnya</a>
                 </div>
             </section>
-            <section class="benefit-section container mt-10 pt-7 pb-10 appear-animate">
+            <section class="benefit-section container mt-10 pt-7 pb-10 " id="benefit">
                 <h4 class="subtitle text-uppercase text-center">Produk Kami
                 </h4>
                 <h2 class="title text-center pb-md-10 mb-6" style="justify-content: center">Keunggulan Produk Tastynas
                 </h2>
                 <figure class="img-back floating">
-                    <img class="layer" src="assets/images/highlightProduct.png" width="649" height="492"
+                    <img loading="lazy"loading="lazy" class="layer" src="assets/images/highlightProduct.png" width="649" height="492"
                         alt="banner" />
                 </figure>
                 <div class="row pt-10">
@@ -497,9 +424,8 @@
                 </div>
             </section>
             <section class="pine-section">
-                <p><q>Let food be thy medicine,
-                        thy medicine shall be thy food</q><br>
-                    <cite>Hippocrates</cite>
+                <p><q>Be a Pineapple, Stand Tall, Wear a Crown, Be Sweet on the Inside</q><br>
+                    <cite>Anonim</cite>
                 </p>
             </section>
             <section class="our-product-section">
@@ -575,9 +501,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/45.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/45.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/46.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Mix/46.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -620,9 +546,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Coklat/11.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Coklat/11.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Coklat/12.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Coklat/12.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -664,9 +590,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Cranberry/9.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Cranberry/9.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Cranberry/10.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Cranberry/10.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -708,9 +634,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Almond/7.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Almond/7.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Almond/8.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Almond/8.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-action-float">
@@ -747,9 +673,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Keju/43.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Keju/43.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Cake Nanas Topping Keju/44.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Cake Nanas Topping Keju/44.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -791,9 +717,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Cake Kering Nanas/1.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/cake/Cake Kering Nanas/1.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Cake Kering Nanas/2.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/cake/Cake Kering Nanas/2.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -835,9 +761,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Cupcake Nanas/41.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/cake/Cupcake Nanas/41.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Cupcake Nanas/42.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/cake/Cupcake Nanas/42.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -880,9 +806,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Diet Cake Nanas/47.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/cake/Diet Cake Nanas/47.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Diet Cake Nanas/48.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/cake/Diet Cake Nanas/48.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -924,9 +850,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cake/Ambassador & Birthday Cake/4.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Ambassador & Birthday Cake/4.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cake/Ambassador & Birthday Cake/6.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cake/Ambassador & Birthday Cake/6.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             {{-- <div class="product-label-group">
@@ -988,9 +914,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Pempek Dos Kuah Nanas/56.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Pempek Dos Kuah Nanas/56.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Pempek Dos Kuah Nanas/57.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Pempek Dos Kuah Nanas/57.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-label-group">
@@ -1030,9 +956,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/33.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/33.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/34.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Cireng Stick Sambel Nanas/34.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-action-float">
@@ -1072,9 +998,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Sambel Nanas/35.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Sambel Nanas/35.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/cireng-pempek-sambel/Sambel Nanas/36.png') }}"
+                                                <img loading="lazy"loading="lazy" src="{{ asset('assets/images/product/cireng-pempek-sambel/Sambel Nanas/36.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-label-group">
@@ -1135,9 +1061,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/dessert/Pineapple Dessert/29.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/dessert/Pineapple Dessert/29.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/dessert/Pineapple Dessert/30.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/dessert/Pineapple Dessert/30.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-label-group">
@@ -1177,9 +1103,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/dessert/Choco Pineapple Dessert/27.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/dessert/Choco Pineapple Dessert/27.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/dessert/Choco Pineapple Dessert/28.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/dessert/Choco Pineapple Dessert/28.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-label-group">
@@ -1219,9 +1145,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/dessert/Cheese Cake Nanas/31.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/dessert/Cheese Cake Nanas/31.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/dessert/Cheese Cake Nanas/32.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/dessert/Cheese Cake Nanas/32.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-action-float">
@@ -1280,9 +1206,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/13.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/13.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/14.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Feeva Cookies/14.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-label-group">
@@ -1322,9 +1248,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/19.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/19.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/20.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Nastar Tugu Nanas/20.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-action-float">
@@ -1362,9 +1288,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/17.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/17.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/18.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Nastar Klasik/18.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-action-float">
@@ -1402,9 +1328,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/15.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/15.png') }}"
                                                     alt="product" width="600" height="750" />
-                                                <img src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/16.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/nastar-cookies/Nastar Black/16.png') }}"
                                                     alt="product" width="600" height="750" />
                                             </a>
                                             <div class="product-action-float">
@@ -1464,9 +1390,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/pastry-cheestik/Pastry Nanas/50.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pastry-cheestik/Pastry Nanas/50.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/pastry-cheestik/Pastry Nanas/51.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pastry-cheestik/Pastry Nanas/51.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -1508,9 +1434,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/pastry-cheestik/Cheese Stick Nanas/52.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pastry-cheestik/Cheese Stick Nanas/52.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/pastry-cheestik/Cheese Stick Nanas/53.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pastry-cheestik/Cheese Stick Nanas/53.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-action-float">
@@ -1574,9 +1500,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/23.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/23.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/24.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Pie Nanas Mini Original/24.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -1619,9 +1545,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Topping/25.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Pie Nanas Mini Topping/25.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/pie/Pie Nanas Mini Topping/26.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Pie Nanas Mini Topping/26.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -1663,9 +1589,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/pie/Pie Nanas Large/54.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Pie Nanas Large/54.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/pie/Pie Nanas Large/55.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Pie Nanas Large/55.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -1708,9 +1634,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/pie/Birthday Pie/21.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Birthday Pie/21.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/pie/Birthday Pie/22.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/pie/Birthday Pie/22.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-action-float">
@@ -1771,9 +1697,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/selai/Selai Nanas Olesan/FPK2022062320.jpg') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/selai/Selai Nanas Olesan/FPK2022062320.jpg') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/selai/Selai Nanas Olesan/FPK2022062321.jpg') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/selai/Selai Nanas Olesan/FPK2022062321.jpg') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -1815,9 +1741,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/selai/Selai Nanas Isian/58.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/selai/Selai Nanas Isian/58.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/selai/Selai Nanas Isian/FPK2022062394.jpg') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/selai/Selai Nanas Isian/FPK2022062394.jpg') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-action-float">
@@ -1878,9 +1804,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/sirup-jus/Milky Juice Nanas/39.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/sirup-jus/Milky Juice Nanas/39.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/sirup-jus/Milky Juice Nanas/40.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/sirup-jus/Milky Juice Nanas/40.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-action-float">
@@ -1920,9 +1846,9 @@
                                     <div class="product shadow-media text-center">
                                         <figure class="product-media">
                                             <a href="product-simple.html">
-                                                <img src="{{ asset('assets/images/product/sirup-jus/Sirup Nanas/37.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/sirup-jus/Sirup Nanas/37.png') }}"
                                                     alt="product" width="295" height="369" />
-                                                <img src="{{ asset('assets/images/product/sirup-jus/Sirup Nanas/38.png') }}"
+                                                <img loading="lazy"src="{{ asset('assets/images/product/sirup-jus/Sirup Nanas/38.png') }}"
                                                     alt="product" width="295" height="369" />
                                             </a>
                                             <div class="product-label-group">
@@ -1970,7 +1896,7 @@
             <div class="container mt-10 mb-10 pb-7">
                 <p class="title-testi">Tastymoni</p>
                 <hr class="underline-divider" style="margin-bottom: 2rem">
-                <div class="owl-carousel owl-theme owl-nav-box row cols-1 appear-animate"
+                <div class="owl-carousel owl-theme owl-nav-box row cols-1 "
                     data-owl-options="{
                             'items': 1,
                             'nav': false,
@@ -1984,70 +1910,26 @@
                                 }
                             }
                         }"
-                    style="background: #b9cf3e">
+                    style="background: #c8d777">
+                    @forelse ($testi as $item)
                     <div class="testimonial testimonial-centered with-double-quote">
                         <blockquote>
                             <figure class="testimonial-author-thumbnail">
-                                <img src="{{ asset('assets/images/testimoni/3cropped.png') }}" alt="user"
+                                <img loading="lazy"src="{{ asset('storage/'.$item->foto_reviewer) }}" alt="user"
                                     width="120" height="120" />
                             </figure>
-                            <p class="mb-3">“Bener loh ini enak, enak banget no comment. Harus coba enak asli.”</p>
+                            <p class="mb-3">{{ $item->isi_review }}</p>
                             <div class="testimonial-info">
                                 <cite>
-                                    Nela
+                                    {{ $item->nama_reviewer }}
                                     <span class="text-body">Customer</span>
                                 </cite>
                             </div>
                         </blockquote>
                     </div>
-                    <div class="testimonial testimonial-centered with-double-quote">
-                        <blockquote class="text-body">
-                            <figure class="testimonial-author-thumbnail">
-                                <img src="{{ asset('assets/images/testimoni/2cropped.png') }}" alt="user"
-                                    width="120" height="120" />
-                            </figure>
-                            <p class="mb-3">“Pas cobain Nastar Tugu Nanas, Baru ujungnya udah enak banget, apalagi
-                                tengahnya. Teksturnya juga lembut, banyak banget isiannya. Enak bangettt”</p>
-                            <div class="testimonial-info">
-                                <cite>
-                                    Agung Setyadi
-                                    <span class="text-body">Customer</span>
-                                </cite>
-                            </div>
-                        </blockquote>
-                    </div>
-                    <div class="testimonial testimonial-centered with-double-quote">
-                        <blockquote class="text-body">
-                            <figure class="testimonial-author-thumbnail">
-                                <img src="{{ asset('assets/images/testimoni/5cropped.png') }}" alt="user"
-                                    width="120" height="120" />
-                            </figure>
-                            <p class="mb-3">“Seger banget! Nanasnya pas, manisnya pas seger banget, gak akan gagal deh.
-                                Ini salah satu produk minuman ter-enak. Masya Allah mantap!”</p>
-                            <div class="testimonial-info">
-                                <cite>
-                                    Ibu Thianu
-                                    <span class="text-body">Customer</span>
-                                </cite>
-                            </div>
-                        </blockquote>
-                    </div>
-                    <div class="testimonial testimonial-centered with-double-quote">
-                        <blockquote class="text-body">
-                            <figure class="testimonial-author-thumbnail">
-                                <img src="{{ asset('assets/images/testimoni/6cropped.png') }}" alt="user"
-                                    width="120" height="120" />
-                            </figure>
-                            <p class="mb-3">“Wah, pie nya gede banget isinya juga banyak. Ada potongan nanasnya juga,
-                                jadi ngga terlalu lembek. Enak !! Harus Cobain recommended banget.”</p>
-                            <div class="testimonial-info">
-                                <cite>
-                                    Fitri Goes
-                                    <span class="text-body">Customer</span>
-                                </cite>
-                            </div>
-                        </blockquote>
-                    </div>
+                    @empty
+                        <h1>Tidak ada data</h1>
+                    @endforelse
                 </div>
             </div>
             <div class="container">
@@ -2077,7 +1959,7 @@
                     <div class="post overlay-zoom overlay-dark">
                         <figure class="post-media">
                             <a href="blog-single.html">
-                                <img src="{{ asset('assets/images/pemberdayaan/20200519_115531.jpg') }}" width="400"
+                                <img loading="lazy"src="{{ asset('assets/images/pemberdayaan/20200519_115531.jpg') }}" width="400"
                                     height="260" alt="post" />
                             </a>
                         </figure>
@@ -2086,7 +1968,7 @@
                             </p>
                             <h3 class="post-title"><a href="blog-single.html">Pemberdayaan Petani Lokal</a>
                             </h3>
-                            <div class="post-meta"><img src="assets/images/croppedPeople.jpg" class="post-agent"
+                            <div class="post-meta"><img loading="lazy"src="assets/images/croppedPeople.jpg" class="post-agent"
                                     width="31" height="31" alt="agent">By
                                 <a href="blog.html" class="post-author">Ahmad</a>
                                 <a href="blog-single.html#post-comments" class="post-comments hash-scroll">
@@ -2117,7 +1999,7 @@
                     <div class="post overlay-zoom overlay-dark">
                         <figure class="post-media">
                             <a href="blog-single.html">
-                                <img src="{{ asset('assets/images/support-event/23.png') }}" width="400"
+                                <img loading="lazy"src="{{ asset('assets/images/support-event/23.png') }}" width="400"
                                     height="260" alt="post" />
                             </a>
                         </figure>
@@ -2126,7 +2008,7 @@
                             </p>
                             <h3 class="post-title"><a href="blog-single.html">Support Event</a>
                             </h3>
-                            <div class="post-meta"><img src="assets/images/croppedPeople.jpg" class="post-agent"
+                            <div class="post-meta"><img loading="lazy"src="assets/images/croppedPeople.jpg" class="post-agent"
                                     width="31" height="31" alt="agent">By
                                 <a href="blog.html" class="post-author">Ahmad</a>
                                 <a href="blog-single.html#post-comments" class="post-comments hash-scroll">
@@ -2155,7 +2037,7 @@
                     <div class="post overlay-zoom overlay-dark">
                         <figure class="post-media">
                             <a href="blog-single.html">
-                                <img src="{{ asset('assets/images/csr/IMG-20220210-WA0024.jpg') }}" width="400"
+                                <img loading="lazy"src="{{ asset('assets/images/csr/IMG-20220210-WA0024.jpg') }}" width="400"
                                     height="260" alt="post" />
                             </a>
                         </figure>
@@ -2165,7 +2047,7 @@
                             <h3 class="post-title"><a href="blog-single.html">Program CSR (Corporate Social
                                     Responsibility)</a>
                             </h3>
-                            <div class="post-meta"><img src="assets/images/croppedPeople.jpg" class="post-agent"
+                            <div class="post-meta"><img loading="lazy"src="assets/images/croppedPeople.jpg" class="post-agent"
                                     width="31" height="31" alt="agent">By
                                 <a href="blog.html" class="post-author">Ahmad</a>
                                 <a href="blog-single.html#post-comments" class="post-comments hash-scroll">
@@ -2200,114 +2082,4 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="brand-section appear-animate" style="background: url(images/demos/demo8/brand-back.jpg);">
-            <div class="container">
-                <div class="owl-carousel owl-theme owl-nav-outer slider-brand row cols-lg-5 cols-md-3 cols-2"
-                    data-owl-options="{
-                                                    'nav': false,
-                                                    'dots': false,
-                                                    'margin': 20,
-                                                    'loop': true,
-                                                    'autoplay': true,
-                                                    'responsive': {
-                                                        '0': {
-                                                            'items': 2
-                                                        },
-                                                        '768': {
-                                                            'items': 3
-                                                        },
-                                                        '992': {
-                                                            'items': 5
-                                                        }
-                                                    }
-                                                }">
-                    <figure class="">
-                        <img src="images/elements/slider/brand/brand1.png" alt="user" width="163"
-                            height="47" />
-                    </figure>
-                    <figure class="">
-                        <img src="images/elements/slider/brand/brand2.png" alt="user" width="121"
-                            height="51" />
-                    </figure>
-                    <figure class="">
-                        <img src="images/elements/slider/brand/brand3.png" alt="user" width="154"
-                            height="39" />
-                    </figure>
-
-                    <figure class="">
-                        <img src="images/elements/slider/brand/brand4.png" alt="user" width="144"
-                            height="37" />
-                    </figure>
-                    <figure class="">
-                        <img src="images/elements/slider/brand/brand5.png" alt="user" width="138"
-                            height="42" />
-                    </figure>
-                    <figure class="">
-                        <img src="images/elements/slider/brand/brand3.png" alt="user" width="154"
-                            height="39" />
-                    </figure>
-
-                </div>
-            </div>
-        </div>
-        <div class="gallery-section appear-animate">
-            <div class="owl-carousel owl-theme owl-nav-outer row cols-lg-5 cols-md-3 cols-2"
-                data-owl-options="{
-                                'nav': false,
-                                'dots': false,
-                                'loop': true,
-                                'autoplay': true,
-                                'autoplayTimeout': 7000,
-                                'responsive': {
-                                    '0': {
-                                        'items': 2
-                                    },
-                                    '576': {
-                                        'items': 4
-                                    },
-                                    '992': {
-                                        'items': 6
-                                    }
-                                }
-                            }">
-                <figure class="instagram">
-                    <a href="#">
-                        <img src="images/demos/demo8/gallery/img1.jpg" alt="Instagram" width="320"
-                            height="320" style="background-color: #585f29;">
-                    </a>
-                </figure>
-                <figure class="instagram">
-                    <a href="#">
-                        <img src="images/demos/demo8/gallery/img2.jpg" alt="Instagram" width="320"
-                            height="320" style="background-color: #E9E9EB;">
-                    </a>
-                </figure>
-                <figure class="instagram">
-                    <a href="#">
-                        <img src="images/demos/demo8/gallery/img3.jpg" alt="Instagram" width="320"
-                            height="320" style="background-color: #515254;">
-                    </a>
-                </figure>
-                <figure class="instagram">
-                    <a href="#">
-                        <img src="images/demos/demo8/gallery/img4.jpg" alt="Instagram" width="320"
-                            height="320" style="background-color: #DAA362;">
-                    </a>
-                </figure>
-                <figure class="instagram">
-                    <a href="#">
-                        <img src="images/demos/demo8/gallery/img5.jpg" alt="Instagram" width="320"
-                            height="320" style="background-color: #3E3733;">
-                    </a>
-                </figure>
-                <figure class="instagram">
-                    <a href="#">
-                        <img src="images/demos/demo8/gallery/img6.jpg" alt="Instagram" width="320"
-                            height="320" style="background-color: #DCDDE1;">
-                    </a>
-                </figure>
-            </div>
-        </div> --}}
-        </div>
-    </main>
 @endsection

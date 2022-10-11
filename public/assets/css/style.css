@@ -4,7 +4,40 @@
     height: 97vh;
     margin-top: 3vh;
 }
-
+.faded{
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.more{
+    display: none;
+}
+.menu .active > a:not(.menu-title):before,
+.menu:not(.category-menu) li:hover > a:not(.menu-title):before {
+    border-color: transparent !important;
+}
+.faq-section {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.faq-section > details > summary {
+    font-size: 3rem;
+}
+.faq-section > details > p {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.faq-section > details > summary::marker {
+    color: #fabf01;
+}
+#map {
+    height: 50vh;
+    width: 80vw;
+    margin: 10rem auto;
+    z-index: 1;
+}
+.maps-section {
+    margin-bottom: 10rem;
+}
 .best-section {
     height: 100vh;
 }
@@ -306,6 +339,79 @@
 .post-list {
     margin-bottom: 2rem;
 }
+.marketplace-icons {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.marketplace-icons > p {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-size: 3rem;
+}
+.marketplace-icons .tokopedia {
+    height: 20rem;
+}
+.marketplace-icons .tokopedia:hover,
+.marketplace-icons .shopee:hover,
+.marketplace-icons .gofood:hover,
+.marketplace-icons .grabfood:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+.marketplace-icons .shopee {
+    height: 25rem;
+}
+.marketplace-icons .gofood {
+    height: 10rem;
+    width: 30rem;
+}
+.marketplace-icons .grabfood {
+    height: 20rem;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background-color: rgba(254, 253, 255, 0.6) !important;
+}
+.contact-section {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.form-contact > .title-contact {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+.form-contact > form > .input-nama {
+    width: 50vw;
+    margin: 10px auto;
+    border: none;
+    border-bottom: 1px solid #fabf01;
+}
+.form-contact > form > input[type="text"]:disabled {
+    background-color: rgb(219, 219, 219);
+}
+.form-contact > form > .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.form-contact > form > .wrapper-checkbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.form-contact > form > .button > button {
+    background-color: #25d366;
+    color: #fefdff;
+    font-size: 3rem;
+    width: 50vw;
+}
 @media (min-width: 576px) {
     .post-list {
         display: flex;
@@ -537,6 +643,35 @@
 .testimonial-sm blockquote > p {
     padding-top: 7px;
 }
+.our-banner {
+    background: linear-gradient(
+            0deg,
+            rgba(185, 207, 62, 0.579),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url(../images/grab-goodibag.JPG);
+    height: 60vh;
+    background-attachment: fixed;
+}
+.mid-title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mid-title > .title-our {
+    font-size: 7rem;
+    text-align: center;
+    margin-top: 15rem;
+    color: #fefdff;
+    font-weight: 600;
+}
+.mid-title > .subtitle-our {
+    color: #fefdff;
+    font-size: 2rem;
+}
 @media (min-width: 576px) {
     .testimonial-sm cite {
         display: flex;
@@ -578,6 +713,13 @@
     }
     .bigLogoTop {
         margin: auto;
+    }
+    .form-contact > form > .button > button {
+        background-color: #25d366;
+        color: #fefdff;
+        font-size: 2rem;
+        width: 50vw;
+        padding: 1rem;
     }
     .icon-box-num .icon-box-icon {
         margin-right: 0;
@@ -625,6 +767,12 @@
     }
     .sertifikasi > h2 {
         text-align: center !important;
+    }
+    .marketplace-icons {
+        flex-direction: column;
+    }
+    .marketplace-icons > p {
+        display: none;
     }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) {
@@ -712,5 +860,22 @@
     }
     .best-section {
         height: 150vh;
+    }
+}
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

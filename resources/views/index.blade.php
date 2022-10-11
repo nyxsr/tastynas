@@ -13,17 +13,18 @@
     <meta name="author" content="Tastynas">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/icons/tastynas-favicon.png') }}">
     <!-- Preload Font -->
 
-    <link rel="preload" href="assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font"
+    <link rel="preload" href="{{ asset('assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2') }}" as="font"
         type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preload" href="assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{{ asset('assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2') }}"
+        as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/leaflet.css') }}">
 
     <script>
         WebFontConfig = {
@@ -41,21 +42,25 @@
     </script>
 
 
-    <link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/animate/animate.min.css') }}">
 
     <!-- Plugin CSS File -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/owl-carousel/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/magnific-popup/magnific-popup.min.css') }}">
     <!-- Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="assets/css/demo8.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/demo8.min.css') }}">
 </head>
 
 <body class="home">
     <div class="page-wrapper">
         @include('partials.navbar')
         <!-- End Header -->
-        @yield('main')
+        <main class="main">
+            <div class="page-content">
+                @yield('main')
+            </div>
+        </main>
         <!-- End Main -->
         @include('partials.footer')
         <!-- End Footer -->
@@ -72,11 +77,10 @@
         </a>
     </div> --}}
     <!-- Scroll Top -->
-    <a id="scroll-top" class="scroll-top" href="#top" title="Top" role="button"> <i
-            class="p-icon-arrow-up"></i>
+    <a id="scroll-top" class="scroll-top" href="#top" title="Top" role="button"> <i class="p-icon-arrow-up"></i>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
-            <circle id="progress-indicator" fill="transparent" stroke="#000000" stroke-miterlimit="10"
-                cx="35" cy="35" r="34" style="stroke-dasharray: 108.881, 400;"></circle>
+            <circle id="progress-indicator" fill="transparent" stroke="#000000" stroke-miterlimit="10" cx="35"
+                cy="35" r="34" style="stroke-dasharray: 108.881, 400;"></circle>
         </svg>
     </a>
 
@@ -89,43 +93,72 @@
         <!-- End CloseButton -->
         <div class="mobile-menu-container scrollable">
             <a href="demo8.html" class="logo">
-                <img src="assets/images/second-logo.jpg" alt="logo" width="171" height="41">
+                <img src="{{ asset('assets/images/second-logo.jpg') }}" alt="logo" width="171" height="41">
             </a>
             <!-- End Search Form -->
             <ul class="mobile-menu mmenu-anim">
                 <li>
-                    <a href="demo8.html">Home</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
                 <li>
-                    <a href="demo8.html">Our Story</a>
+                    <a href="{{ url('our') }}">Our Story</a>
                 </li>
                 <li>
-                    <a href="#">Where To Buy ?</a>
+                    <a href="{{ url('where') }}">Where To Buy ?</a>
                 </li>
                 <li>
-                    <a href="blog.html">FAQ</a>
+                    <a href="{{ url('faq') }}">FAQ</a>
                 </li>
                 <li>
                     <a href="#">News</a>
                     <ul>
-                        <li><a href="about.html">About Tastynas</a></li>
-                        <li><a href="contact.html">About Subang</a></li>
+                        <li><a href="{{ url('news/tastynas') }}">About Tastynas</a></li>
+                        <li><a href="{{ url('news/subang') }}">About Subang</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="{{ url('/contact') }}">Contact</a>
                 </li>
             </ul>
             <!-- End MobileMenu -->
         </div>
     </div>
+    @if ($active == 'home')
+        @if ($event)
+            @foreach ($event as $item)
+                <div class="newsletter-popup mfp-hide" id="newsletter-popup">
+                    <figure>
+                        <a href="{{ $item->link_event }}">
+                            <img src="{{ asset('storage/' . $item->poster) }}" width="500" height="269"
+                                alt="newsletter">
+                        </a>
+                    </figure>
+                    <div class="newsletter-content">
+                        <div class="form-checkbox">
+                            <input style="display: none" type="checkbox" id="hide-newsletter-popup"
+                                name="hide-newsletter-popup" required="">
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        @endif
+    @endif
     <!-- Plugins JS File -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    {{-- <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ asset('assets/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/jquery.floating/jquery.floating.min.js') }}"></script>
-    <script src="assets/vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+    <script src="{{ asset('assets/vendor/elevatezoom/jquery.elevatezoom.min.js') }}"></script>
+    <script src="{{ asset('assets/js/leaflet.js') }}"></script>
+    <script src="{{ asset('assets/js/maps.js') }}"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/main.min.js"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/js/main.min.js') }}"></script>
 </body>
 
 </html>
