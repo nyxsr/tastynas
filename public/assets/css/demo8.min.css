@@ -3442,10 +3442,6 @@ blockquote {
 .post-title {
     margin-bottom: 1.1rem;
     line-height: 1.21;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 .post-content > a {
     margin-left: 10px;
@@ -6786,7 +6782,7 @@ button.mfp-arrow {
     margin: 0.7rem 0 0.9rem;
     opacity: 1;
 }
-.product-hide-details .btn-cart {
+.product-hide-details .btn-keranjang {
     display: block;
     max-width: 14rem;
     white-space: nowrap;
@@ -10446,6 +10442,7 @@ input.quantity {
 }
 .best-section {
     margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 .best-section .icon-box-icon {
     height: 6.4rem;

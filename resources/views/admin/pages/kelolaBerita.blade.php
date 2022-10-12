@@ -20,6 +20,7 @@
                             <th>Judul Berita</th>
                             <th>Slug</th>
                             <th>Isi</th>
+                            <th>Kategori</th>
                             <th>Penulis</th>
                             <th>Gambar Thumbnail</th>
                             <th style="text-align: center" colspan="3">Aksi</th>
@@ -34,6 +35,7 @@
                                 </td>
                                 <td>{{ $new->slug }}</td>
                                 <td>{{ Str::limit($new->isi, 30, '...') }}</td>
+                                <td><b>{{ $new->kategori }}</b></td>
                                 <td>{{ $new->user->name }}</td>
                                 <td><img src="{{ asset('storage/' . $new->gambar) }}" alt=""
                                         class="rounded-circle" style="width:4rem; height: 4rem;">

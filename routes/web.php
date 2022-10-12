@@ -28,6 +28,9 @@ Route::get('/', function () {
     return view('pages.home', [
         'active' => 'home',
         'testi' => DB::table('testimoni')->get(),
+        'kategori' => DB::table('categories')->get(),
+        'products' => DB::table('products')->get(),
+        'best_products' => DB::table('products')->where('best_seller',1)->get(),
         'event'=> DB::table('events')->where('is_show',1)->get()
     ]);
 })->name('home');
@@ -56,8 +59,8 @@ Route::get('/contact', function () {
     ]);
 });
 Route::get('/news/{category}',[NewsController::class, 'showNews']);
-Route::get('/news/{category}/{subcategory}',[NewsController::class, 'showNews'])->name('news.{category}');
-Route::get('/news/{category}/{subcategory}/{slug}',[NewsController::class, 'showNews'])->name('news.{category}/{subcategory}/{slug}');
+Route::get('/news/{category}/',[NewsController::class, 'showNews'])->name('news.{category}');
+Route::get('/news/{category}/{slug}',[NewsController::class, 'detailNews'])->name('news.{category}/{slug}');
 
 Route::post('contact', [ContactController::class, 'sendMessage']);
 Route::post('/admin',[AuthController::class,'doLogin']);
@@ -80,7 +83,3 @@ Route::resource('kelolaBerita',NewsController::class)->middleware('auth');
 Route::get('kelolaSpotlight',[NewsController::class,'spotlightNews'])->middleware('auth');
 Route::put('kelolaSpotlight/{kelolaBeritum}/updateSpotlight',[NewsController::class,'updateSpotlight'])->name('kelolaSpotlight.updateSpotlight')->middleware('auth');
 Route::resource('kelolaEvent', EventController::class)->middleware('auth');
-// Route::get('kelolaEvent/{kelolaEvent}',[EventController::class,'unshow'])->middleware('auth')->name('kelolaEvent.unshow');
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});

@@ -4,6 +4,33 @@
     height: 97vh;
     margin-top: 3vh;
 }
+
+.product-hide-details .btn-cart {
+    display: block;
+    max-width: 14rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    z-index: 1;
+}
+
+.post .post-media img {
+    max-width: 624px !important;
+    max-height: 260px !important;
+}
+
+.post .post-media-more img {
+    max-width: 900px !important;
+    max-height: 500px !important;
+}
+@media screen and (max-width: 767px) {
+    .post .post-media-more img {
+        max-width: 90vw !important;
+        max-height: 400px !important;
+    }
+}
 .faded{
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
@@ -315,11 +342,9 @@
 .post-title {
     margin-bottom: 1.1rem;
     line-height: 1.21;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block;
 }
+
 .post-content {
     overflow: hidden;
     display: -webkit-box;
@@ -449,12 +474,6 @@
 .post-list-sm .post-meta a {
     font-size: 0.857em;
     color: #54524d;
-}
-.post-outer .post-title {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 .post-outer .post-details {
     background-color: #fff;
@@ -650,7 +669,7 @@
             rgba(0, 0, 0, 0.5)
         ),
         url(../images/grab-goodibag.JPG);
-    height: 60vh;
+    height: 80vh;
     background-attachment: fixed;
 }
 .mid-title {
@@ -667,6 +686,11 @@
     margin-top: 15rem;
     color: #fefdff;
     font-weight: 600;
+}
+@media screen and (max-width:767px) {
+    .mid-title > .title-our{
+        font-size: 3rem;
+    }
 }
 .mid-title > .subtitle-our {
     color: #fefdff;

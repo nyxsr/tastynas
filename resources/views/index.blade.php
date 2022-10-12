@@ -92,7 +92,7 @@
         <a class="mobile-menu-close" href="#"><i class="p-icon-times"></i></a>
         <!-- End CloseButton -->
         <div class="mobile-menu-container scrollable">
-            <a href="demo8.html" class="logo">
+            <a href="{{ url('/') }}" class="logo">
                 <img src="{{ asset('assets/images/second-logo.jpg') }}" alt="logo" width="171" height="41">
             </a>
             <!-- End Search Form -->

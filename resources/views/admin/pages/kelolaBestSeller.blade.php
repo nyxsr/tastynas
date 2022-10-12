@@ -53,7 +53,7 @@
 
                     </tbody>
                 </table>
-                {{-- {{ $dataUsers->links() }} --}}
+                {{ $products->links() }}
             </div>
         </div>
     </div>

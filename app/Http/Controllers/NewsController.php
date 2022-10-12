@@ -14,7 +14,17 @@ class NewsController extends Controller
     {
         return view('pages.news',[
             'active' => 'news',
-            'news_category' => $category
+            'news' => DB::table('news')->where('kategori',$category)->paginate(2),
+            'category'=>$category
+        ]);
+    }
+
+    public function detailNews($category, $slug)
+    {
+        return view('pages.news.seeMore',[
+            'active' => 'news',
+            'news' => News::where('slug',$slug)->firstOrFail(),
+            'related' => News::where('slug', '!=', $slug)->orWhereNull('slug')->paginate(3)
         ]);
     }
     public function index()
